@@ -1,1 +1,11 @@
-<
+<%@adventures.each do |adv| %>
+<%=adv.name%><br>
+<%adv.countries.each do |country|%><br>
+  <%=country.name%><br>
+  <%end%>
+<%=adv.description%><br>
+<%=adv.duration%><br>
+<%adv.images.each do |img|%><br>
+  <img src='<%=img.url%>'/>
+  <%end%>
+<%end%>

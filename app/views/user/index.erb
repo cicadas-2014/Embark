@@ -1,6 +1,0 @@
-<% ip = request.remote_ip %>
-
-<%=  lat = Geocoder.search(ip).first.latitude %></BR>
-<%=  lon = Geocoder.search(ip).first.longitude %>
-</br>
-<%= Geocoder.search([40.706363,-74.009096]).first.country %>
