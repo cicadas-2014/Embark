@@ -41,7 +41,8 @@ gem 'travis-lint'
 
 gem 'simplecov', :require => false, :group => :test
 
-gem "pg"
+#use geocoder to find location of user
+gem 'geocoder'
 
 group :development, :test do
   gem 'rspec-rails'
