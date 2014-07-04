@@ -28,3 +28,5 @@ A travel app that allows users to find adventure.
 (-) Be shown food options around the area of the adventure<br>
 (-) Be shown hotel options around the area of the adventure<br>
 
+
+<strong>Schema-Design(take 1):</strong> http://i.imgur.com/GHyw6Za.png
