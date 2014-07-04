@@ -1,5 +1,5 @@
 class Country < ActiveRecord::Base
-  has_many :country_adventures
-  has_many :adventures, through: :country_adventures
-  
+	has_many :country_adventures
+	has_many :countries, through: :country_adventures
+	has_many :cities
 end
