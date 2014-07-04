@@ -27,6 +27,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.6)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
     capybara (2.3.0)
@@ -55,8 +56,16 @@ GEM
     flickr (1.0.2)
       xml-simple (>= 1.0.7)
     flickraw (0.9.8)
+=======
+    geocoder (1.2.2)
+    google_custom_search_api (1.0.0)
+      addressable
+      httparty
     hashr (0.0.22)
     hike (1.2.3)
+    httparty (0.13.1)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
     jbuilder (2.1.1)
       activesupport (>= 3.0.0, < 5)
@@ -72,6 +81,7 @@ GEM
     mini_portile (0.6.0)
     minitest (5.3.5)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     pg (0.17.1)
@@ -175,8 +185,14 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   faker
+<<<<<<< HEAD
   flickr
   flickraw
+=======
+  geocoder
+  google_custom_search_api
+  httparty
+>>>>>>> 5a71929c3c94fd634d0262954bfaaf476f8e2e74
   jbuilder (~> 2.0)
   jquery-rails
   pg
