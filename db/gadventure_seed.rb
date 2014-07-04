@@ -15,7 +15,7 @@ end
 
 def gAdveturesAddUrls(url, adventuresUrls = []) #Retrieving the urls for all the adventures on every page
   results = CurlRequest(url)
-  p url
+  puts url
   results["results"].each do |tour|
     adventuresUrls << tour['tour_dossier']['href'] #pushing links from each adventure on the page into an array
   end
@@ -23,45 +23,47 @@ def gAdveturesAddUrls(url, adventuresUrls = []) #Retrieving the urls for all the
     return adventuresUrls
   end
     adventuresUrls = gAdveturesAddUrls(results['links'][0]['href'],adventuresUrls)#recursivly calls method to move on to the next page of requests
-end
+  end
 
 
 
-def SaveToCSV(data)
-    CSV.open('db/tours.csv', 'a') do |csv|
+  def SaveToCSV(data)
+    CSV.open('db/gtours.csv', 'a') do |csv|
       csv << data
     end
-end
+  end
 
-def dataRetrieval(url)
-  categories = []
-  visited_countries = []
-  
-  adventure_data = CurlRequest(url)
+  def dataRetrieval(url)
+    categories = []
+    visited_countries = []
+    duration = 'nil'
+    image = 'nil'
+    map = 'nil'
+    adventure_data = CurlRequest(url)
 
     name = adventure_data['name']
-    duration = adventure_data['itineraries'][0]['duration']
+    duration = adventure_data['itineraries'][0]['duration'] if adventure_data['itineraries'][0]
     description = adventure_data['description']
     adventure_data['categories'].each {|c| categories << c["name"]}  
     start_city = adventure_data["geography"]["start_city"]["name"]
-    map = adventure_data["images"][0]["image_href"]
-    image = adventure_data["images"][1]["image_href"]
+    map = adventure_data["images"][0]["image_href"] if adventure_data["images"][0]
+    image = adventure_data["images"][1]["image_href"] if adventure_data["images"][1]
     adventure_data["geography"]["visited_countries"].each {|c| visited_countries << [c['id'],c['name']]}
 
 
+    return nil unless name
     return [name,duration,description,categories,start_city,map,image,visited_countries]
-end  
+  end  
 
 
 urls = gAdveturesAddUrls('https://rest.gadventures.com/tours') #starting collecting urls for data retrieval 
 last_name = ''
 urls.each_with_index do |url, i|
-  data = dataRetrieval(url)
-  unless last_name == data.first
-  # if i == 203 || i == 204 || i == 205
-    puts "number #{i} of #{urls.length}"
-    SaveToCSV(data)
-  end
-    p last_name = data.first
+    data = dataRetrieval(url)
+    unless last_name == data.first
+      puts "number #{i} of #{urls.length}"
+      SaveToCSV(data)
+    end
+    puts last_name = data.first
 end
 
