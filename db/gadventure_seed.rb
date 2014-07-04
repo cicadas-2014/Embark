@@ -8,7 +8,7 @@ require 'curb'
 
 def CurlRequest(url) # Making the request to the g adventures API
   curl = Curl::Easy.new(url)
-  curl.headers["X-Application-Key"]="live_0ed49b6452ad05041e52d88b6893bf0f4d0a7b7e"
+  curl.headers["X-Application-Key"]='live_0ed49b6452ad05041e52d88b6893bf0f4d0a7b7e'
   curl.perform
   JSON.parse(curl.body_str)
 end
@@ -48,11 +48,12 @@ def gAdveturesAddUrls(url, adventuresUrls = []) #Retrieving the urls for all the
     start_city = adventure_data["geography"]["start_city"]["name"]
     map = adventure_data["images"][0]["image_href"] if adventure_data["images"][0]
     image = adventure_data["images"][1]["image_href"] if adventure_data["images"][1]
-    adventure_data["geography"]["visited_countries"].each {|c| visited_countries << [c['id'],c['name']]}
+    starting_country = adventure_data["geography"]["start_country"]["id"]
+    adventure_data["geography"]["visited_countries"].each {|c| visited_countries << [c['id']]}
 
 
     return nil unless name
-    return [name,duration,description,categories,start_city,map,image,visited_countries]
+    return [name,duration,description,categories,start_city,map,image,starting_country,visited_countries]
   end  
 
 
