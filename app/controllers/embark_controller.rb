@@ -1,6 +1,7 @@
 class EmbarkController < ApplicationController
 
 def home
+
 end
 
 def adventures
