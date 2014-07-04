@@ -31,7 +31,8 @@ gem 'json'
 gem 'curl'
 # Use unicorn as the app server
 # gem 'unicorn'
-
+gem 'json'
+gem 'curb'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
