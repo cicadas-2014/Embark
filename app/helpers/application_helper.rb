@@ -1,5 +1,4 @@
 module ApplicationHelper
-
 	def user_location
 		geo = Geocoder.search(request.remote_ip).first
 		return [geo.latitude,geo.longitude]
