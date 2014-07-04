@@ -1,3 +1,4 @@
+
 require 'csv'
 require 'json'
 # Top 20 World Adentures
@@ -78,3 +79,4 @@ end
 
 top20
 gtours
+

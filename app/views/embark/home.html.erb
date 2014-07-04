@@ -1,2 +1,11 @@
-<%= find_images_of 'barack' %> 
-
+<div id="logo">
+	Embark
+</div>
+<div id="search">
+<%= link_to "Local", adventures_path(search: "local") %>
+<%= link_to "Continential", adventures_path(search: "continential") %>
+<%= link_to "Global", adventures_path(search: "global") %>
+</div>
+<div id="background">
+	<%= image_tag('metior.jpg') %>
+</div>
