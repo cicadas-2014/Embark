@@ -6,9 +6,6 @@ module ApplicationHelper
 		# p response.body
 		# p JSON.parse(response)
 		# p req.methods.sort
-		results = GoogleCustomSearchApi.search('obama')
-		p '*'*1000
-		p results
 	end
 
 	def user_location
