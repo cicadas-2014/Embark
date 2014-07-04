@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20140704175519) do
 
   create_table "adventures", force: true do |t|
     t.string   "name"
-    t.integer  "duration"
     t.text     "description"
+    t.integer  "duration"
     t.integer  "city_id"
     t.datetime "created_at"
     t.datetime "updated_at"
