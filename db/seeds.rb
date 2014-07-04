@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-require 'net/http'
-
-url = "https://rest.gadventures.com/tours"
-credentials = "#{"X-Application-Key"}:#{live_0ed49b6452ad05041e52d88b6893bf0f4d0a7b7e}"
-RestClient.post "https://credentials@#{url}", '<hello xmlns="https://rest.gadventures.com/tours"/>'
-
-
-# url = 'https://rest.gadventures.com/tours'
-# mykey = 'live_0ed49b6452ad05041e52d88b6893bf0f4d0a7b7e'
-# uri = URI.parse(url)
-
-# request = Net::HTTP.get_response(uri).body
-# p request
-# request['X-Application-Key'] = mykey
-
-# response = Net::HTTP.new(uri.host,uri.port) do |http|
-#   http.request(request)
-# end
-
-<<<<<<< HEAD
-# p response.inspect
-=======
-# p response.inspect
-=======
 require 'csv'
 
 
@@ -45,6 +13,84 @@ end
   CountryAdventure.create(country_id: @country.id, adventure_id: @adventure.id)
   Image.create(url: s[4][0], adventure_id: @adventure.id)
 end
->>>>>>> master
-=======
->>>>>>> 7da359cfa504763cfc8189586c5dcc047510235b
+
+require 'csv'
+require 'json'
+# Top 20 World Adentures
+def top20
+  adventures = []
+  CSV.foreach('db/adventures.csv') do |row|
+    adventures << row
+  end
+
+  sliced = adventures.each_slice(5)
+  sliced.each do |s|
+    @adventure = Adventure.create(name: s[0][0], duration: s[2][0].to_i, description: s[3][0])
+    @country = Country.create(name: s[1][0])
+    CountryAdventure.create(country_id: @country.id, adventure_id: @adventure.id)
+    Image.create(url: s[4][0], adventure_id: @adventure.id)
+  end
+end
+
+
+# G Adventure Tours
+def gtours
+  tours = []
+  @data_countries = []
+  @tours_countries = []
+
+  CSV.foreach('db/gtours.csv') do |row|
+    tours << row
+  end
+
+#countries
+tours.each do |t|
+  countries = t[8].gsub('[','').gsub(']','').gsub(' ','').gsub('"','').split(',')
+  @tours_countries << countries
+  @data_countries << countries
+end
+
+@data_countries = @data_countries.flatten.uniq
+@data_countries.each do |country|
+  c = Country.create(name: country)
+end
+
+#cities
+tours.each do |t|
+  country = Country.find_by(name:t[7])
+  city = City.find_or_create_by(name: t[4], country_id: country.id)  
+
+#adventure
+  adventure = Adventure.find_or_create_by(name:t[0], duration:t[1],description:t[2],city_id: city.id, map_url: t[5])
+  p adventure
+end
+#country adventure
+i = 0
+tours.each do |t|
+  @tours_countries[i].each do |country|
+    country_adventure = CountryAdventure.create(country:Country.find_by(name: country), adventure: Adventure.find_by(name:t[0]))
+  end
+  i += 1
+end
+#category and category adventure
+tours.each do |t|
+  categories = t[3].gsub('[','').gsub(']','').gsub(' ','').gsub('"','').split(',')
+  categories.each do |cat|
+    category = Category.find_or_create_by(name:cat) unless cat.match(/\d/)
+    catad = CategoryAdventure.create(category: category, adventure: Adventure.find_by(name:t[0]))
+  end
+end
+#image
+# tours.each do |t|
+#   image = Image.find_or_create_by(url: t[6])
+#   adventure = Adventure.find_by(name: t[0])
+#   country = Country.find_by(name: t[7])
+#   city = City.find_by(name:t[4])
+#   adventure.images << image
+#   country.images << image
+#   city.images << image
+# end
+end
+
+top20
+gtours
