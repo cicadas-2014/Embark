@@ -17,14 +17,16 @@ A travel app that allows users to find adventure.
 
 (+) Have the app locate me<br>
 (+) Be able to filter my adventures based on my parameters<br>
-(+) Have flight options present<br>
-(+) Be shown the price of the adventure<br>
 (+) See a picture of the adventure<br>
 (+) Have a variety of adventure types to choose from
 
 (-) Be able to share the adventure on social media<br>
 (-) Be able to save an adventure<br>
+(-) Have flight options present<br>
+(-) Be shown the price of the adventure<br>
 (-) Be able to create an adventure I've been on, for other users to go on<br>
 (-) Be shown food options around the area of the adventure<br>
 (-) Be shown hotel options around the area of the adventure<br>
 
+
+<strong>Schema-Design(take 1):</strong> http://i.imgur.com/GHyw6Za.png

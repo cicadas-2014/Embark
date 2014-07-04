@@ -40,9 +40,21 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'travis-lint'
 
+gem 'httparty'
+
 gem 'simplecov', :require => false, :group => :test
 
+<<<<<<< HEAD
 gem 'flickraw'
+=======
+
+
+#use geocoder to find location of user
+gem 'geocoder'
+
+gem 'google_custom_search_api'
+
+>>>>>>> master
 
 group :development, :test do
   gem 'rspec-rails'
