@@ -8,7 +8,7 @@ require 'curb'
 
 def CurlRequest(url) # Making the request to the g adventures API
   curl = Curl::Easy.new(url)
-  curl.headers["X-Application-Key"]='live_0ed49b6452ad05041e52d88b6893bf0f4d0a7b7e'
+  curl.headers["X-Application-Key"]=ENV['GADVENTURE_API_KEY']
   curl.perform
   JSON.parse(curl.body_str)
 end
