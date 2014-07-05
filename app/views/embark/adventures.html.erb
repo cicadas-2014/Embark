@@ -1,6 +1,31 @@
 <div id="logo">
   embark
 </div>
+
+<div class='filters'>
+<form method=post id='test'>
+  <select name='test' onchange="this.up('form').id = this.value;">
+    <%@categories.each do |cat|%>
+      <option value=1><%=cat%></option>
+    <%end%>
+  </select>
+</form>
+<form method=post id='test'>
+  <select name='test' onchange="this.up('form').id = this.value;">
+    <%@categories.each do |cat|%>
+      <option value=1><%=cat%></option>
+    <%end%>
+  </select>
+</form>
+<form method=post id='test'>
+  <select name='test' onchange="this.up('form').id = this.value;">
+    <%@categories.each do |cat|%>
+      <option value=1><%=cat%></option>
+    <%end%>
+  </select>
+</form>
+</div>
+
 <section class="module">
   <section class="wraper"> 
     <%@photos.each do |photo|%>

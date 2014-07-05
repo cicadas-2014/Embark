@@ -141,4 +141,13 @@ body {
 #gallery li a:hover img {
   width:478px;
   }
-
+.filters {
+  position: absolute;
+  top: 6%;
+  right:3%;
+}
+select {
+  color: #66FFFF;
+  background-color: black;
+  font-size: 18px;
+}
