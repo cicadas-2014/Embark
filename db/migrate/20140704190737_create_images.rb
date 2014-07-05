@@ -5,7 +5,7 @@ class CreateImages < ActiveRecord::Migration
       t.string :longitude
       t.string :latitude
       t.belongs_to :city
-
+      
       t.timestamps
     end
   end

@@ -113,48 +113,6 @@ def add_image(adventure)
   end
 end
 
-#countries
-# tours.each do |tour|
-#   countries = tour[8].gsub('[','').gsub(']','').gsub(' ','').gsub('"','').split(',')
-#   tours_countries << countries
-#   data_countries << countries
-# end
-
-# data_countries = data_countries.flatten.uniq
-# data_countries.each do |country|
-#   c = Country.create(name: country)
-# end
-
-#cities
-# tours.each do |t|
-#   country = Country.find_by(name:t[7])
-#   city = City.find_or_create_by(name: t[4], country_id: country.id)  
-
-#adventure
-#   p adventure
-# end
-#country adventure
-# i = 0
-# tours.each do |t|
-#   tours_countries[i].each do |country|
-#     country_adventure = CountryAdventure.create(country:Country.find_by(name: country), adventure: Adventure.find_by(name:t[0]))
-#   end
-#   i += 1
-# end
-#category and category adventure
-# end
-#image
-# tours.each do |t|
-#   image = Image.find_or_create_by(url: t[6])
-#   adventure = Adventure.find_by(name: t[0])
-#   country = Country.find_by(name: t[7])
-#   city = City.find_by(name:t[4])
-#   adventure.images << image
-#   country.images << image
-#   city.images << image
-# end
-# end
-
 make_countries
 top20
 gtours

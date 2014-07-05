@@ -7,6 +7,7 @@ class CreateAdventures < ActiveRecord::Migration
       t.belongs_to :city
       t.text :map_url
       t.text :image_url
+
       t.timestamps
     end
   end

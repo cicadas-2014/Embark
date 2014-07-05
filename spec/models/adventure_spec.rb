@@ -1,5 +1,39 @@
-require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe Adventure, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe "Adventure" do
+  before(:each) do
+    Adventure.create( name: 'New Jersey',
+                  	  scope: 'local')
+  end
+
+  describe "User can view 3 options in the form page"  do
+    it "by visiting the homepage" do
+      visit root_path
+      expect(index).to have_style(".")
+    end
+
+    it "asks the user to choose an adventure" do
+      visit root_path
+      expect(page).to have_content("Choose an adventure")
+    end
+  end
+
+  describe "User can click on an adventure that" do
+    it "redirects to the show page" do
+      visit stories_all_path 
+      expect(response).to redirect_to '/adventures'
+    end
+  end
+
+  describe "User can view all adventures of a specific scope" do
+    it "by clicking on a scope in the forms" do
+      visit adventures_all_path
+      expect(response.status).to eq 200
+    end
+  end
+
+  it "had a method to add a user" do 
+    visit root_path
+    expect(respons).to equal('root_path')
+  end
 end
