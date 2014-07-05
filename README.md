@@ -1,4 +1,4 @@
-<h1>embark</h1>
+embark
 ====
 A travel app that allows users to find adventure. 
 
