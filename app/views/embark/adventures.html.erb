@@ -1,5 +1,46 @@
-<<<<<<< HEAD
+<div id="logo">
+  embark
+</div>
 
-<%= find_images_of 'barack' %> 
-=======
->>>>>>> 7da359cfa504763cfc8189586c5dcc047510235b
+<div class='filters'>
+<form method=post id='test'>
+  <select name='test' onchange="this.up('form').id = this.value;">
+    <%@categories.each do |cat|%>
+      <option value=1><%=cat%></option>
+    <%end%>
+  </select>
+</form>
+<form method=post id='test'>
+  <select name='test' onchange="this.up('form').id = this.value;">
+    <%@categories.each do |cat|%>
+      <option value=1><%=cat%></option>
+    <%end%>
+  </select>
+</form>
+<form method=post id='test'>
+  <select name='test' onchange="this.up('form').id = this.value;">
+    <%@categories.each do |cat|%>
+      <option value=1><%=cat%></option>
+    <%end%>
+  </select>
+</form>
+</div>
+
+<section class="module">
+  <section class="wraper"> 
+    <%@photos.each do |photo|%>
+      <figure class='small'>
+          <a href="">
+            <img src=<%=photo%> alt="">
+          </a>
+          <figcaption class="transition-050 opacity85">
+            <a href="">
+              <strong class="text transition-050 title">Adventure</strong>
+              <span class="text transition-050 desc">Cool Stuff</span>
+            </a>
+          </figcaption>
+      </figure>
+    <%end%>
+  </section>
+</section>
+

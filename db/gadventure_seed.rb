@@ -25,8 +25,6 @@ def gAdveturesAddUrls(url, adventuresUrls = []) #Retrieving the urls for all the
     adventuresUrls = gAdveturesAddUrls(results['links'][0]['href'],adventuresUrls)#recursivly calls method to move on to the next page of requests
   end
 
-
-
   def SaveToCSV(data)
     CSV.open('db/gtours.csv', 'a') do |csv|
       csv << data
