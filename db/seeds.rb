@@ -82,7 +82,7 @@ def gtours
     num += 1
     tours << tour
     make_tour(tour)
-    sleep(0.1)
+    # sleep(0.1)
   end
 end
 def make_tour(tour)
@@ -94,7 +94,7 @@ def make_tour(tour)
    category = Category.find_or_create_by(name:cat) unless cat.match(/\d/)
    CategoryAdventure.create(category: category, adventure: adventure)
  end
- # add_image(adventure)
+ add_image(adventure)
 end
 def make_city(city_name)
   city = City.find_by(name: city_name) 
