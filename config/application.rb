@@ -16,6 +16,7 @@ Bundler.require(*Rails.groups)
 
 module Embark
   class Application < Rails::Application
+    SafeYAML::OPTIONS[:default_mode] = :safe
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

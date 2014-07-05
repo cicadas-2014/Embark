@@ -4,6 +4,7 @@ require 'rails_helper'
         expect(Category.new()).to be_valid
   	  end
 
+<<<<<<< HEAD
       it "is invalid without a description" do 
         expect(category.description).to exist
       end
@@ -24,4 +25,9 @@ require 'rails_helper'
         expect(category.name).to be_a(string)
       end
     end
+=======
+RSpec.describe Category, :type => :model do
+
+
+>>>>>>> d2c6e71a04ad1d6c33388309acea75d2778fc13f
 end
