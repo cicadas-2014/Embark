@@ -1,5 +1,20 @@
 require 'rails_helper'
+    describe Country do 
+      it "has a valid id" do
+      end
 
+<<<<<<< HEAD
+      it "is invalid without a name" do
+      end
+
+      it "is invalid without a geolocation" do
+      end
+
+      it "returns a country's full name as a string" do
+      end
+      
+    end
+=======
 RSpec.describe Country, :type => :model do
   
   # context "when Country is invalid" do
@@ -24,4 +39,5 @@ RSpec.describe Country, :type => :model do
 
   # end
 
+>>>>>>> d2c6e71a04ad1d6c33388309acea75d2778fc13f
 end
