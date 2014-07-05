@@ -13,3 +13,73 @@
  *= require_tree .
  *= require_self
  */
+
+
+.transition-050 {
+  -moz-transition: 0.50s;
+  -webkit-transition: 0.50s;
+  -ms-transition: 0.50s;
+  -o-transition: 0.50s;
+  transition: 0.50s;
+}
+.opacity85{ 
+  opacity: 0.75; 
+  filter: alpha(opacity=85); 
+}
+body { 
+  background-color:black; 
+  color:#eee
+}
+.module { 
+  max-width: 100%; 
+  margin:auto;
+  display: inline-block;
+}
+.module figure {
+  position: relative;
+  overflow: hidden;
+  border:2px solid #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.module .small {
+  float: left;
+  width: 32%;
+  height: 300px;
+  margin: 5px;
+}
+.module figure img {
+  width: 100%;
+   float: left;
+  height: 100%;
+}
+.module figcaption {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  max-height: 27px;
+}
+.module .text {
+  color: #7A8B8B;
+  background-color: black;
+  font-size:0.90em;
+}
+.module figure:hover figcaption { max-height: 100%;}
+.module figure:hover figcaption .text {
+  background-color: black;
+  color:#fff;
+}
+.module figcaption a { display: block; text-decoration:none; }
+.module .title {
+  display: inline-block;
+  padding: 5px;
+  text-transform:uppercase;  
+}
+.module .desc {
+  display: block;
+  padding: 10px;
+}
+.bgcolor {
+  background-color: #fff;
+}
