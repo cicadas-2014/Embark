@@ -1,10 +1,11 @@
-<div id="logo">
+<div id="embark">
   embark
 </div>
 
 <div class='filters'>
 <form method=post id='test'>
   <select name='test' onchange="this.up('form').id = this.value;">
+    <option value=1>Category</option>
     <%@categories.each do |cat|%>
       <option value=1><%=cat%></option>
     <%end%>
@@ -12,18 +13,13 @@
 </form>
 <form method=post id='test'>
   <select name='test' onchange="this.up('form').id = this.value;">
-    <%@categories.each do |cat|%>
+    <option value=1>Duration</option>
+    <%@durations.each do |cat|%>
       <option value=1><%=cat%></option>
     <%end%>
   </select>
 </form>
-<form method=post id='test'>
-  <select name='test' onchange="this.up('form').id = this.value;">
-    <%@categories.each do |cat|%>
-      <option value=1><%=cat%></option>
-    <%end%>
-  </select>
-</form>
+
 </div>
 
 <section class="module">
