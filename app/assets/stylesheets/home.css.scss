@@ -11,6 +11,10 @@ body {
 	z-index: -1;
 	opacity: 0;
 }
+#background img{
+	height: 100%;
+	width:100%;
+}
 #search {
 	margin: 0px auto;
 	width: 400px;
@@ -29,8 +33,8 @@ body {
 	font-size: 18px;
 
 
-	box-shadow: inset 0px 1px 0px 0px #f9eca0;
-	background-color: #f0c911;
+	box-shadow: inset 0px 1px 0px 0px white;
+	background-color: black;
 
 	border-top-left-radius: 300px;
 	border-top-right-radius: 300px;
@@ -39,7 +43,7 @@ body {
 	border: none;
 	
 
-	color: #c92200;
+	color: #66FFFF;
 	font-weight: bold;
 	line-height: 30px;
 	text-align: center;
@@ -49,6 +53,7 @@ body {
 }
 
 #logo {
+	text-shadow:-6px 6px black, 0px 0px black, 1px -1px black, 0px 0px black;
 	font-size: 130px;
 	color: #66FFFF;
 	width: 800px;

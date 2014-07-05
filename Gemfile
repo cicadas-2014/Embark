@@ -26,7 +26,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
-gem 'json'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'curl'
@@ -44,8 +43,6 @@ gem 'travis-lint'
 gem 'httparty'
 
 gem 'simplecov', :require => false, :group => :test
-
-
 
 #use geocoder to find location of user
 gem 'geocoder'
