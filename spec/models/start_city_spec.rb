@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe StartCity, :type => :model do
+# RSpec.describe StartCity, :type => :model
 
-end
+

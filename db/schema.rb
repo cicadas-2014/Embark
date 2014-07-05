@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140704190737) do
     t.integer  "duration"
     t.integer  "city_id"
     t.text     "map_url"
+    t.text     "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,6 +42,8 @@ ActiveRecord::Schema.define(version: 20140704190737) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
+    t.string   "longitude"
+    t.string   "latitude"
     t.integer  "country_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -48,6 +51,7 @@ ActiveRecord::Schema.define(version: 20140704190737) do
 
   create_table "countries", force: true do |t|
     t.string   "name"
+    t.string   "code"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -61,6 +65,9 @@ ActiveRecord::Schema.define(version: 20140704190737) do
 
   create_table "images", force: true do |t|
     t.text     "url"
+    t.string   "longitude"
+    t.string   "latitude"
+    t.integer  "adventure_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
