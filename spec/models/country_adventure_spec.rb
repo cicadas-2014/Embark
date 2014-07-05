@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-# RSpec.describe CountryAdventure, :type => :model do
-
-# end
+describe CountryAdventure do
+	it "should link the country and adventure pages"
+		expect(country.adventure).to exist
+	end
+end
