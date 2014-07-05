@@ -1,0 +1,14 @@
+<script>var advId=<%= @adventure.id %></script>
+
+<button id="delete_pictures">delete pictures</button>
+<button id="delete_adventure">delete adventrue</button>
+<p class="description"><span>description:</span> <%= @adventure.description %></p>
+<p class="title"><span>title:</span> <%= @adventure.name %></p>
+<p class="category"><span>category:</span> 
+<% @adventure.categories.each do|x| %>
+	<span id="cat"><%= x.name %></span>
+<% end %>
+</p>
+<% @adventure.images.each do |image| %>
+	<img src="<%= image.url %>" id="<%= image.id %>">
+<% end %>
