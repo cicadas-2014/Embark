@@ -1,5 +1,4 @@
 require 'rails_helper'
-RSpec.describe Category, :type => :model do
     describe Category do
  
       it "has a valid category" do
@@ -25,6 +24,4 @@ RSpec.describe Category, :type => :model do
       it "returns a category's full name as a string" do 
         expect(category.name).to be_a(string)
       end
-    end
   end
-end

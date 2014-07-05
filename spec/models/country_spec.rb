@@ -1,25 +1,23 @@
-RSpec.describe Country, :type => :model do
-  
 require 'rails_helper'
-    describe Country do 
-     before(:each) do
-    Country.create( name: 'Indonesia')
+
+describe Country do
+
+  let(:country) { build(:country) }
+
+  it "should be vaild" do
+    expect(country).to be_valid
   end
-      it "has a valid id" do
-        expect(country.id).to exist
-      end
 
-      it "is invalid without a name" do
-        expect(country.name).to exist
-      end
+  it "is invalid without a name" do
+    expect(build(:country, name: nil)).to have(1).errors_on(:name)
+  end
 
-      it "is invalid without a geolocation" do
-        expect(country.geolocation).to exist
-      end
+  it "is invalid without a description" do
+    expect(build(:country, description:nil)).to have(1).errors_on(:description)
+  end
 
-      it "returns a country's full name as a string" do
-        expect(country).to be_a(string)
-      end
-      end      
-    end
+  it "cannot have a duplicate name" do
+    create(:country, name: "Argentina")
+    expect(build(:country, name: "Argentina")).to have(1).errors_on(:name)
+  end
 end

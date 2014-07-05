@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe Adventure, type: :model do
-  let(:adventure) {Adventure.create(name: 'Awesome adventure', description: 'This is a awesome adventure with a loong description', duration:12,city_id:1)}
 describe "Adventure" do
   before(:each) do
     Adventure.create( name: 'Jarkata',
@@ -15,12 +13,7 @@ describe "Adventure" do
       expect(body).to have_field("Continental")
       expect(body).to have_field("Global")
     end
-
-  #   it "asks the user to choose an adventure" do
-  #     visit root_path
-  #     expect(page).to have_content("Choose an adventure")
-  #   end
-  # end
+  end
 
   describe "User can click on an adventure that" do
     it "redirects to the adventures page" do

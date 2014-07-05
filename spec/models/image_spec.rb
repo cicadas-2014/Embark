@@ -1,23 +1,11 @@
-require 'spec_helper'
 require 'rails_helper'
-RSpec.describe Image, :type => :model do
 
-describe "Image" do
-  before(:each) do
-    Image.find(id=1)
+describe Image do
+  it "has a valid background-image" do
+    expect(build(:image)).to be_valid
   end
 
-  describe "User can view image"  do
-    it "by visiting the homepage" do
-      visit root_path
-      expect(body).to return("Image")
-    end
-  end
-end
-
-    it "Image" do
-      visit root_path
-      expect(page).to have_content("Choose an Image")
-    end
+  it "is invalid without content" do
+    expect(build(:image, content: nil)).to have(1).errors_on(:content)
   end
 end

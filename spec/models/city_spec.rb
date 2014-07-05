@@ -1,14 +1,23 @@
 require 'rails_helper'
+    describe City do
+ 
+      it "has a valid city" do
+        expect(city.new()).to be_valid
+  	  end
 
+      it "is invalid without a description" do 
+        expect(city.description).to exist
+      end
 
-RSpec.describe City, :type => :model do
-describe 'city' do
-  context 'the country has a city' do
-    visit start_city_path
+      it "is invalid without a city" do 
+        expect(city.country).to exist
+      end
 
-    fill_in 'Name', with: 'Jarkata'
-    click_button 'Set Start_city'
+      it "is invalid without an name" do
+        expect(city.name).to exist
+      end
 
-    expect(page).to have_css '.start-city', 'Jarkata'
+      it "returns a city's full name as a string" do 
+        expect(city.name).to be_a(string)
+      end
   end
-end
