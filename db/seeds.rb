@@ -12,7 +12,7 @@ def seedPictures(coords,start)
   url="http://www.panoramio.com/map/get_panoramas.php"
   set="set=public"
   from="from=#{start}"
-  to="to=#{start+100}"
+  to="to=#{start+30}"
   minx="minx=#{(coords[1].to_i)-0.3}"
   miny="miny=#{(coords[0].to_i)-0.3}"
   maxx="maxx=#{(coords[1].to_i)+0.3}"
@@ -37,8 +37,8 @@ def loopPages(coords,urls,posittion=0, page=0)
   response["photos"].each do |photo|
     urls << [photo["photo_file_url"],photo["latitude"], photo["longitude"] ]
   end
-  return urls unless response['has_more'] || page < 1
-  urls = loopPages(coords,urls,posittion+100,page+=1)
+  return urls #unless response['has_more'] || page < 1
+  # urls = loopPages(coords,urls,posittion+100,page+=1)
 end
 
 def getImages(city)
@@ -109,7 +109,7 @@ def add_image(adventure)
   getImages(city).each do |image|
     $image_num += 1
     puts "Image number: #{$image_num}, city: #{city.name}, adventure name: #{adventure.name}"
-    Image.create(url: image[0], latitude: image[1], longitude: image[2], city_id: city.id)
+    Image.create(url: image[0], latitude: image[1], longitude: image[2], adventure_id: adventure.id)
   end
 end
 

@@ -4,8 +4,8 @@ class CreateImages < ActiveRecord::Migration
       t.text :url
       t.string :longitude
       t.string :latitude
-      t.belongs_to :city
-      
+      t.belongs_to :adventure
+
       t.timestamps
     end
   end
