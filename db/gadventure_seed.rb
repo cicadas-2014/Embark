@@ -1,7 +1,5 @@
 ### Accessing the G Adventures API. Grabbing data on tour names, duration, descriptions, categories, 
 ### cities, visited countries, a map of the tour, and an image of the tour.
-
-
 require 'json'
 require 'csv'
 require 'curb'
