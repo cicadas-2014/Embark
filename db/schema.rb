@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 20140704190737) do
     t.string   "name"
     t.text     "description"
     t.integer  "duration"
-    t.integer  "city_id"
     t.text     "map_url"
     t.text     "image_url"
+    t.integer  "city_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
