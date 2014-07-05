@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 require 'spec_helper'
+require 'rails_helper'
+RSpec.describe Image, :type => :model do
 
 describe "Image" do
   before(:each) do
@@ -11,15 +12,8 @@ describe "Image" do
       visit root_path
       expect(body).to return("Image")
     end
-=======
-require 'rails_helper'
-
-RSpec.describe Image, :type => :model do
-
-
+  end
 end
-
->>>>>>> d2c6e71a04ad1d6c33388309acea75d2778fc13f
 
     it "Image" do
       visit root_path
