@@ -1,23 +1,23 @@
-# spec/views/products/_product.html.erb_spec.rb
+# # spec/views/products/_product.html.erb_spec.rb
 
-describe 'index.erb' do
-  context 'when the adventure has a url' do
-    it 'displays the url' do
-      assign(:adventure, build(:category, url: 'http://dustbowl.com')
+# describe 'index.erb' do
+#   context 'when the adventure has a url' do
+#     it 'displays the url' do
+#       assign(:adventure, build(:category, url: 'http://dustbowl.com')
 
-      render
+#       # render
 
-      expect(rendered).to have_link 'category', href: 'http://dustbowl.com'
-    end
-  end
+#       expect(rendered).to have_link 'category', href: 'http://dustbowl.com'
+#     end
+#   end
 
-  context 'when the product url is nil' do
-    it "displays 'none'" do
-      assign(:adventure, build(:category, url: nil)
+#   context 'when the product url is nil' do
+#     it "displays 'none'" do
+#       assign(:adventure, build(:category, url: nil)
 
-      render
+#       # render
 
-      expect(rendered).to have_content 'None'
-    end
-  end
-end
+#       expect(rendered).to have_content 'None'
+#     end
+#   end
+# end
