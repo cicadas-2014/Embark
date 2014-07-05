@@ -46,10 +46,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-<<<<<<< HEAD
-=======
     curb (0.8.5)
->>>>>>> 7da359cfa504763cfc8189586c5dcc047510235b
     curl (0.0.9)
       awesome_print (>= 0.2.1)
       unidecoder (>= 1.1.1)
@@ -63,15 +60,10 @@ GEM
     ffi (1.9.3)
     flickr (1.0.2)
       xml-simple (>= 1.0.7)
-    flickraw (0.9.8)
-<<<<<<< HEAD
-=======
-=======
     geocoder (1.2.2)
     google_custom_search_api (1.0.0)
       addressable
       httparty
->>>>>>> master
     hashr (0.0.22)
     hike (1.2.3)
     httparty (0.13.1)
@@ -195,26 +187,14 @@ PLATFORMS
 DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
-<<<<<<< HEAD
-=======
   curb
->>>>>>> 7da359cfa504763cfc8189586c5dcc047510235b
   curl
   database_cleaner
   faker
-<<<<<<< HEAD
   flickr
-  flickraw
-=======
-<<<<<<< HEAD
-  flickr
-  flickraw
-=======
   geocoder
   google_custom_search_api
   httparty
->>>>>>> 5a71929c3c94fd634d0262954bfaaf476f8e2e74
->>>>>>> master
   jbuilder (~> 2.0)
   jquery-rails
   json
