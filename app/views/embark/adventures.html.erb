@@ -1,10 +1,11 @@
-<div id="logo">
-  embark
+<div id="embark">
+  <a href="/">embark</a>
 </div>
 
 <div class='filters'>
 <form method=post id='test'>
   <select name='test' onchange="this.up('form').id = this.value;">
+    <option value=1>Category</option>
     <%@categories.each do |cat|%>
       <option value=1><%=cat%></option>
     <%end%>
@@ -12,25 +13,20 @@
 </form>
 <form method=post id='test'>
   <select name='test' onchange="this.up('form').id = this.value;">
-    <%@categories.each do |cat|%>
+    <option value=1>Duration</option>
+    <%@durations.each do |cat|%>
       <option value=1><%=cat%></option>
     <%end%>
   </select>
 </form>
-<form method=post id='test'>
-  <select name='test' onchange="this.up('form').id = this.value;">
-    <%@categories.each do |cat|%>
-      <option value=1><%=cat%></option>
-    <%end%>
-  </select>
-</form>
+
 </div>
 
 <section class="module">
   <section class="wraper"> 
     <%@photos.each do |photo|%>
       <figure class='small'>
-          <a href="">
+          <a href="/adventures/1">
             <img src=<%=photo%> alt="">
           </a>
           <figcaption class="transition-050 opacity85">
