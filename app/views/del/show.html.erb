@@ -1,14 +1,17 @@
 <script>var advId=<%= @adventure.id %></script>
-
-<button id="delete_pictures">delete pictures</button>
-<button id="delete_adventure">delete adventrue</button>
-<p class="description"><span>description:</span> <%= @adventure.description %></p>
-<p class="title"><span>title:</span> <%= @adventure.name %></p>
-<p class="category"><span>category:</span> 
-<% @adventure.categories.each do|x| %>
-	<span id="cat"><%= x.name %></span>
-<% end %>
-</p>
-<% @adventure.images.each do |image| %>
+<div id="del">
+	<button id="delete_pictures">delete pictures</button>
+	<button id="delete_adventure">delete adventure</button>
+	<p class="description"><span id="header">Description:</span> <%= @adventure.description %></p><% city = City.find(@adventure.city_id) %>
+	<p class="title"><span id="header">City:</span> <%= city.name %> -- <%= city.latitude %>, <%= city.longitude %></p>
+	<p class="title"><span id="header">Country:</span> <%= city.country.name %></p>
+	<p class="title"><span id="header">Title:</span> <%= @adventure.name %></p>
+	<p class="title"><span id="header">Category:</span> 
+		<% @adventure.categories.each do|x| %>
+		<span id="cat"><%= x.name %>, </span>
+		<% end %>
+	</p>
+	<% @adventure.images.each do |image| %>
 	<img src="<%= image.url %>" id="<%= image.id %>">
-<% end %>
+	<% end %>
+</div>

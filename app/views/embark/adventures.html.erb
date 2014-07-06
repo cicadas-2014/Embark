@@ -7,7 +7,7 @@
     <select name='test' onchange="this.up('form').id = this.value;">
       <option value=1>Category</option>
       <%@categories.each do |cat|%>
-      <option value=1><%=cat%></option>
+      <option value=1><%=cat.name%></option>
       <%end%>
     </select>
   </form>
@@ -31,7 +31,7 @@
       </a>
       <figcaption class="transition-050 opacity85">
         <a href="/adventures/<%=adv.id%>">
-          <strong class="text transition-050 title">Adventure</strong>
+          <strong class="text transition-050 title"><%=City.find(adv.city_id).name%></strong>
           <span class="text transition-050 desc"><%=adv.name%></span>
         </a>
       </figcaption>
