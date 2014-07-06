@@ -11,14 +11,14 @@ function getUserLocation(search) {
 			var lat = position.coords.latitude;
 			var lon = position.coords.longitude;
 			console.log(search+'&latitude='+lat+'&longitude='+lon);
-		 window.location = search+'&latitude='+lat+'&longitude='+lon;
+			window.location = search+'&latitude='+lat+'&longitude='+lon;
 		},displayError);
 	} else {
 		document.getElementById('locationData').innerHTML = "Sorry - your browser doesn't support geolocation!";
 	}
 }
 function redirect(position, search){
-		
+
 }
 function displayError(error){
 	var locationElement = document.getElementById("locationData");
@@ -41,23 +41,42 @@ function displayError(error){
 	}
 }
 
-
 ready = function(){
-	var speed = 800
-	$('#background').stop().fadeTo(speed*4,0.7)
-	$('a').hover(function(){
-		console.log(true)
-		$('#background').stop().fadeTo(speed,0.9)
+	var speed = 1200
+	startAnimation(speed)
+	buttonEffects(speed)
 
-	},function(){
-		$('#background').stop().fadeTo(speed*2,0.7)
-		})
+};
 
-	$('#search a').on('click',function(e){
+function startAnimation(speed){
+	$('#home a').hide();
+	$('#home #logo').fadeTo(speed,1)
+	setTimeout(function() {
+		$('#home #logo').animate({
+			'font-size':'100px',
+			'letter-spacing': '0.1em'
+		},speed*2)
+		$('#home #background').stop().fadeTo(speed*2,1)
+		setTimeout(function() {
+			$('#home a').fadeTo(speed,1)
+		},speed*1.5)
+	},speed)
+}
+function buttonEffects(speed){
+	$('#home a').hover(function(){
+    $('#home #background').stop().fadeTo(speed/2,0.6)
+  },function(){
+    $('#home #background').stop().fadeTo(speed/2,1)
+  })
+
+	$('#home #search a').on('click',function(e){
 		e.preventDefault();
 		getUserLocation($(this).attr('href'))
 	})
-};
+}
+
+
+
 $(document).ready(ready)
 $(document).on('page:load', ready);
 
