@@ -1,27 +1,23 @@
 require 'rails_helper'
 
-RSpec.describe Country, :type => :model do
-  
-  # context "when Country is invalid" do
+describe Country do
 
-  #   it "with no Country" do
-  #     expect(build(:country, score: nil)).to have(1).errors_on(:country)
-  #   end
+  let(:country) { Country.create({name: "Jarkata"}) }
 
-  #   it "with a country of over 200 million" do
-  #     expect(build(:country, score: 'a'*200)).to be_valid
-  #   end
+  it "should be vaild" do
+    expect(country).to be_valid
+  end
 
-  #   it "with an anecdote of over 201 characters" do
-  #     expect(build(:story, anecdote: 'a'*201)).to have(1).errors_on(:anecdote)
-  #   end
-  # end
+  it "is invalid without a name" do
+    expect(Country.create({ name: nil})).to eq(1).errors_on(:name)
+  end
 
-  # context "when anecdote is valid" do
-  #   it "belongs to a color" do
-  #     expect(build(:story)).to respond_to :color
-  #   end
+  it "is invalid without a description" do
+    expect(build(:country, description:nil)).to eq(1).errors_on(:description)
+  end
 
-  # end
-
+  it "cannot have a duplicate name" do
+    create(:country, name: "Argentina")
+    expect(build(:country, name: "Argentina")).to eq(1).errors_on(:name)
+  end
 end
