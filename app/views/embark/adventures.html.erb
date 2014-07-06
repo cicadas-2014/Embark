@@ -3,39 +3,39 @@
 </div>
 
 <div class='filters'>
-<form method=post id='test'>
-  <select name='test' onchange="this.up('form').id = this.value;">
-    <option value=1>Category</option>
-    <%@categories.each do |cat|%>
-      <option value=1><%=cat%></option>
-    <%end%>
-  </select>
-</form>
-<form method=post id='test'>
-  <select name='test' onchange="this.up('form').id = this.value;">
-    <option value=1>Duration</option>
-    <%@adventures.each do |cat|%>
+  <form method=post id='test'>
+    <select name='test' onchange="this.up('form').id = this.value;">
+      <option value=1>Category</option>
+      <%@categories.each do |cat|%>
+      <option value=1><%=cat.name%></option>
+      <%end%>
+    </select>
+  </form>
+  <form method=post id='test'>
+    <select name='test' onchange="this.up('form').id = this.value;">
+      <option value=1>Duration</option>
+      <%@adventures.each do |cat|%>
       <option value=1><%=cat.duration%></option>
-    <%end%>
-  </select>
-</form>
+      <%end%>
+    </select>
+  </form>
 
 </div>
 
 <section class="module">
   <section class="wraper"> 
     <%@adventures.each do |adv|%>
-      <figure class='small'>
-          <a href="/adventures/1">
-            <img src=<%=adv.image_url%> alt="">
-          </a>
-          <figcaption class="transition-050 opacity85">
-            <a href="">
-              <strong class="text transition-050 title">Adventure</strong>
-              <span class="text transition-050 desc"><%=adv.name%></span>
-            </a>
-          </figcaption>
-      </figure>
+    <figure class='small'>
+      <a href="/adventures/<%=adv.id%>">
+        <img src=<%=adv.image_url%> alt="">
+      </a>
+      <figcaption class="transition-050 opacity85">
+        <a href="/adventures/<%=adv.id%>">
+          <strong class="text transition-050 title">Adventure</strong>
+          <span class="text transition-050 desc"><%=adv.name%> <br>tmp(city:<%=City.find(adv.city_id).name%>)</span>
+        </a>
+      </figcaption>
+    </figure>
     <%end%>
   </section>
 </section>
