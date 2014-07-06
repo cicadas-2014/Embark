@@ -28,7 +28,6 @@ class EmbarkController < ApplicationController
 				end
 			end
 		end
-		p '*'*100
 		@categories = Category.all
 		@adventures = valid_adventures.sample(27)
 	end

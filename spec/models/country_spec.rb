@@ -1,23 +1,18 @@
 require 'rails_helper'
 
-describe Country do
-
-  let(:country) { Country.create({name: "Jarkata"}) }
-
-  it "should be vaild" do
+RSpec.describe Country, :type => :model do
+  let(:country) {Country.create(name:'Norway',code:'NO')}
+  
+  it "should be valid" do
     expect(country).to be_valid
   end
 
-  it "is invalid without a name" do
-    expect(Country.create({ name: nil})).to eq(1).errors_on(:name)
+  it "belongs to a country" do
+    expect(country).to respond_to :name
   end
 
-  it "is invalid without a description" do
-    expect(build(:country, description:nil)).to eq(1).errors_on(:description)
+  it "belongs to an adventure" do
+    expect(country).to respond_to :code
   end
-
-  it "cannot have a duplicate name" do
-    create(:country, name: "Argentina")
-    expect(build(:country, name: "Argentina")).to eq(1).errors_on(:name)
-  end
+  
 end
