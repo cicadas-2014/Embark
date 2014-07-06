@@ -1,23 +1,21 @@
 <div id='descridivtion_title'><p>embark</p></div>
 
 <ul id="gallery">
-<li><a>
-<img src="<%= @adventure.images.first.url %>" alt="#1" title="#1" /></a></li>
-<li><a>
-<img src="<%= @adventure.images[1].url %>"/></a></li>
-<li><a>
-<img src="<%= @adventure.images[2].url %>"/></a></li>
-<li><a>
-<img src="<%= @adventure.images[3].url %>"/></a></li>
-<li><a>
-<img src="<%= @adventure.images[4].url %>"/></a></li>
-<li><a>
-<img src="<%= @adventure.images[5].url %>"/></a></li>
+<li><img src="<%= @adventure.image_url %>" alt="#1" title="#1" /></li>
+<% images = [] %>
+<% 5.times do %>
+<% images << @adventure.images.first if @adventure.images %>
+<% end %>
+<% p images %>
+<% images.each do |image| %>
+	<li><img src="<%= image.url %>"/></li> 
+<% end %>
+
 </ul>
 
 <div id='description'>
-<header></header>
-<p><%= @adventure.description %></p>
+	<header>Description</header>
+	<p><%= @adventure.description %></p>
 </div>
 
 

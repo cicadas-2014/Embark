@@ -3,7 +3,6 @@ require 'spec_helper'
 RSpec.describe EmbarkController, :type => :controller do
   # let!(:application) { create :application }
 
-
   describe "GET#home" do
     it "is successful" do
       get :home
