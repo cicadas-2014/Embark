@@ -58,8 +58,8 @@ def top20
   sliced = adventures.each_slice(5)
   sliced.each do |s|
     adventure = Adventure.create(name: s[0][0], duration: s[2][0].to_i, description: s[3][0], image_url: s[4][0])
-    puts s[4][0]
-    country = Country.find_by(name: s[1][0])
+    # puts s[4][0]
+    # country = Country.find_by(name: s[1][0])
     # CountryAdventure.create(country: country, adventure: adventure)
   end
 end

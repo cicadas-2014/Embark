@@ -19,10 +19,14 @@ class EmbarkController < ApplicationController
 				city = City.find(adv.city_id)
 				possition = [city.latitude, city.longitude]
 				if possition[0].to_i - location[0].to_i+distance < distance*2 && possition[0].to_i - location[1].to_i+distance < distance*2
-					valid_adventures << adv
+					unless adv.image_url == "nil"
+						valid_adventures << adv
+					end
 				end
 			end
 		end
+		p '*'*100
+		p valid_adventures.length
 		@categories = Category.all
 		@adventures = valid_adventures.sample(27)
 	end
