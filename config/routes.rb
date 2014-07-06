@@ -6,4 +6,5 @@ get '/adventures/:adventure_id', to: 'embark#description', as: 'description'
 
 resources :del
 
+
 end

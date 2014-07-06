@@ -1,5 +1,4 @@
 body {
-	color: red;
 	background-color: black;
 }
 #background {
@@ -18,47 +17,48 @@ body {
 #search {
 	margin: 0px auto;
 	width: 400px;
+	position: absolute;
+	left: 12%;
+	top:40%;
 }
 
 #search a {
 	margin: 0px auto;
 	margin-top: 30px;
 	padding: 3px;
-	height: 30px;
-	width: 250px;
+	height: 40px;
+	width: 275px;
 	display: block;
 	
 	text-decoration: none;
 
-	font-size: 18px;
+	font-size: 25px;
 
 
 	box-shadow: inset 0px 1px 0px 0px white;
 	background-color: black;
-
-	border-top-left-radius: 300px;
-	border-top-right-radius: 300px;
-	border-bottom-right-radius: 300px;
-	border-bottom-left-radius: 300px;
-	border: none;
+	border-radius: 5px;
+	border: #50C0A0 1px solid;
 	
 
-	color: #66FFFF;
+	color: #50C0A0;
 	font-weight: bold;
 	line-height: 30px;
 	text-align: center;
 }
 #search a:hover {
-	background-color:#f2ab1e;
+	background-color:#66FFFF;
+	color:black;
 }
 
 #logo {
 	text-shadow:-6px 6px black, 0px 0px black, 1px -1px black, 0px 0px black;
-	font-size: 130px;
-	color: #66FFFF;
+	font-size: 150px;
+	color: #50C0A0;
 	width: 800px;
 	margin: 0px auto;
 	margin-top:50px;
-
-	text-align:center;
+	top:10%;
+	position:absolute;
+	left:10%;
 }
