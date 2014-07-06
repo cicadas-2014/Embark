@@ -1,191 +1,54 @@
-body {
-	background-color: black;
-}
+$backgorundColor:#000000;
+$borderColor:#eee;
+$fillColor:#FFEFD5;
+$textColor:#000000;
+$errorColor:red;
 
-div#search{
-	transition-property: opacity;
-    transition-duration: 4s;
-    margin: auto auto;
-    
-}
-
-
-#background {
+#home #background {
 	position: fixed;
 	height: 100%;
 	width:100%;
 	left: 0;
 	top: 0;
-	z-index: -1;
+	z-index: -2;
 	opacity: 0;
-
-
 }
-#background img{
+#home #blurdiv {
+    position: fixed;
+    height: 100%;
+    width:100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+}
+#home #background img {
 	height: 100%;
 	width:100%;
 }
-/*!
-Pure v0.5.0
-Copyright 2014 Yahoo! Inc. All rights reserved.
-Licensed under the BSD License.
-https://github.com/yui/pure/blob/master/LICENSE.md
-*/
 
-
-.pure-button {
-    /* Structure */
-    border-style:solid;
- 	border-width:15px;
+#home a {
+    width: 400px;
+    height: 50px;
+    font-size: 40px;
     display: block;
-    *display: inline; /*IE 6/7*/
-    zoom: 1;
-    width: 10em;
-    margin-left: 5em;
-	margin-top:2em;
-    line-height: normal;
-    white-space: nowrap;
-    vertical-align: baseline;
+    margin: 20px auto;
     text-align: center;
-    cursor: pointer;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    position: relative;
- 	top: 4.5em;
- 	
-
-}
-
-/* Firefox: Get rid of the inner focus border */
-.pure-button::-moz-focus-inner {
-    padding: 0;
-    border: 1px;
-}
-
-/*csslint outline-none:false*/
-
-
-.pure-button {
-    font-family: 'Karla', "arial", sans-serif;
-    font-size: 160%;
-    *font-size: 160%; /*IE 6/7 - To reduce IE's oversized button text*/
-    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
-    padding: 0.5em 1em;
-    color: #5F9EA0; /* rgba not supported (IE 8) */
-    color: rgba(0, 0, 0, 0.80); /* rgba supported */
-    *color: #444; /* IE 6 & 7 */
-    border: 1px solid #999;  /*IE 6/7/8*/
-    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
-    background-color: #66CDAA;
     text-decoration: none;
-    border-radius: 2px;
-    letter-spacing:3px;
+    background-color: $fillColor;
+    color: $textColor;
+    border-radius: 5px;
+    opacity: 0;
 }
 
-.pure-button-hover,
-.pure-button:hover,
-.pure-button:focus {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
-    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
-    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.10));
-    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
-    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
-
-}
-.pure-button:focus {
-    outline: 0;
-}
-.pure-button-active,
-.pure-button:active {
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
-}
-
-.pure-button[disabled],
-.pure-button-disabled,
-.pure-button-disabled:hover,
-.pure-button-disabled:focus,
-.pure-button-disabled:active {
-    border: none;
-    background-image: none;
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-    filter: alpha(opacity=40);
-    -khtml-opacity: 0.40;
-    -moz-opacity: 0.40;
-    opacity: 0.40;
-    cursor: not-allowed;
-    box-shadow: none;
-}
-
-.pure-button-hidden {
-    display: none;
-}
-
-/* Firefox: Get rid of the inner focus border */
-.pure-button::-moz-focus-inner{
-    padding: 0;
-    border: 0;
-}
-
-.pure-button-primary,
-.pure-button-selected,
-a.pure-button-primary,
-a.pure-button-selected {
-    background-color: #FFEFD5;
-    color: black;
-}
-
-// a.button{
-// 	text-align: center;
-// 	border-radius: 13px;
-// 	padding: 8px 22px;
-// 	display: block;
-// 	background: #00FFFF;
-// 	font-family: georgia;
-// 	font-weight: bold;
-// 	color:#7f7f7f;
-// 	text-decoration: none;
-// 	text-shadow:0px 1px 0px #fff;
-// 	border:1px solid #a7a7a7;
-// 	width: 250px;
-// 	margin-left: 15%;
-// 	margin-top:100px;
-// 	box-shadow: 0px 2px 1px #222, 
-// 	0px -2px 8px white, 
-// 	0px 2px 5px rgba(0, 0, 0, 0.1), 
-// 	0px 8px 10px rgba(0, 0, 0, 0.1);
-// 	-webkit-transition:box-shadow 0.5s;
-// }
-a.button i{
-	float: right;
-	margin-top: px;
-}
-
-a.button:hover{
-	box-shadow: 0px 2px 1px #bbb, 
-	0px -2px 20px white;
-}
-a.button:active{
-	background:-webkit-linear-gradient(top, #47B2B2 0%,#85FFFF 100%);
-}
-
-#logo {
+#home #logo {
 	font-weight:bold;
     text-align: center;
-     position: relative;
- 	 top: 10px;
-	font-family: 'Raleway', sans-serif;
-	font-size: 100px;
-	letter-spacing: 0.3em;
-	color: white; 
-// 	   border-style:solid;
-// 		border-color:white;
-// 		border-width:4px;
-}
-
-.home {
-	margin: 0 auto;
+    position: relative;
+    top: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 200px;
+    letter-spacing: 0.3em;
+    color: $fillColor; 
+    opacity: 0;
 }

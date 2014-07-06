@@ -1,24 +1,27 @@
-
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
-<div class='home'>
-<div id="logo">
-<p> Embark </p>
+<div id='home'>
+	<div id="logo">
+		<p> Embark </p>
+	</div>
+	<div id="search">
+		<%= link_to "Local", adventures_path(search: "local"), class: 'button' %>
+		<%= link_to "Continential", adventures_path(search: "continential"), class: 'button'%>
+		<%= link_to "Global", adventures_path(search: "global"), class: 'button' %>
+	</div>
+	<div id="background">
+		<%= image_tag('https://m1.behance.net/rendition/modules/82977983/disp/9458de8774adbcf5d6c33b40547f7198.gif') %>
+	</div>
 </div>
 
 
-<div id="search">
-<%= link_to "Local", adventures_path(search: "local"), class: 'button' %>
-<%= link_to "Continential", adventures_path(search: "continential"), class: 'button'%>
-<%= link_to "Global", adventures_path(search: "global"), class: 'button' %>
-
-</div>
-<div id='loca'></div>
-<div id="background">
 
 
-	<%= image_tag('https://m1.behance.net/rendition/modules/82977983/disp/9458de8774adbcf5d6c33b40547f7198.gif') %>
-</div>
+
+
+
+
+
 <!-- 
 
 http://i.minus.com/ibhwZcRDlyU6LG.gif
