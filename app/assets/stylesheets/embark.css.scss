@@ -83,7 +83,9 @@ body {
 body {
   background: black;
 }
-
+.adventure_info {
+  width:100%;
+}
 #description {
   margin: 1%;
   padding: 1% 2%;
@@ -93,72 +95,44 @@ body {
   border: 1px solid white;
   height: 350px;
   float:left;
-  width: 65%;
+  width: 58%;
   color: white;
   border-radius: 15px;
 }
 
-#adventure_map {
+#adventure_map img{
   margin-top: 1%;
+  margin-left:1%;
   border: 1px solid white;
   height: 350px;
-  float: right;
-  width: 33%;
-  color: white;
+  width: 38%;
+
 }
 
-#gallery {
-  margin: 2% auto; 
-  list-style-type:none; 
-  overflow:hidden; 
-  height:540px; 
-  width:900px;
-  background: #000 url(http://images5.alphacoders.com/293/293505.jpg);
+div.show_images {
+  margin-top: 30px;
+  width: 100%;
+  border: 2px solid white;
+  clear: both;
 }
-#gallery li {
-  float:right;
-  display:block;
-  border: 1px solid white;
+
+#adventure_images {
+  width:100;
+  margin:0;
+  padding:0;
 }
-#gallery li a {
-  display:block;
-  width:60px;
-  height:540px; 
-  -webkit-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
+.smallimage {
+  width:auto;
+  height:150px;
 }
-#gallery li a img {
-  background: #fff;
-  padding: 5%;
-  height:540px; 
-  width:60px; 
-  border:0;
-  -webkit-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
+
+#main_image {
+
+  width:100%;
+  height: auto;
 }
-#gallery li a:hover {
-  background:#eee; 
-  width:478px;
-  -webkit-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
-}
-#gallery li a:hover img {
-  width:478px;
-  -webkit-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
-}
+
+
 .filters{
   display: inline-block;
   position: absolute;

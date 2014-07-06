@@ -45,7 +45,7 @@ ready = function(){
 	var speed = 1200
 	startAnimation(speed)
 	buttonEffects(speed)
-
+	imageGallery();
 };
 
 function startAnimation(speed){
@@ -64,16 +64,25 @@ function startAnimation(speed){
 }
 function buttonEffects(speed){
 	$('#home a').hover(function(){
-    $('#home #background').stop().fadeTo(speed/2,0.6)
-  },function(){
-    $('#home #background').stop().fadeTo(speed/2,1)
-  })
+		$('#home #background').stop().fadeTo(speed/2,0.6)
+	},function(){
+		$('#home #background').stop().fadeTo(speed/2,1)
+	})
 
 	$('#home #search a').on('click',function(e){
 		e.preventDefault();
 		getUserLocation($(this).attr('href'))
 	})
-}
+};
+
+imageGallery = function() {
+	$('div.show_images').on('click', '.smallimage', function(e) {
+		e.preventDefault();
+		var new_image_source = e.target.getAttribute('src')
+		$('img#main_image').attr('src', new_image_source);
+	});
+};
+
 
 
 
