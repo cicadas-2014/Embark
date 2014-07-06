@@ -1,14 +1,10 @@
 <div id='descridivtion_title'><p>embark</p></div>
 
 <ul id="gallery">
-<li><img src="<%= @adventure.image_url %>" alt="#1" title="#1" /></li>
-<% images = [] %>
-<% 5.times do %>
-<% images << @adventure.images.first if @adventure.images %>
-<% end %>
-<% p images %>
-<% images.each do |image| %>
-	<li><img src="<%= image.url %>"/></li> 
+<li><a><img src="<%= @adventure.image_url %>" alt="#1" title="#1" /></a></li>
+
+<% @adventure.images[0..4].each do |image| %>
+	<li><a><img src="<%= image.url %>"/></a></li> 
 <% end %>
 
 </ul>
