@@ -32,8 +32,6 @@ class EmbarkController < ApplicationController
 	end
 
 	def description
-
-		@adventure = Adventure.find(params['adventure_id'])
+		@adventure = Adventure.find_by(id: params[:adventure_id])
 	end
-
 end

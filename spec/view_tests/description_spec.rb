@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'views/embark/description.html.erb' do  
-  let(:adventure) { Adventure.find(1) }
+  # let(:adventure) { Adventure.find(1) }
 
   # context 'buttons' do
   #   it "should have the first image of the adventure'" do
@@ -31,5 +31,5 @@ describe 'views/embark/description.html.erb' do
   #     click_link("Global")
   #     expect(current_path).to eq adventures_path
   #   end
-  end
+  # end
 end

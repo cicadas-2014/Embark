@@ -28,7 +28,7 @@ RSpec.describe EmbarkController, :type => :controller do
 
   describe "GET#description" do
     it "is successful" do
-      get :description, adventure_id: 4
+      get :description, adventure_id: 20
       expect(response).to be_success
     end
   end
