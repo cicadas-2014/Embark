@@ -10,7 +10,6 @@ class EmbarkController < ApplicationController
 		end
 		geo = Geocoder.search(request.remote_ip).first
 		location = [geo.latitude,geo.longitude]
-
 		distance = 3 if params[:search] == 'local'
 		distance = 16 if params[:search] == 'continential'
 		distance = 1000000 if params[:search] == 'global'
@@ -33,7 +32,6 @@ class EmbarkController < ApplicationController
 	end
 
 	def description
+		@adventure = Adventure.find_by(id: params[:adventure_id])
 	end
-
-
 end
