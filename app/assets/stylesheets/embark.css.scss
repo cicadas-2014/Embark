@@ -3,6 +3,11 @@ $borderColor:#eee;
 $errorColor:#eee;
 $backgorundColor:#eee;
 
+* { 
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
 
 .transition-050 {
   -moz-transition: 0.50s;
@@ -40,7 +45,7 @@ body {
 }
 .module figure img {
   width: 100%;
-   float: left;
+  float: left;
   height: 100%;
 }
 .module figcaption {
@@ -73,35 +78,37 @@ body {
   background-color: #fff;
 }
 
-* { 
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
+
+
+body {
+  background: black;
 }
 
- body {
- 	background: black;
- }
+#description {
+  margin: 1%;
+  padding: 1% 2%;
+  font-size: 18px;
+  background: #444;
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, Verdana;
+  border: 1px solid white;
+  height: 350px;
+  float:left;
+  width: 65%;
+  color: white;
+  border-radius: 15px;
+}
 
- #description {
- 	border: 1px solid white;
- 	height: 350px;
- 	float:left;
- 	width: 65%;
- 	color: white;
- }
-
- #adventure_map {
- 	border: 1px solid white;
- 	height: 350px;
- 	float: right;
- 	width: 35%;
- 	color: white;
- }
+#adventure_map {
+  margin-top: 1%;
+  border: 1px solid white;
+  height: 350px;
+  float: right;
+  width: 33%;
+  color: white;
+}
 
 #gallery {
-  padding: 0; 
-  margin:0 auto; 
+  margin: 2% auto; 
   list-style-type:none; 
   overflow:hidden; 
   height:540px; 
@@ -111,24 +118,47 @@ body {
 #gallery li {
   float:right;
   display:block;
-  }
+  border: 1px solid white;
+}
 #gallery li a {
-	display:block;
+  display:block;
   width:60px;
   height:540px; 
-  }
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
 #gallery li a img {
+  background: #fff;
+  padding: 5%;
   height:540px; 
   width:60px; 
   border:0;
-  }
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
 #gallery li a:hover {
   background:#eee; 
   width:478px;
-  }
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
 #gallery li a:hover img {
   width:478px;
-  }
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
 .filters{
   display: inline-block;
   position: absolute;
@@ -156,4 +186,17 @@ select {
   margin-left:15px;
   text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-decoration: none;
+}
+
+#description_title {
+  width: 100%;
+  margin-right: 5%;
+  text-align: right;
+  color: #33CCFF;
+  font-family: Helvetica;
+  font-size: 34px;
+}
+
+#description_title p:hover {
+  padding: 1%;
 }
