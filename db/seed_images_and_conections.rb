@@ -49,6 +49,7 @@ end
 
 
 # Top 20 World Adentures
+
 def top20
   adventures = []
   CSV.foreach('db/adventures.csv') do |row|

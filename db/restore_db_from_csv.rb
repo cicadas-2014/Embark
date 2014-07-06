@@ -1,4 +1,22 @@
 require 'csv'
+def top20
+  adventures = []
+  CSV.foreach('db/adventures.csv') do |row|
+    adventures << row
+  end
+
+  slice = adventures.each_slice(5)
+  slice.each do |s|
+  	p s[4][0]
+    # adventure = Adventure.create(name: s[0][0], duration: s[2][0].to_i, description: s[3][0], image_url: s[4][0])
+    # p adventure
+    # p s[1][0]
+    # country = Country.find_or_create_by(name:s[1][0])
+    # p country
+    # CountryAdventure.create(country_id: country.id, adventure_id: adventure.id)
+  end
+end
+
 def restore_db_from_csv
 	puts "importing adventures from a csv file"
 	CSV.foreach("db/dbfiles/adventure.csv") do |csv|
