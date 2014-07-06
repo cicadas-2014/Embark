@@ -8,7 +8,7 @@ ready = function(){
 	$('#background').stop().fadeTo(speed*4,0.7)
 	$('a').hover(function(){
 	console.log(true)
-	var values = [300,0]
+	var values = [300,0] 
 	var radius1 = values[Math.floor(Math.random() * values.length)];
 	var radius2 = values[Math.floor(Math.random() * values.length)];
 	var radius3 = values[Math.floor(Math.random() * values.length)];

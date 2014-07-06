@@ -44,8 +44,6 @@ gem 'httparty'
 
 gem 'simplecov', :require => false, :group => :test
 
-gem 'flickraw'
-
 #use geocoder to find location of user
 gem 'geocoder'
 
