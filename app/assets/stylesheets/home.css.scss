@@ -1,5 +1,4 @@
 body {
-	color: red;
 	background-color: black;
 }
 #background {
@@ -15,6 +14,7 @@ body {
 	height: 100%;
 	width:100%;
 }
+
 a.button{
 	text-align: center;
 	border-radius: 13px;
@@ -40,6 +40,7 @@ a.button i{
 	float: right;
 	margin-top: 2px;
 }
+
 a.button:hover{
 	box-shadow: 0px 2px 1px #bbb, 
 	0px -2px 20px white;
@@ -51,4 +52,3 @@ a.button:active{
 #logo {
 	margin-left: 15%;
 	margin-top: 10%;
-}
