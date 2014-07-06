@@ -25,7 +25,9 @@ duplicate_adventures.each_with_index do |hash, index|
 	end
 end
 duplicate_images.each_with_index do |hash, index|
-	if hash[1] == []
+	#p hash
+		# puts hash[1][0][:image_url] if hash[1][0][:image_url]
+	if hash[1] == [] || hash[1][0][:image_url] == 'nil'
 		duplicate_images.delete(hash[0])
 	end
 end
@@ -44,5 +46,5 @@ duplicate_images.each do |id,hash|
 	hash.each do |duplicate|
 		ids << duplicate[:id]
 	end
-	puts "\nid: #{id} have #{hash.length} image duplicates, the duplicate ids is: #{ids.join(",")}"
+	puts "\nid:#{id} duplicates: #{ids.join(",")}"
 end
