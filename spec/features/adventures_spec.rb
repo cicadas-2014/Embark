@@ -20,7 +20,7 @@ describe "adventure" do
   describe "User can click on an adventure" do
     it "when viewing the adventures list" do
       visit adventure_url
-      expect(page).to have_content(adventure.adventure) # refers to factory
+      expect(page).to have_content(adventure.adventure)
     end
   end
 
