@@ -60,7 +60,6 @@ GEM
     ffi (1.9.3)
     flickr (1.0.2)
       xml-simple (>= 1.0.7)
-    flickraw (0.9.8)
     geocoder (1.2.2)
     google_custom_search_api (1.0.0)
       addressable
@@ -193,7 +192,6 @@ DEPENDENCIES
   database_cleaner
   faker
   flickr
-  flickraw
   geocoder
   google_custom_search_api
   httparty
