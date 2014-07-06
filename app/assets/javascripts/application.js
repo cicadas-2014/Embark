@@ -1,16 +1,44 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
-//
+
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+ready = function(){
+	var speed = 800
+	$('#background').stop().fadeTo(speed*4,0.7)
+	$('a').hover(function(){
+	console.log(true)
+	var values = [300,0]
+	var radius1 = values[Math.floor(Math.random() * values.length)];
+	var radius2 = values[Math.floor(Math.random() * values.length)];
+	var radius3 = values[Math.floor(Math.random() * values.length)];
+	var radius4 = values[Math.floor(Math.random() * values.length)];
+		$('#background').stop().fadeTo(speed,0.9)
+		// $('#background').stop().animate({
+		// 	'text-shadow': '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black',
+		// 	'border-top-left-radius': radius1,
+		// 	'border-top-right-radius': radius2,
+		// 	'border-bottom-right-radius': radius3,
+		// 	'border-bottom-left-radius': radius4
+		// },speed);
+
+
+		$(this).css('border','none')
+		// $(this).animate({
+		// 	'border-top-left-radius': radius1,
+		// 	'border-top-right-radius': radius2,
+		// 	'border-bottom-right-radius': radius3,
+		// 	'border-bottom-left-radius': radius4
+		// },speed);
+	},function(){
+		// $(this).animate({
+		// 	'border-top-left-radius': '300px',
+		// 	'border-top-right-radius': '300px',
+		// 	'border-bottom-right-radius': '300px',
+		// 	'border-bottom-left-radius': '300px'
+		// },speed);
+		$('#background').stop().fadeTo(speed*2,0.7)
+	})
+};
+$( document ).ready(ready);
+$(document).on('page:load', ready);
