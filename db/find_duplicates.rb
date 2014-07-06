@@ -3,7 +3,7 @@ require 'csv'
 adventures = []
 puts "Finding duplicates of adventures"
 CSV.foreach("db/dbfiles/adventure.csv") do |csv|
-	adventures << {id:csv[0],name:csv[1],description:csv[2],duration:csv[3],image_url:csv[4],map_url:csv[5],city_id:csv[6]}
+	adventures << {id:csv[0],name:csv[1],description:csv[2],duration:csv[3],map_url:csv[4],image_url:csv[5],city_id:csv[6]}
 end
 duplicate_adventures = {}
 duplicate_images = {}

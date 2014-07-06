@@ -2,32 +2,20 @@
   <a href="/">embark</a>
 </div>
 
-
-
-  <div id="locationData">
-    Location data here
-  </div>
-
-
-  
 <div class='filters'>
+<form>
+  <select>
+    <%@categories.each do |cat|%>
+     <option><%=cat.name%></option>
+    <%end%>
+  </select>
 
-  <form method=post id='test'>
-    <select name='test' onchange="this.up('form').id = this.value;">
-      <option value=1>Category</option>
-      <%@categories.each do |cat|%>
-      <option value=1><%=cat.name%></option>
-      <%end%>
-    </select>
-  </form>
-  <form method=post id='test'>
-    <select name='test' onchange="this.up('form').id = this.value;">
-      <option value=1>Duration</option>
-      <%@adventures.each do |cat|%>
-      <option value=1><%=cat.duration%></option>
-      <%end%>
-    </select>
-  </form>
+  <select >    
+    <%@adventures.each do |adv|%>
+     <option><%=adv.duration%></option>
+    <%end%>
+  </select>
+</form>
 
 </div>
 
