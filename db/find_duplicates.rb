@@ -29,13 +29,14 @@ duplicate_images.each_with_index do |hash, index|
 		duplicate_images.delete(hash[0])
 	end
 end
-puts "We have #{duplicate_adventures.length} duplicated adventures in our database"
+# puts "We have #{duplicate_adventures.length} duplicated adventures in our database"
+puts "We have #{duplicate_images.length} duplicated images in our database"
 duplicate_adventures.each do |id,hash|
 	ids = []
 	hash.each do |duplicate|
 		ids << duplicate[:id]
 	end
-	puts "\nid: #{id} have #{hash.length} duplicates, the duplicate ids is: #{ids.join("','")}"
+	# puts "\nid: #{id} have #{hash.length} duplicates, the duplicate ids is: #{ids.join(",")}"
 end
 
 duplicate_images.each do |id,hash|
@@ -43,5 +44,5 @@ duplicate_images.each do |id,hash|
 	hash.each do |duplicate|
 		ids << duplicate[:id]
 	end
-	# puts "\nid: #{id} have #{hash.length} image duplicates, the duplicate ids is: #{ids.join("','")}"
+	puts "\nid: #{id} have #{hash.length} image duplicates, the duplicate ids is: #{ids.join(",")}"
 end
