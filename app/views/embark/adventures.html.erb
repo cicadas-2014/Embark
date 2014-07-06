@@ -31,8 +31,8 @@
       </a>
       <figcaption class="transition-050 opacity85">
         <a href="/adventures/<%=adv.id%>">
-          <strong class="text transition-050 title"><%=City.find(adv.city_id).name%></strong>
-          <span class="text transition-050 desc"><%=adv.name%></span>
+          <strong class="text transition-050 title">Adventure</strong>
+          <span class="text transition-050 desc"><%=adv.name%> <br>tmp(city:<%=City.find(adv.city_id).name%>)</span>
         </a>
       </figcaption>
     </figure>
