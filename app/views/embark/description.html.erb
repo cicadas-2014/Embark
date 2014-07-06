@@ -2,30 +2,22 @@
 
 <ul id="gallery">
 <li><a>
-<img src="http://www.w8themes.com/wp-content/uploads/2013/11/Green-Desktop-Wallpaper.jpg" alt="#1" title="#1" /></a></li>
+<img src="<%= @adventure.images.first.url %>" alt="#1" title="#1" /></a></li>
 <li><a>
-<img src="http://images6.alphacoders.com/393/393400.jpg" alt="#2" title="#2" /></a></li>
+<img src="<%= @adventure.images[1].url %>"/></a></li>
 <li><a>
-<img src="http://m0.i.pbase.com/u26/jackcnd/upload/43767520.GradientBlue720p.JPG" alt="#3" title="#3" /></a></li>
+<img src="<%= @adventure.images[2].url %>"/></a></li>
 <li><a>
-<img src="http://images2.fanpop.com/image/photos/10500000/Pink-wallpaper-pink-color-10579454-1022-768.jpg" alt="#4" title="#4" /></a></li>
+<img src="<%= @adventure.images[3].url %>"/></a></li>
 <li><a>
-<img src="http://geewall.com/mmc_uploads/1512-orange-background-wallpaper-1920x1200.jpg" alt="#5" title="#5" /></a></li>
+<img src="<%= @adventure.images[4].url %>"/></a></li>
 <li><a>
-<img src="http://images2.fanpop.com/images/photos/2600000/Brown-wallpapers-brown-2658869-1680-1050.jpg" alt="#6" title="#6" /></a></li>
+<img src="<%= @adventure.images[5].url %>"/></a></li>
 </ul>
 
-<<<<<<< HEAD
 <div id='description'>
 <header></header>
-<p>Lorem ipsum dolor sit amet, vim no mundi habemus, ne moderatius signiferumque nam. Dicat novum delicatissimi in pro. Ius veniam commodo an. In per oblique vituperata, vel quidam denique efficiendi id. </br></br>
-
-Ei vim vero possim sadipscing. Ut dicit nihil usu, et pro possit iisque ullamcorper. Ut vel iusto labores facilisi, ei quo iusto epicurei, epicuri albucius adolescens ei usu. Iudico abhorreant ad cum, no delenit nusquam liberavisse eum, usu maiorum accusata voluptaria ad. Vis te stet summo iuvaret. Semper dolorum luptatum quo at, qui ut ferri aperiam, te vix brute facete signiferumque. Te sed malorum definitiones, no eam prima laoreet adolescens.</br></br></p>
+<p><%= @adventure.description %></p>
 </div>
 
-<div id='adventure_map'><p>Map goes here</p></div>	
-=======
-<div id='description'><p>Description</p></div>
-<div id='adventure_map'><p>Map goes here</p></div>	
-
->>>>>>> master
+<div id='adventure_map'><img src="<%= @adventure.map_url %>"></div>	

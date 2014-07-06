@@ -11,6 +11,8 @@ def adventures
 end
 
 def description
+	@adventure = Adventure.find(parmas[:id])
+	
 end
 
 
