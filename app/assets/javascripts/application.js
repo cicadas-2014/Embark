@@ -43,6 +43,7 @@ function displayError(error){
 
 
 ready = function(){
+	imageGallery();
 	var speed = 800
 	$('#background').stop().fadeTo(speed*4,0.7)
 	$('a').hover(function(){
@@ -57,7 +58,20 @@ ready = function(){
 		e.preventDefault();
 		getUserLocation($(this).attr('href'))
 	})
+
 };
+
+imageGallery = function() {
+ $('div.show_images').on('click', '.smallimage', function(e) {
+        e.preventDefault();
+        var new_image_source = e.target.getAttribute('src')
+        $('img#main_image').attr('src', new_image_source);
+    });
+};
+
+
+
+
 $(document).ready(ready)
 $(document).on('page:load', ready);
 
