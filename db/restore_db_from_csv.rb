@@ -40,7 +40,7 @@ def restore_db_from_csv
 
 	puts "importing city from a csv file"
 	CSV.foreach("db/dbfiles/city.csv") do |csv|
-		City.create(id:csv[0],name:csv[1],longitude:csv[2],latitude:csv[3],country_id:csv[4],created_at:csv[5],updated_at:csv[6])
+		City.create(id:csv[0],name:csv[1],longitude:csv[3],latitude:csv[2],country_id:csv[4],created_at:csv[5],updated_at:csv[6])
 	end
 
 	puts "importing category_adventure from a csv file"
