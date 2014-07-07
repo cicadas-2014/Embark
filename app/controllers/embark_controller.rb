@@ -16,9 +16,9 @@ class EmbarkController < ApplicationController
 
 		valid_adventures = []
 		all_adventures = Adventure.all
-		all_adventures.each do |adv|
 			puts '*'*50
-			puts adv.id
+			puts adv.first
+		all_adventures.each do |adv|
 			if adv.city_id
 				city = City.find(adv.city_id)
 				position = [city.latitude, city.longitude]
