@@ -1,8 +1,8 @@
-$backgorundColor:#eee;
+$backgroundColor:#000000;
 $borderColor:#eee;
-$errorColor:#eee;
-$backgorundColor:#eee;
-
+$fillColor:#FFEFD5;
+$textColor:#000000;
+$errorColor:red;
 * { 
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -21,8 +21,8 @@ $backgorundColor:#eee;
   filter: alpha(opacity=85); 
 }
 body { 
-  background-color:black; 
-  color:#eee;
+  background-color:$backgroundColor; 
+  color:$fillColor;
 }
 #adventure-container { 
   max-width: 100%; 
@@ -32,7 +32,7 @@ body {
 #adventure-container figure {
   position: relative;
   overflow: hidden;
-  border:2px solid #fff;
+  border:2px solid $fillColor;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -83,21 +83,30 @@ body {
 body {
   background: black;
 }
+
 .adventure_info {
   width:100%;
 }
+
+#description header {
+  font-size: 25px;
+  font-style: bold;
+  text-align: center;
+}
+
 #description {
-  margin: 1%;
+  margin-top: 1%;
   padding: 1% 2%;
-  font-size: 18px;
-  background: #444;
-  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, Verdana;
-  border: 1px solid white;
+  font-size: 20px;
+  background-color: $fillColor;
+  font-family: 'Raleway', sans-serif;
+  border: 8px double $textColor;
   height: 350px;
   float:left;
   width: 58%;
-  color: white;
-  border-radius: 15px;
+  color: $textColor;
+  border-radius: 9px;
+
 }
 
 #adventure_map img{
@@ -106,6 +115,8 @@ body {
   border: 1px solid white;
   height: 350px;
   width: 38%;
+  border-radius: 9px;
+  float:right;
 
 }
 
@@ -129,9 +140,32 @@ div.show_images {
 #main_image {
 
   width:100%;
-  height: auto;
+  height: auto;  // border: 2px solid white;
+  clear: both;
+  border-radius: 10px;
 }
 
+#adventure_images {
+  width:100;
+  margin:0;
+  padding:0;
+}
+.smallimage {
+  position: static;
+  top:0;
+  width:236px;
+  height:236px;
+  padding:auto;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+#main_image {
+  position: static;
+  border-radius: 10px;
+  height: 600px;
+  width: 1200px;
+}
 
 .filters{
   display: inline-block;
@@ -143,7 +177,7 @@ div.show_images {
 }
 select {
   float:right;
-  color: #66FFFF;
+  color: $fillColor;
   background-color: black;
   font-size: 18px;
   right:10px;
@@ -151,14 +185,14 @@ select {
 }
 #embark a{
   position:relative;
-  font-size: 50px;
-  color: #66FFFF;
+  font-size: 65px;
+  font-weight: bold;
+  color: $fillColor;
   width: 100%;
   height: 70px;
   margin: 0px auto;
-  margin-top:15px;
-  margin-left:15px;
-  text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-top:5px;
+  margin-left:5px;
   text-decoration: none;
 }
 
@@ -166,11 +200,15 @@ select {
   width: 100%;
   margin-right: 5%;
   text-align: right;
-  color: #33CCFF;
+  color: $textColor;
   font-family: Helvetica;
   font-size: 34px;
 }
 
 #description_title p:hover {
   padding: 1%;
+}
+#adventureDescription {
+  width: 1200px;
+  margin: 0 auto;
 }
