@@ -49,7 +49,8 @@ ready = function(){
 	imageListLoad(speed);
 };
 function imageListLoad(speed){
-	
+	$('#adventuresPage').hide()
+	$('#adventuresPage').fadeTo(speed,1)
 }
 function startAnimation(speed){
 	$('#home a').hide();
