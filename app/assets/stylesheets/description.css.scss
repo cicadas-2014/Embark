@@ -4,26 +4,21 @@ $fillColor:#444;
 $textColor:#444;
 $errorColor:red;
 
-html {
-  background-color: white;
-}
-
 body {
-  background-color: white;
+  background-color: $backgroundColor;
 }
-
-
 
 #description {
   margin-top: 1%;
   padding: 3% 6%;
   font-size: 20px;
-  background-color: #74c9bf;
+  background-color: #1989ee;
+  opacity: 0.8;
   font-family: Verdana;
   height: 40%;
   float:left;
   width: 100%;
-  color: #666;
+  color: #ccc;
 }
 
 #description header {
@@ -43,8 +38,10 @@ body {
 }
 
 div.show_images {
+  margin: 0 auto;
+  padding: 0 auto;
   margin-top: 30px;
-  width: 100%;
+  width: 90%;
   clear: both;
   border-radius: 10px;
 }
@@ -60,7 +57,7 @@ div.show_images {
   position: static;
   top:0;
   display: inline;
-  height: 200px;
+  max-height: 140px;
   width: auto;
   padding:auto;
   margin-top: 8px;
@@ -68,17 +65,21 @@ div.show_images {
 
 
 #main_image {
-  position: static;
+  margin: 0 auto;
   max-width:2000px;
-  max-height:600px;   
+  max-height:650px;   
   width: auto;
   height: auto;
 }
 
 #main_image img{
+  display: block;
+  margin: 0 auto;
   position: static;
-  width: 100%;
-  height: 100%;
+  max-width:2000px;
+  max-height:650px;   
+  width: auto;
+  height: auto;
 }
 
 .filters{
@@ -93,7 +94,7 @@ div.show_images {
 select {
   float:right;
   color: $fillColor;
-  background-color: white;
+  background-color: $backgroundColor;
   font-size: 18px;
   right:10px;
   width:50%;
@@ -137,4 +138,9 @@ select {
   height: 230px;
   width: auto;
   padding-left: 1%;
+}
+
+#adventures_images {
+  display: block;
+  margin: 0 auto;
 }
