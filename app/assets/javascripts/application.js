@@ -57,9 +57,15 @@ function startAnimation(speed){
 	$('#home a').hide();
 	$('#home #logo').fadeTo(speed,2)
 	setTimeout(function() {
+<<<<<<< HEAD
 		 $('#home #logo').animate({
 		 	'font-size':'40px',
 		 	'letter-spacing': '0.1em'
+=======
+		$('#home #logo').animate({
+			'font-size':'130px',
+			'letter-spacing': '0.1em'
+>>>>>>> 83d5faae4e472ab5fafa48d616ec85f84e9ab689
 		},speed*2)
 		$('#home #background').stop().fadeTo(speed*2,1)
 		setTimeout(function() {
