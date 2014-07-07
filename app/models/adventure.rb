@@ -1,8 +1,6 @@
 class Adventure < ActiveRecord::Base
-	has_many :category_adventures
-	has_many :categories, through: :category_adventures
-	belongs_to :start_city, class_name: 'City'
-	has_many :country_adventures
-	has_many :countries, through: :country_adventures
-	has_many :images
+	has_many :adventure_categories
+	has_many :categories, through: :adventure_categories
+	has_many :adventure_cities
+	has_many :cities, through: :adventure_cities
 end
