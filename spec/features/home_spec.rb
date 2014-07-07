@@ -6,7 +6,7 @@ describe 'views/embark/home.html.erb' do
 			visit home_path
 			expect(page).to have_selector("a", text: "Local")
 		end
-		it "have continential button'" do
+		it "have continental button'" do
 			visit home_path
 			expect(page).to have_selector("a", text: "Continential")
 		end
@@ -21,7 +21,7 @@ describe 'views/embark/home.html.erb' do
 		end
 		it "local button redirects to right page" do
 			visit home_path
-			click_link("Continential")
+			click_link("Continental")
 			expect(current_path).to eq adventures_path
 		end
 		it "local button redirects to right page" do
