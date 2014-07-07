@@ -78,6 +78,7 @@ function buttonEffects(speed){
 		getUserLocation($(this).attr('href'))
 		$('#home a').fadeTo(speed,0)
 		$('#home #background').fadeTo(speed,0)
+		setTimeout(function() {$('#home #background').hide()},speed)
 		$('#home #logo').fadeTo(speed,0)
 	})
 };
