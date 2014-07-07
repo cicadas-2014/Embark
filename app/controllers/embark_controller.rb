@@ -16,8 +16,6 @@ class EmbarkController < ApplicationController
 
 		valid_adventures = []
 		all_adventures = Adventure.all
-			puts '*'*50
-			puts adv.first
 		all_adventures.each do |adv|
 			if adv.city_id
 				city = City.find(adv.city_id)
