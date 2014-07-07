@@ -22,8 +22,6 @@
 
 
 .bundle
-Gemfile.lock
-gemfiles/*.lock
 
 ## MAC OS
 .DS_Store
