@@ -18,6 +18,13 @@ SimpleCov.start 'rails'
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  config.failure_color = :magenta
+  config.success_color = :green
+  config.pending_color = :white
+  config.fixed_color = :blue
+  config.detail_color = :cyan
+  config.tty = true
+  config.color = true
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
