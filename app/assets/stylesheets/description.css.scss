@@ -1,0 +1,146 @@
+$backgroundColor:#fff;
+$borderColor:#eee;
+$fillColor:#444;
+$textColor:#444;
+$errorColor:red;
+
+body {
+  background-color: $backgroundColor;
+}
+
+#description {
+  margin-top: 1%;
+  padding: 3% 6%;
+  font-size: 20px;
+  background-color: #1989ee;
+  opacity: 0.8;
+  font-family: Verdana;
+  height: 40%;
+  float:left;
+  width: 100%;
+  color: #ccc;
+}
+
+#description header {
+  font-size: 25px;
+  font-style: bold;
+  text-align: left;
+  font-family: sans-serif;
+  width: 70%;
+  padding-top: 3%;
+  padding-bottom: 6%;
+}
+
+#adventure_map img{
+  height: 100%;
+  width: 40%;
+  margin: 0 auto;
+}
+
+div.show_images {
+  margin: 0 auto;
+  padding: 0 auto;
+  margin-top: 30px;
+  width: 90%;
+  clear: both;
+  border-radius: 10px;
+}
+
+#back {
+  font-size: 20px;
+  text-decoration: none;
+  color: $fillColor;
+  float: right;
+}
+
+.smallimage {
+  position: static;
+  top:0;
+  display: inline;
+  max-height: 140px;
+  width: auto;
+  padding:auto;
+  margin-top: 8px;
+}
+
+
+#main_image {
+  margin: 0 auto;
+  max-width:2000px;
+  max-height:650px;   
+  width: auto;
+  height: auto;
+}
+
+#main_image img{
+  display: block;
+  margin: 0 auto;
+  position: static;
+  max-width:2000px;
+  max-height:650px;   
+  width: auto;
+  height: auto;
+}
+
+.filters{
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right:3%;
+  margin: 5px;
+  width: 30%;
+}
+
+select {
+  float:right;
+  color: $fillColor;
+  background-color: $backgroundColor;
+  font-size: 18px;
+  right:10px;
+  width:50%;
+}
+
+#embark a{
+  position:relative;
+  font-size: 65px;
+  font-weight: bold;
+  color: $fillColor;
+  width: 100%;
+  font-family: sans-serif;
+  height: 70px;
+  margin: 0px auto;
+  margin-top:5px;
+  margin-left:5px;
+  text-decoration: none;
+}
+
+#description_title {
+  width: 100%;
+  margin-right: 5%;
+  text-align: right;
+  color: $textColor;
+  font-family: serif;
+  font-size: 34px;
+}
+
+#description_title p:hover {
+  padding: 1%;
+}
+#adventureDescription {
+  width: 80%;
+  margin: 0 auto;
+}
+.adventure_info {
+  padding-bottom: 20px;
+}
+
+#images img {
+  height: 230px;
+  width: auto;
+  padding-left: 1%;
+}
+
+#adventures_images {
+  display: block;
+  margin: 0 auto;
+}
