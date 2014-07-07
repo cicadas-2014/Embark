@@ -10,7 +10,7 @@ class EmbarkController < ApplicationController
 		longitude = params[:longitude]
 		search = params[:search]
 		
-		distance = 10 if search == 'local'
+		distance = 8 if search == 'local'
 		distance = 20 if search == 'continential'
 		distance = 1000000 if search == 'global'
 
@@ -20,7 +20,7 @@ class EmbarkController < ApplicationController
 			if adv.city_id
 				city = City.find(adv.city_id)
 				position = [city.latitude, city.longitude]
-				if position[0].to_i - latitude.to_i+distance < distance*2 && position[0].to_i - latitude.to_i+distance > 0 && position[0].to_i - longitude.to_i+distance < distance*2 && position[0].to_i - longitude.to_i+distance > 0
+				if city.latitude.to_i - latitude.to_i+distance < distance*2 && city.latitude.to_i - latitude.to_i+distance > 0 && city.longitude.to_i - longitude.to_i+distance < distance*2 && city.longitude.to_i - longitude.to_i+distance > 0
 					unless adv.image_url == "nil" || adv.image_url == "Private photo cant use"
 						valid_adventures << adv
 					end
