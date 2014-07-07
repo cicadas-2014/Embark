@@ -8,7 +8,7 @@ describe 'views/embark/home.html.erb' do
 		end
 		it "have continental button'" do
 			visit home_path
-			expect(page).to have_selector("a", text: "Continential")
+			expect(page).to have_selector("a", text: "Continental")
 		end
 		it "have global button'" do
 			visit home_path
