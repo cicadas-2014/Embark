@@ -120,7 +120,12 @@ div.show_images {
   clear: both;
   border-radius: 10px;
 }
-
+#back {
+  font-size: 20px;
+  text-decoration: none;
+  color: $fillColor;
+  float: right;
+}
 #adventure_images {
   width:100;
   margin:0;
