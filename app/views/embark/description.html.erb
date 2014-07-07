@@ -1,37 +1,33 @@
-<div id="embark">
-  <a href="/">embark</a>
-</div>
+<div id="adventureDescription">
 
-<div class="show_images">
-  <% unless @adventure.images.empty? %>
+  <div id="embark">
+    <a href="/">embark</a>
+  </div>
+
+  <div class="show_images">
+    <% unless @adventure.images.empty? %>
     <div id="main_image">
       <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
     </div>
     <div id="adventures_images">
       <% @adventure.images[0..4].each do |image| %>
-        <img class="smallimage" src='<%= image.url %>'/>
+      <img class="smallimage" src='<%= image.url %>'/>
       <% end %>
-      </div>
-  <% end %>
+    </div>
+    <% end %>
 
-</div>
-
-
+  </div>
 
 
-
-
-
-
-
-
-
-
-<div class='adventure_info'>
-  <div id='description'>
-  	<header>Description</header>
-  	<p><%= @adventure.description %></p>
+  <div class='adventure_info'>
+    <div id='description'>
+      <header><%= @adventure.name %></header>
+      <p><%= @adventure.description %></p>
+    </div>
   </div>
   <div id='adventure_map'>
-    <img src="<%= @adventure.map_url %>"></div>	
+    <img id='adventure_map' src="<%= @adventure.map_url %>"></div>  
+  </div>
+
+
 </div>
