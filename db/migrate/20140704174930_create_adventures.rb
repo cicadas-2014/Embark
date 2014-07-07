@@ -1,7 +1,7 @@
 class CreateAdventures < ActiveRecord::Migration
   def change
     create_table :adventures do |t|
-      t.text :name
+      t.string :name
       t.text :description
       t.integer :duration
       t.text :map_url
