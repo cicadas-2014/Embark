@@ -1,10 +1,11 @@
 <div id="embark">
   <a href="/">embark</a>
 </div>
+<div id="adventuresPage">
 
 <div class='filters'>
 <form>
-  <select>
+<!--   <select>
     <%@categories.each do |cat|%>
      <option><%=cat.name%></option>
     <%end%>
@@ -14,7 +15,7 @@
     <%@adventures.each do |adv|%>
      <option><%=adv.duration%></option>
     <%end%>
-  </select>
+  </select> -->
 </form>
 
 </div>
@@ -29,11 +30,11 @@
       <figcaption class="transition-050 opacity85">
         <a href="/adventures/<%=adv.id%>">
           <strong class="text transition-050 title">Adventure</strong>
-          <span class="text transition-050 desc"><%=adv.name%> <br>tmp(city:<%=City.find(adv.city_id).name%>)</span>
+          <span class="text transition-050 desc"><%=adv.name%></span>
         </a>
       </figcaption>
     </figure>
     <%end%>
   </section>
 </section>
-
+</div>
