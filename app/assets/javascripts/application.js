@@ -57,7 +57,7 @@ function startAnimation(speed){
 	$('#home #logo').fadeTo(speed,1)
 	setTimeout(function() {
 		$('#home #logo').animate({
-			'font-size':'100px',
+			'font-size':'130px',
 			'letter-spacing': '0.1em'
 		},speed*2)
 		$('#home #background').stop().fadeTo(speed*2,1)
