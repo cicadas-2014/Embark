@@ -86,6 +86,7 @@ body {
   background: black;
 }
 
+
 #description header {
   font-size: 25px;
   font-style: bold;
@@ -109,16 +110,37 @@ body {
 #adventure_map img{
   margin-top: 1%;
   margin-left:1%;
+  border: 1px solid white;
   height: 350px;
   width: 38%;
   border-radius: 9px;
   float:right;
+
 }
 
 div.show_images {
   margin-top: 30px;
   width: 100%;
-  // border: 2px solid white;
+  border: 2px solid white;
+  clear: both;
+  border-radius:10px;
+}
+
+#adventure_images {
+  width:100;
+  margin:0;
+  padding:0;
+}
+.smallimage {
+  width:auto;
+  height:150px;
+  
+}
+
+#main_image {
+
+  width:100%;
+  height: auto;  // border: 2px solid white;
   clear: both;
   border-radius: 10px;
 }
