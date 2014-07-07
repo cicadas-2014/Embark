@@ -46,8 +46,11 @@ ready = function(){
 	startAnimation(speed)
 	buttonEffects(speed)
 	imageGallery();
+	imageListLoad(speed);
 };
-
+function imageListLoad(speed){
+	
+}
 function startAnimation(speed){
 	$('#home a').hide();
 	$('#home #logo').fadeTo(speed,1)
@@ -72,6 +75,9 @@ function buttonEffects(speed){
 	$('#home #search a').on('click',function(e){
 		e.preventDefault();
 		getUserLocation($(this).attr('href'))
+		$('#home a').fadeTo(speed,0)
+		$('#home #background').fadeTo(speed,0)
+		$('#home #logo').fadeTo(speed,0)
 	})
 };
 
