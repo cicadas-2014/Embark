@@ -48,21 +48,26 @@ ready = function(){
 	imageGallery();
 	imageListLoad(speed);
 };
+
+
 function imageListLoad(speed){
 	$('#adventuresPage').hide()
 	$('#adventuresPage').fadeTo(speed,1)
 }
 function startAnimation(speed){
 	$('#home a').hide();
-	$('#home #logo').fadeTo(speed,1)
+	$('#home #logo').fadeTo(speed,2)
 	setTimeout(function() {
-		$('#home #logo').animate({
-			'font-size':'100px',
-			'letter-spacing': '0.1em'
+		 $('#home #logo').animate({
+		 	'font-size':'40px',
+		 	'letter-spacing': '0.1em'
 		},speed*2)
 		$('#home #background').stop().fadeTo(speed*2,1)
 		setTimeout(function() {
-			$('#home a').fadeTo(speed,1)
+			 $('#home a').fadeTo(speed,1)
+		},speed*1.5)
+		setTimeout(function() {
+			 $('#embark').fadeTo(speed,1)
 		},speed*1.5)
 	},speed)
 }
@@ -78,6 +83,7 @@ function buttonEffects(speed){
 		getUserLocation($(this).attr('href'))
 		$('#home a').fadeTo(speed,0)
 		$('#home #background').fadeTo(speed,0)
+		setTimeout(function() {$('#home #background').hide()},speed)
 		$('#home #logo').fadeTo(speed,0)
 	})
 };
