@@ -14,11 +14,11 @@ def import_new_york_adventures
 	CSV.foreach('db/new_york_adventures.csv') do |row|
 		adventures << row
 	end
-	sliced_adventures = adventures.each_slice(6)
-
-	sliced_adventures.each do |ad|
+	sliced = adventures.each_slice(6)
+	p adventures
+	sliced.each do |ad|
 		# p ad
-		Adventure.create(name: ad[0].first, description: ad[3].first, duration: ad[2].first, map_url: ad[4].first, city_id: 151, image_url: ad[5].first)
+		a = Adventure.create(name: ad[0].first, description: ad[3].first, duration: ad[2].first, map_url: ad[4].first, city_id: 151, image_url: ad[5].first)
   end
 end
 
