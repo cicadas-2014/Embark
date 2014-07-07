@@ -84,9 +84,6 @@ body {
   background: black;
 }
 
-.adventure_info {
-  width:100%;
-}
 
 #description header {
   font-size: 25px;
@@ -106,7 +103,6 @@ body {
   width: 58%;
   color: $textColor;
   border-radius: 9px;
-
 }
 
 #adventure_map img{
@@ -125,6 +121,7 @@ div.show_images {
   width: 100%;
   border: 2px solid white;
   clear: both;
+  border-radius:10px;
 }
 
 #adventure_images {
@@ -135,6 +132,7 @@ div.show_images {
 .smallimage {
   width:auto;
   height:150px;
+  
 }
 
 #main_image {
