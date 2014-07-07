@@ -4,6 +4,7 @@ root 'embark#home', as: 'home'
 get '/adventures', to: 'embark#adventures', as: 'adventures'
 get '/adventures/:adventure_id', to: 'embark#description', as: 'description'
 
+get '/adventures/map', to: 'embark#map', as: 'map'
 resources :del
 
 
