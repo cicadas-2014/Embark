@@ -57,7 +57,7 @@ function startAnimation(speed){
 	$('#home #logo').fadeTo(speed,1)
 	setTimeout(function() {
 		$('#home #logo').animate({
-			'font-size':'100px',
+			'font-size':'130px',
 			'letter-spacing': '0.1em'
 		},speed*2)
 		$('#home #background').stop().fadeTo(speed*2,1)
@@ -78,6 +78,7 @@ function buttonEffects(speed){
 		getUserLocation($(this).attr('href'))
 		$('#home a').fadeTo(speed,0)
 		$('#home #background').fadeTo(speed,0)
+		setTimeout(function() {$('#home #background').hide()},speed)
 		$('#home #logo').fadeTo(speed,0)
 	})
 };

@@ -56,7 +56,7 @@ def top20
     adventures << row
   end
 
-  puts "seeding the top 20 adventures"
+  puts "strating to seed the top 20 adventures"
   sliced = adventures.each_slice(5)
   sliced.each do |s|
     adventure = Adventure.create(name: s[0][0], duration: s[2][0].to_i, description: s[3][0], image_url: s[4][0])
