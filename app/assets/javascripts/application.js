@@ -5,6 +5,15 @@
 //= require_tree .
 //= require masonry
 
+function filter() {
+	$('.filters button').on('click',function(e){
+		e.preventDefault();
+
+		$('.filterOptions').css('display','block');
+	})
+}
+
+
 function getUserLocation(search) {
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position){
@@ -43,6 +52,7 @@ function displayError(error){
 
 ready = function(){
 	var speed = 1200
+	filter();
 	startAnimation(speed)
 	buttonEffects(speed)
 	imageGallery();

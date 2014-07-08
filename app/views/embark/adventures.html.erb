@@ -1,31 +1,43 @@
 <div id="adventuresPage">
-  <div id="embark">
-    <a href="/">Embark</a>
-  </div>
+  <div id="adventuresTop">
 
-  <div class='filters'>
-    <form>
-<!--   <select>
-    <%@categories.each do |cat|%>
-     <option><%=cat.name%></option>
-    <%end%>
-  </select>
+    <div id="adventuresTitle">
+      <a href="/">EMBARK</a>
+    </div>
 
-  <select >    
-    <%@adventures.each do |adv|%>
-     <option><%=adv.duration%></option>
-    <%end%>
-  </select> -->
-</form>
+      <button name="filters">Filter Search</button>
 
+    <div class="filterOptions">
+
+        <div id="filterLocation"> 
+          <%= link_to "Local", adventures_path(search: "local"), class: 'btn' %>
+          <%= link_to "Continental", adventures_path(search: "continential"), class: 'btn'%>
+          <%= link_to "Global", adventures_path(search: "global"), class: 'btn' %>
+        </div>
+        <form>
+          <select>
+              <option>Category</option>
+            <%@categories.each do |cat|%>
+             <option><%=cat.name%></option>
+            <%end%>
+          </select>
+
+          <select >    
+             <option>Duration</option>
+            <%@adventures.each do |adv|%>
+             <option><%=adv.duration%></option>
+            <%end%>
+          </select>
+        </form>
+    </div>
 </div>
-<div id="gallery" data-masonry-options='{ "isFitWidth": true,"isOriginTop": true, "gutter": 10, "columnWidth": 250}'>
+<div id="gallery">
    <%@adventures.each do |adv|%>
-    <div class='image'>
-       <a href="/adventures/<%=adv.id%>">
-        <img src=<%=adv.image_url%> alt="">
-      </a>
-     </div>
-  <%end%>
+      <div class="image">
+         <a href="/adventures/<%=adv.id%>">
+            <img src=<%=adv.image_url%> alt="">
+          </a>
+      </div>
+    <%end%>
 </div>
 </div>
