@@ -34,7 +34,15 @@ class UserController < ApplicationController
   end
 
   def signup_params
-    params.permit(:email, :passwordri)
+    params.permit(:email, :password)
+  end
+
+  def addAdventure
+    if Adventure.makeAdventure(params[:title],params[:description],params[:start_city],params[:duration],params[:image_url],params[:categories])
+      redirect_to users_path
+    else
+      redirect_to home_path
+    end
   end
 
 end

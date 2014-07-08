@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 	post 'user/signup'
 
 	get 'user/logout'
+
+	post 'user/addAdventure', to: 'user#addAdventure', as: 'addAdventure'
 	
 	root 'embark#home', as: 'home'
 	get '/adventures', to: 'embark#adventures', as: 'adventures'
