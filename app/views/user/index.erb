@@ -1,0 +1,15 @@
+<div>
+	<div id="embark">
+		<a href="/">Embark</a>
+	</div>
+
+	<div id="user_adventures">
+		<% if @user.adventures%>
+		<% @user.adventures.each do |adventure| %>
+		<div class ="adventure">
+			<a href="/adventures/<%= adventure.id %>"><div id="adventure_name"><%= adventure.name %></div>
+			<div id="adventure_description"><%= adventure.description %></div>
+		</div>
+	</div>
+	
+</div>

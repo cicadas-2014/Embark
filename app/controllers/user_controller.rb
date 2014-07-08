@@ -10,6 +10,7 @@ class UserController < ApplicationController
   end
 
   def signup
+  	raise params.inspect
     @user = User.new(signup_params)
     if @user.save
       
@@ -25,16 +26,15 @@ class UserController < ApplicationController
   private
 
   def login_params
-    params.permit(:username, :email)
+    params.require(:params).permit(:username, :email)
   end
 
   def login_password
-    params.permit(:password)
+    params.require(:params).permit(:password)
   end
 
   def signup_params
-    params.permit(:username, :email, :password, :password_confirmation)
+    params.permit(:email, :passwordri)
   end
 
-end
 end

@@ -1,6 +1,6 @@
-var loginForm = "<form method='post' action='user#login'><p><input type='text' name='email' placeholder= 'Email'></p><p><input type='password' name='password'></p><p class='submit'><input type='submit' value='Login to your account'></p></form>";
+var loginForm = "<form method='post' action='user/login'><p><input type='text' name='email' placeholder= 'Email'></p><p><input type='password' name='password'></p><p class='submit'><input type='submit' value='Login to your account'></p></form>";
 
-var signupForm = "<form method='post' action='user#signup'><p><input type='text' name='email' placeholder= 'Email'></p><p><input type='password' name='password'></p><p class='submit'><input type='submit' value='Create Account'></p></form>";
+var signupForm = "<form method='post' action='user/signup'><p><input type='text' name='email' placeholder= 'Email'></p><p><input type='password' name='password'></p><p class='submit'><input type='submit' value='Create Account'></p></form>";
 
 var hideButtons = function() {
   $('#signup').hide();
