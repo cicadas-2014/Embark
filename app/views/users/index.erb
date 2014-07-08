@@ -4,21 +4,25 @@
 		<a href="/">Embark</a>
 	</div>
 
-<!-- 	<div id="user_adventures">
-		<% if @user.adventures.count %>
-		<% @user.adventures.each do |adventure| %>
-			<div class ="adventure">
-				<a href="/adventures/<%= adventure.id %>">	
-					<div id="adventure_name"><%= adventure.name %></div>
-				</a>
-			</div>
-			<div id="adventure_description"><%= adventure.description %></div>
-			<% end %>
-			<% end %>
-		</div>
-	</div> -->
+  <div id="user_adventures">
+    <% if @user %>
+        <% @user.adventures.each do |adventure| %>
+          <div class ="adventure">
+            <a href="/adventures/<%= adventure.id %>">
+              <div id="adventure_name"><%= adventure.name %></div></a>
+            <div id="adventure_description"><%= adventure.description %></div>
+          </div>
+        <%end%>
+    <% else %>
+    	<h3>You haven't favorited any adventures yet! Go forth and be inspired! <br><a href="/">BE INSPIRED!</a>
+    	</h3>
+    <%end%>
+  </div>
 
-	<input type="button" id="addAdventure" value="Add Adventure"/>
+<div id="addAdventure">
+  <button name="addAdventure">Add Adventure</button>
+</div>
+
 	<div id="adventureForm"></div>
 
 </div>

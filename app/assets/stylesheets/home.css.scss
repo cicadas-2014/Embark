@@ -5,7 +5,15 @@ $textColor:rgba(116, 201, 148, 0.84);;
 $errorColor:red;
 $font:'Raleway', sans-serif;
 
+@media (max-width: 1000px) {
+    div#header {
+         background-color: black;
+    }
+}
 
+div#hamburger {
+    color: $backgroundColor;
+}
 #embark {
     margin-top: 120px;
     font-weight:bold;

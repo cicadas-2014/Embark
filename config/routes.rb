@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
 	get 'user/logout'
 
-	post 'users/addAdventure', to: 'users#addAdventure', as: 'addAdventure'
 	
 	root 'embark#home', as: 'home'
 
@@ -24,4 +23,6 @@ Rails.application.routes.draw do
 
 	get '/users/favorites', to: "users#favorites"
 
+	post '/users/addAdventure', to: 'users#addAdventure'
+	
 end
