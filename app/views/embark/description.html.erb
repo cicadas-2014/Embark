@@ -4,35 +4,19 @@
     <a href="/">Embark</a>
   </div>
 
-  <%= form_for @user, url: {action: 'favorite'} do |f| %>
-    <%= button_tag 'Favorite this adventure', name: nil %>
-  <% end %>
-  
   <div>
     <form>
       <input type="button" id="favorite" value="Save to your favorites"/>
     </form>
   </div>
-  <%= f.text_field :title %>
-  <%= f.text_area :body, size: "60x12" %>
-  <%= f.submit "Create" %>
 
   <div class="show_images">
-    <% unless @adventure.city.images.empty? %>
     <div id="main_image">
-      <img id="main_image" class="largeimage" src='<%= @adventure.images.first.url %>'/>
+      <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
     </div>
     <div id="thumbnail_container">
 
-      <div id="adventures_images">
-        <% @adventure.images[0..4].each do |image| %>
-        <img class="smallimage" src='<%= image.url %>'/>
-        <% end %>
-        <img class="smallimage" src='<%= @adventure.image_url %>'/>
-      </div>
-
     </div>
-    <% end %>
 
     <div class='adventure_info'>
       <div id='description'>
