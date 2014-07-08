@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20140707163616) do
 
   create_table "images", force: true do |t|
     t.text     "big_image_url"
-    t.text     "smaal_image_url"
+    t.text     "small_image_url"
     t.string   "longitude"
     t.string   "latitude"
     t.integer  "city_id"
