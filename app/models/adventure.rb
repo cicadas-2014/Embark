@@ -12,7 +12,9 @@ class Adventure < ActiveRecord::Base
 	has_many :categories, through: :adventure_categories
 	belongs_to :city
 
-	def self.makeAdventure(title,description,start_city,duration,map_url,image_url,categories, inCSV = false, csv = nil)
+
+	def self.makeAdventure(title,description,start_city,duration, map_url,image_url,categories, inCSV = false, csv = nil)
+
 		####################
 		# title: string
 		# description: text
@@ -21,23 +23,27 @@ class Adventure < ActiveRecord::Base
 		# map_url: text
 		# image_url: text
 		####################
-		sleep(0.1)
 		city = City.find_by(name:start_city)
 		unless city
 			if inCSV
-				City.create(name:start_city, longitude:csv[0], latitude:csv[1], country: csv[2])
+				City.create(name:start_city, longitude:csv[0], latitude:csv[1], country: Country.find_by(name:csv[2]))
 			else
+				unless start_city == 'Longyearbyen'
 				geo = Geocoder.search(start_city).first
+				if geo
 				country = Country.find_by(name:geo.country) 
 				city = City.create(name:start_city, longitude:geo.longitude, latitude:geo.latitude, country: country)
+				end
+				end
 			end
 		end
-		puts city.id
+		if city
 		adventure = Adventure.create(title:title, description:description, duration:duration, map_url:map_url, image_url:image_url)
 		adventure.city = city
 		categories = categories.gsub(/[\[\\\]" ]/,"").split(',').delete_if{ |cat| cat.match(/\d/) }
 		categories.each do |category|
 			adventure.categories << Category.find_or_create_by(name:category)
+		end
 		end
 	end
 end

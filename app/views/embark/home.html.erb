@@ -1,36 +1,34 @@
 <div class='homepage'>
 
-<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-<div id="new_session">
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<!-- <div id="new_session">
 <% if session %>
 <input type="button" id="login" value="Login"/>
 <input type="button" id="signup" value="Signup"/>
 <% else %>
 %= button_to "Logout" %>
 <% end %>
-</div>
+</div> -->
 <link rel="stylesheet" href="css/home.css.scss">
 
 <div id="embark" href="/">
 	EMBARK
 </div>
-	<div id='home'>
-		<div id="logo">
-			<p> We inspire experiences </p>
-		</div>
+<div id='home'>
+	<div id="logo">
+		<p> We inspire experiences </p>
+	</div>
 	<div id="search">	
 		<%= link_to "Local", adventures_path(search: "local"), class: 'btn' %>
 		<%= link_to "Continental", adventures_path(search: "continential"), class: 'btn'%>
 		<%= link_to "Global", adventures_path(search: "global"), class: 'btn' %>
-   </div>
+	</div>
 
 	<div id="background">
 		<video autoplay="true" loop="true" preload="auto">
-		  <source src="field.mov" type="video/mp4">
-		</video>
-	</div>
-	<!-- 
-		<%= image_tag('https://m1.behance.net/rendition/modules/82977983/disp/9458de8774adbcf5d6c33b40547f7198.gif') %> 	 -->
+			<source src="field.mov" type="video/mp4">
+			</video>
+		</div>
 	</div>
 </div>
 </div>
