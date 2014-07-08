@@ -4,47 +4,35 @@
     <a href="/">Embark</a>
   </div>
 
-  <%= button_to "Favorite this adventure", action: "favorite", controller: 'users', params: {adventure_id: @adventure.id} %>
-  <form>
-    <input type="button" id="favorite" value="Save to your favorites"/>
-  </form>
-</div>
-<%= f.text_field :title %>
-<%= f.text_area :body, size: "60x12" %>
-<%= f.submit "Create" %>
-
-<div class="show_images">
-  <% unless @adventure.city.images.empty? %>
-  <div id="main_image">
-    <img id="main_image" class="largeimage" src='<%= @adventure.images.first.url %>'/>
+  <div>
+    <form>
+      <input type="button" id="favorite" value="Save to your favorites"/>
+    </form>
   </div>
-  <div id="thumbnail_container">
 
-    <div id="adventures_images">
-      <% @adventure.images[0..4].each do |image| %>
-      <img class="smallimage" src='<%= image.url %>'/>
-      <% end %>
-      <img class="smallimage" src='<%= @adventure.image_url %>'/>
+  <div class="show_images">
+    <div id="main_image">
+      <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
     </div>
-
   </div>
-  <% end %>
 
   <div class='adventure_info'>
     <div id='description'>
-     <header><%= @adventure.name %></header>
+    <header><%= @adventure.title %></header>
      <p><%= @adventure.description %></p>
    </div>
    <div id="images"></div>
  </div>
+ <div id="images"></div>
+</div>
 </div>
 
 
 <div id="map"></div>
 
 <script type="text/javascript">
-  var latitude = <%= @adventure.city.latitue %>;
+  var latitude = <%= @adventure.city.latitude %>;
   var longitude = <%= @adventure.city.longitude %>;
-  renderMap(latitue,longitude); 
+  renderMap(latitude,longitude); 
 </script>
 </div>

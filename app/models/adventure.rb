@@ -13,6 +13,7 @@ class Adventure < ActiveRecord::Base
 	belongs_to :city
 
 
+
 	def self.makeAdventure(title,description,start_city,duration, map_url,image_url,categories, inCSV = false, csv = nil)
 
 		####################
@@ -44,6 +45,7 @@ class Adventure < ActiveRecord::Base
 		categories.each do |category|
 			adventure.categories << Category.find_or_create_by(name:category)
 		end
+		adventure.save
 		end
 	end
 end

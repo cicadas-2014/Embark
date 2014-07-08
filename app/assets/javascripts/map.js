@@ -1,3 +1,11 @@
+function addMarker(map,markerLocation) {
+	var marker = new google.maps.Marker({
+		position: markerLocation,
+		map: map,
+		title: "The start of your adventure"
+	})
+}
+
 function initialize(latitude,longitude) {
 	var mapCenter = new google.maps.LatLng(latitude,longitude);
 	
@@ -6,7 +14,9 @@ function initialize(latitude,longitude) {
 		center: mapCenter
 	}
 
-	map = new google.maps.Map(document.getElementbyId('map'),mapOptions);	
+	map = new google.maps.Map(document.getElementById('map'), mapOptions);	
+
+	addMarker(map,mapCenter);
 }
 
 
