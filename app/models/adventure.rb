@@ -1,5 +1,8 @@
 require 'geocoder'
 class Adventure < ActiveRecord::Base
+	has_many :favorited_adventures
+	has_many :users, through: :favorited_adventures
+
 	validates :image_url, uniqueness: true
 	validates :title, uniqueness: true
 	validates :description, uniqueness: true

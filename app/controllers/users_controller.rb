@@ -1,25 +1,34 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
+
+  def index 
+    @user = User.find(session[:id])
+
+  end
 
   def login
     @user = User.find_by(login_params).try(:authenticate, login_password[:password])
     if @user
-      redirect_to root_path
+      session[:id] = @user.id
+      redirect_to home_path
     else
-      redirect_to root_path 
+      redirect_to home_path 
     end
   end
 
-  def signup
+  def create
     @user = User.new(signup_params)
     if @user.save
-      redirect_to root_path
+      p "success"+ "*"*10000
+      session[:id] = @user.id
+      redirect_to home_path
     else
-      redirect_to root_path 
+      redirect_to home_path 
     end
   end
 
   def logout
   	session.clear
+    redirect_to home_path
   end
 
   private
