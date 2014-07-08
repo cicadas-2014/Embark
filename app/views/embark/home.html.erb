@@ -1,12 +1,19 @@
 <div class='homepage'>
 
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<div id="new_session">
+<% if session %>
+<input type="button" id="login" value="Login"/>
+<input type="button" id="signup" value="Signup"/>
+<% else %>
+%= button_to "Logout" %>
+<% end %>
+</div>
 <link rel="stylesheet" href="css/home.css.scss">
 
 <div id="embark" href="/">
 	EMBARK
 </div>
-
 	<div id='home'>
 		<div id="logo">
 			<p> We inspire experiences </p>

@@ -9,7 +9,7 @@ class Adventure < ActiveRecord::Base
 	has_many :categories, through: :adventure_categories
 	belongs_to :city
 
-	def self.makeAdventure(title,description,start_city,duration,map_url,image_url,categories)
+	def self.makeAdventure(title,description,start_city,duration,map_url,image_url,categories, inCSV = false, csv = nil)
 		####################
 		# title: string
 		# description: text
@@ -21,9 +21,13 @@ class Adventure < ActiveRecord::Base
 		sleep(0.1)
 		city = City.find_by(name:start_city)
 		unless city
-			geo = Geocoder.search(start_city).first
-			country = Country.find_by(name:geo.country)
-			city = City.create(name:start_city, longitude:geo.longitude, latitude:geo.latitude, country: country)
+			if inCSV
+				City.create(name:start_city, longitude:csv[0], latitude:csv[1], country: csv[2])
+			else
+				geo = Geocoder.search(start_city).first
+				country = Country.find_by(name:geo.country) 
+				city = City.create(name:start_city, longitude:geo.longitude, latitude:geo.latitude, country: country)
+			end
 		end
 		puts city.id
 		adventure = Adventure.create(title:title, description:description, duration:duration, map_url:map_url, image_url:image_url)
