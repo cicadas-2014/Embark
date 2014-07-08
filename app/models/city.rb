@@ -1,7 +1,8 @@
 class City < ActiveRecord::Base
+	validates :name, uniqueness: true
+
 	belongs_to :country
 	
-	has_many :adventure_cities
-	has_many :cities, through: :adventure_cities
+	has_many :adventures
   has_many :images
 end

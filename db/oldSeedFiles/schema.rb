@@ -64,13 +64,10 @@ ActiveRecord::Schema.define(version: 20140707163616) do
   end
 
   create_table "images", force: true do |t|
-    t.string   "panoramio_id"
-    t.text     "original_image_url"
-    t.text     "medium_image_url"
+    t.text     "big_image_url"
     t.text     "smaal_image_url"
     t.string   "longitude"
     t.string   "latitude"
-    t.boolean  "confirmed",          default: false
     t.integer  "city_id"
     t.datetime "created_at"
     t.datetime "updated_at"
