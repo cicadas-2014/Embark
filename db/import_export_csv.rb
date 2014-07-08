@@ -56,7 +56,13 @@ def export_cities_to_csv
   puts "exporting images to a csv file"
   CSV.open("db/csvFiles/cities.csv", "wb") do |csv|
     City.all.each do |city|
+      if city.country
+      puts city.name
+      puts city.longitude
+      puts city.latitude
+      puts city.country.name
       csv << [city.name,city.longitude,city.latitude,city.country.name]
+    end
     end
   end
 end
