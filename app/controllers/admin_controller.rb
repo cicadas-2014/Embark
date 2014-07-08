@@ -1,4 +1,4 @@
-class DelController < ApplicationController
+class AdminController < ApplicationController
 	def index
 
 		@adventures = Adventure.all
