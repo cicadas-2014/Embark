@@ -82,23 +82,7 @@ div.show_images {
   height: auto;
 }
 
-.filters{
-  display: inline-block;
-  position: absolute;
-  top: 20px;
-  right:3%;
-  margin: 5px;
-  width: 30%;
-}
 
-select {
-  float:right;
-  color: $fillColor;
-  background-color: $backgroundColor;
-  font-size: 18px;
-  right:10px;
-  width:50%;
-}
 
 #embark a{
   position:relative;
