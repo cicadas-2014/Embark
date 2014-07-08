@@ -17,6 +17,20 @@ $font:'Raleway', sans-serif;
     font-style: normal;
 }
 
+
+ul.thumbnail-gallery {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+}
+
+ul.thumbnail-gallery li {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  padding: 0;
+}
+
+
 .pointer{
   margin-top: 100px; 
   font-family: icon-worksregular;

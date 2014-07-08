@@ -7,11 +7,11 @@ $font:'Raleway', sans-serif;
 
 
 #embark {
-    margin-top: 120px;
+    margin-top: 110px;
     font-weight:bold;
     text-align: center;
     font-family: $font;
-    font-size: 100px;
+    font-size: 130px;
     letter-spacing: 0.3em;
     color: $backgroundColor;
 }
@@ -38,6 +38,7 @@ $font:'Raleway', sans-serif;
 
 #home #background video{
     height: 100%;
+    width: 100%;
     position: fixed;
 }
 
@@ -56,10 +57,9 @@ $font:'Raleway', sans-serif;
 
 #home a {
    // border: 2px solid $backgroundColor;
-    width: 200px;
-    height: 50px;
+    width: 320px;
+    height: 60px;
     font-family: $font;
-    font-size: 40px;
     display: block;
     margin: 30px auto;
     text-align: center;
@@ -70,7 +70,7 @@ $font:'Raleway', sans-serif;
     color: $backgroundColor;
     min-width: 270px;
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 34px;
     line-height : 45px;
     text-align: center;
     -webkit-appearance: none;
@@ -78,15 +78,18 @@ $font:'Raleway', sans-serif;
     font-family: $font;
     opacity: 0.2;
     background-color: $textColor;
+    padding-top: 8px;
+
+
 }
 
 
 #home #logo {
     text-align: center;
     position: relative;
-    margin-top: -10px;
     font-family: $font;
-    font-size: 30px;
+    top: -30px;
+    font-size: 37px;
     letter-spacing: .3em;
     color: $backgroundColor; 
     opacity: 0;
@@ -100,5 +103,16 @@ $font:'Raleway', sans-serif;
 }
 
 #search{
-    margin-top: 40px;
+    top: 100px;
 }
+
+// @media (max-width: 1900px) {
+// img {height: 290px;width: auto;}
+//   #adventuresPage button{ width: 155px; height: 50px;font-size: 14px;} 
+//   #adventuresTitle a{ font-size:65px; letter-spacing: 0.3em; }
+// }
+// @media (max-width: 1500px) {
+//   img {height: 250px;width: auto;}
+//   #adventuresPage button{ width: 125px; height: 40px;font-size: 12px;} 
+//   #adventuresTitle a{ font-size:55px; letter-spacing: 0.2em; }
+// }

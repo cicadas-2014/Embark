@@ -1,35 +1,77 @@
+<link rel="stylesheet" href="css/justifiedGallery.css" />
+<script src="js/jquery.justifiedGallery.js"></script>
+
 <div id="adventureDescription">
 
   <div id="embark">
     <a href="/">Embark</a>
   </div>
 
-  <div>
+   <div>
     <form>
       <input type="button" id="favorite" value="Save to your favorites"/>
     </form>
   </div>
 
-  <div class="show_images">
-    <div id="main_image">
-      <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
-    </div>
-  </div>
-
   <div class='adventure_info'>
     <div id='description'>
-    <header><%= @adventure.title %></header>
-     <p><%= @adventure.description %></p>
+  <header><%= @adventure.title %></header>
+    <p><%= @adventure.description %></p>
+  </div>
+
+<div class='adventure_info'>
+    <div id='description'>
+  <header><%= @adventure.title %></header>
+    <p><%= @adventure.description %></p>
+  </div>
+
+<!-- 
+   <div id="images"></div>
    </div>
    <div id="images"></div>
- </div>
- <div id="images"></div>
+  </div>
 </div>
+ -->
+
+ <div id="colorboxExample">
+
+  <a title="What's your destination?">
+    <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
+  </a>
+  <a title="Just in a dream Place">
+    <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
+  </a>
+   <a title="What's your destination?">
+    <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
+  </a>
+  <a title="Just in a dream Place">
+    <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
+  </a>
+   <a title="What's your destination?">
+    <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
+  </a>
+  <a title="Just in a dream Place">
+    <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
+  </a>
+   <a title="What's your destination?">
+    <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
+  </a>
+  <a title="Just in a dream Place">
+    <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
+  </a>
+   <a title="What's your destination?">
+    <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
+  </a>
+  <a title="Just in a dream Place">
+    <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
+  </a>
+  
 </div>
+
+
 
 
 <div id="map"></div>
-
 <script type="text/javascript">
   var latitude = <%= @adventure.city.latitude %>;
   var longitude = <%= @adventure.city.longitude %>;
