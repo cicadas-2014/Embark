@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
 
-	post 'user/login'
-
-	post 'user/signup'
-
-	get 'user/logout'
-
 	root 'embark#home'
 
 	get '/adventures', to: 'embark#adventures', as: 'adventures'
@@ -15,5 +9,7 @@ Rails.application.routes.draw do
 	get '/adventures/map', to: 'embark#map', as: 'map'
 	
 	resources :admin, only: [:show,:index]
-	
+
+	resources :users, only: [:index,:create]
+
 end
