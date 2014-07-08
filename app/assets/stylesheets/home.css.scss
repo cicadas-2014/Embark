@@ -41,15 +41,12 @@ $font:'Raleway', sans-serif;
     position: fixed;
 }
 
-
 #home a:hover{
      background: $fillColor;
     -webkit-transition-property: background;
     -webkit-transition-duration: 0.8s;
     -webkit-transition-timing-function: ease;
 }
-
-
 
 #home a:active {
     text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
