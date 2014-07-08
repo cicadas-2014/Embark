@@ -20,6 +20,11 @@
     </div>
 
 
+  <div  class="favorite_div">
+    <form>
+      <input type="button" adventure='<%= @adventure.id %>' id="favorite_button" value="Save to your favorites"/>
+    </form>
+  </div>
 
     <div id="header" class="scrolled">
       <div class="mid-cont">
@@ -27,14 +32,7 @@
         <div class="hamburger" style="background-position: 0px -28px;"></div>
     </div>
 <div id="adventureDescription">
-  
-  <% if session%>
-    <div id='favorite'>
-      <form>
-        <input type="button" id="favorite" value="★Favorite★"/>
-      </form>
-    </div>
-  <% end %>
+
 
 <!--   <div class="show_images">
     <div id="main_image">

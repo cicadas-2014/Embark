@@ -30,8 +30,9 @@ class UsersController < ApplicationController
     redirect_to home_path
   end
 
-  def favorite
-    
+  def favorites
+    FavoritedAdventure.create(adventure_id: params[:data], user_id: session[:id])
+    return 200
   end
   
   def addAdventure
