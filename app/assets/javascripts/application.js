@@ -60,7 +60,8 @@ ready = function(){
 };
 
 function imageListLoad(speed){
-	$('#adventuresPage').hide()
+	$(
+		'#adventuresPage').hide()
 	$('#adventuresPage').fadeTo(speed,1)
 }
 function startAnimation(speed){
@@ -110,6 +111,8 @@ imageGallery = function() {
 
 $(document).ready(ready)
 $(document).on('page:load', ready);
+
+
 
 
 
