@@ -5,6 +5,15 @@
 //= require_tree .
 
 
+function filter() {
+	$('.filters button').on('click',function(e){
+		e.preventDefault();
+
+		$('.filterOptions').css('display','block');
+	})
+}
+
+
 function getUserLocation(search) {
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position){
@@ -43,26 +52,31 @@ function displayError(error){
 
 ready = function(){
 	var speed = 1200
+	filter();
 	startAnimation(speed)
 	buttonEffects(speed)
 	imageGallery();
 	imageListLoad(speed);
 };
+
 function imageListLoad(speed){
 	$('#adventuresPage').hide()
 	$('#adventuresPage').fadeTo(speed,1)
 }
 function startAnimation(speed){
 	$('#home a').hide();
-	$('#home #logo').fadeTo(speed,1)
+	$('#home #logo').fadeTo(speed*4,1)
 	setTimeout(function() {
-		$('#home #logo').animate({
-			'font-size':'130px',
-			'letter-spacing': '0.1em'
-		},speed*2)
-		$('#home #background').stop().fadeTo(speed*2,1)
+		//  $('#home #logo').animate({
+		//  	'font-size':'30px',
+		//  	'letter-spacing': '0.1em'
+		// },speed*2)
+		$('#home #background').stop().fadeTo(speed*6,1)
 		setTimeout(function() {
-			$('#home a').fadeTo(speed,1)
+			 $('#home a').fadeTo(speed,1)
+		},speed*1.5)
+		setTimeout(function() {
+			 $('#embark').fadeTo(speed,1)
 		},speed*1.5)
 	},speed)
 }
@@ -96,7 +110,6 @@ imageGallery = function() {
 
 $(document).ready(ready)
 $(document).on('page:load', ready);
-
 
 
 
