@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20140708134211) do
     t.string   "panoramio_id"
     t.text     "original_image_url"
     t.text     "medium_image_url"
-    t.text     "smaal_image_url"
+    t.text     "small_image_url"
     t.string   "longitude"
     t.string   "latitude"
     t.boolean  "confirmed",          default: false
