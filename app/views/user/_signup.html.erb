@@ -1,0 +1,7 @@
+<%= form_tag(user_signup_path, method: "post", remote: true, :id => "signup") do %>
+  <%= label_tag :email, "Email" %>
+  <%= email_field_tag :email %>
+  <%= label_tag :password, "Password" %>
+  <%= password_field_tag :password %>
+  <%= submit_tag('Sign up') %>
+<% end %>
