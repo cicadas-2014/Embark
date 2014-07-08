@@ -27,12 +27,10 @@
       <div class="mid-cont">
         <a class = "embark" href="/" style="background-position: 0px -18px;">EMBARK</a>
         <div class="hamburger" style="background-position: 0px -28px;"></div>
+
+      <button name="filters">Filter Search</button>
       </div>
     </div>
-
-
-<!--       <button name="filters">Filter Search</button>
- -->
  <!--    <div class="filterOptions">
 
         <div id="filterLocation"> 
@@ -61,16 +59,16 @@
 
 
 <p id="tagline">Choose your own adventure</p>
-<div id="home-scroll" class="desktop" onclick="scrollToHome();">
-  <div class="pointer">&#96;</div>
+<!-- <div id="home-scroll" class="desktop" onclick="scrollToHome();">
+  <div class="pointer">&#96;</div> -->
 </div>
 
 <div id="gallery">
    <%@adventures.each do |adv|%>
       <div class="image">
-         <a href="/adventures/<%=adv.id%>">
+          <a href="/adventures/<%=adv.id%>">
             <img src=<%=adv.image_url%> alt="">
-                          </a>
+          </a>
       </div>
     <%end%>
 </div>
