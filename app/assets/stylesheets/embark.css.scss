@@ -143,7 +143,7 @@ div.show_images {
 //   right:10px;
 //   width:50%;
 // }
-#adventuresTop {
+#adventuresPage {
     width: 100%;
     border: 3px solid white;
     margin-bottom: 15px;
@@ -167,17 +167,16 @@ div.show_images {
   margin-right:30px;
   float: right;
   margin-top: 8px;
-
 }
 
-#adventuresTop .filterOptions {
+.filterOptions {
   border-top: 2px solid $borderColor;
   width: 100%;
   height: 50px;
   margin-top: 1%;
-  display:none;
+  display: none;
 }
-#adventuresTop .filterOptions select{
+#adventuresPage .filterOptions select{
   margin-right: 15px;
   width: 45%;
   background-color: $backgroundColor;
@@ -185,7 +184,7 @@ div.show_images {
   font-size: 25px;
   font-family: $font;
 }
-#adventuresTop .filterOptions form {
+#adventuresPage .filterOptions form {
   display: inline-block;
   text-align: center;
   float:right;
@@ -212,7 +211,7 @@ div.show_images {
   margin: 1%;
   width: 25%;
 }
-#adventuresTop button:hover, #adventuresTop .filterOptions select:hover, .filterOptions #filterLocation a:hover{
+#adventuresPage button:hover, #adventuresPage .filterOptions select:hover, .filterOptions #filterLocation a:hover{
   background-color: $fillColor;
   color: $backgroundColor;
 }
@@ -252,12 +251,12 @@ div.show_images {
 }
 @media (max-width: 1900px) {
   img {height: 290px;width: auto;}
-  #adventuresTop button{ width: 250px; height: 50px;font-size: 40px;} 
+  #adventuresPage button{ width: 250px; height: 50px;font-size: 40px;} 
   #adventuresTitle a{ font-size:65px; letter-spacing: 0.3em; }
 }
 @media (max-width: 1500px) {
   img {height: 250px;width: auto;}
-  #adventuresTop button{ width: 220px; height: 40px;font-size: 30px;} 
+  #adventuresPage button{ width: 220px; height: 40px;font-size: 30px;} 
   #adventuresTitle a{ font-size:55px; letter-spacing: 0.2em; }
 }
 @media (max-width: 1400px) {
@@ -265,21 +264,21 @@ div.show_images {
 }
 @media (max-width: 1200px) {
   img {height: 180px;width: auto;}
-  #adventuresTop button { width: 180px; height: 35px;font-size: 28px;} 
+  #adventuresPage button { width: 180px; height: 35px;font-size: 28px;} 
   #adventuresTitle a { font-size:45px; letter-spacing: 0.1em; }
 }
 @media (max-width: 1000px) {
   img {height: 150px;width: auto;}
-  #adventuresTop button{ width: 140px; height: 30px;font-size: 25px;} 
+  #adventuresPage button{ width: 140px; height: 30px;font-size: 25px;} 
   #adventuresTitle a{ font-size:40px; letter-spacing: 0.1em; }
 }
 @media (max-width: 800px) {
   img {height: 120px;width: auto;}
-  #adventuresTop button{ display:none;} 
+  #adventuresPage button{ display:none;} 
   #adventuresTitle a{ font-size:30px; letter-spacing: 0.1em; }
 }
 @media (max-width: 600px) {
   img {height: 180px;width: auto;}
-  #adventuresTop button{ display:none;} 
+  #adventuresPage button{ display:none;} 
   #adventuresTitle a{ font-size:25px; letter-spacing: 0.1em; }
 }
