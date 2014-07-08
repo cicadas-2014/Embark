@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     @user = User.find_by(login_params).try(:authenticate, login_password[:password])
     if @user
       session[:id] = @user.id
-      redirect_to root_path
+      redirect_to home_path
     else
-      redirect_to root_path 
+      redirect_to home_path 
     end
   end
 
@@ -20,15 +20,15 @@ class UsersController < ApplicationController
     if @user.save
       p "success"+ "*"*10000
       session[:id] = @user.id
-      redirect_to root_path
+      redirect_to home_path
     else
-      redirect_to root_path 
+      redirect_to home_path 
     end
   end
 
   def logout
   	session.clear
-    redirect_to root_path
+    redirect_to home_path
   end
 
   private

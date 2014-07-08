@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-	root 'embark#home'
+	root 'embark#home', as: 'home'
 
 	get '/adventures', to: 'embark#adventures', as: 'adventures'
 	
@@ -11,5 +11,7 @@ Rails.application.routes.draw do
 	resources :admin, only: [:show,:index]
 
 	resources :users, only: [:index,:create]
+
+	get '/users/login', to: "users#login"
 
 end
