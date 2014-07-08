@@ -32,7 +32,7 @@ gem 'spring',        group: :development
 # gem 'unicorn'
 gem 'json'
 
-
+gem 'bcrypt'
 
 gem 'curl'
 gem 'curb'
