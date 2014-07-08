@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
-	has_many :category_adventures
-	has_many :adventures, through: :category_adventures
+	has_many :adventure_categories
+	has_many :adventures, through: :adventure_categories
 end
