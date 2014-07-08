@@ -34,6 +34,16 @@ class UsersController < ApplicationController
     
   end
   
+  def addAdventure
+    adventure = Adventure.makeAdventure(params[:title],params[:description],params[:start_city],params[:duration],nil,params[:image_url],params[:categories])
+    if adventure
+      redirect_to users_path
+    else
+      redirect_to home_path
+    end
+
+  end
+
   private
 
   def login_params
@@ -48,11 +58,4 @@ class UsersController < ApplicationController
     params.permit(:email, :password)
   end
 
-  def addAdventure
-    if Adventure.makeAdventure(params[:title],params[:description],params[:start_city],params[:duration],nil,params[:image_url],params[:categories])
-      redirect_to users_path
-    else
-      redirect_to home_path
-    end
-  end
 end

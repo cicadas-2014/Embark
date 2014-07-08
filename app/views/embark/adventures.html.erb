@@ -5,7 +5,14 @@
   <script type="text/javascript" src="http://cobblehilldigital.com/wp-content/themes/cobblehill/js/mytheme.js"></script>
 </head>
 
-
+<div id="new_session">
+<% if session %>
+  <input type="button" id="login" value="Login"/>
+  <input type="button" id="signup" value="Signup"/>
+<% else %>
+  <%= button_to "Logout" %>
+<% end %>
+</div>
 
 <div id="loader" style="display: none;"></div>
 <div id="nav" style="height: auto; top: -380px;">
