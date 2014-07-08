@@ -1,17 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe UserController, :type => :controller do
+RSpec.describe UsersController, :type => :controller do
+  let(:user) {User.create(email:'test@dbc.com', 
+                password_digest: '1121233', 
+                admin?: false)}
 
   describe "GET 'login'" do
     it "returns http success" do
-      get 'login'
+      post 'login', params: { email: 'test@dbc.com', password: "1121233"}
       expect(response).to be_success
     end
   end
 
-  describe "GET 'signup'" do
+  describe "GET 'create'" do
     it "returns http success" do
-      get 'signup'
+      post 'create'
       expect(response).to be_success
     end
   end

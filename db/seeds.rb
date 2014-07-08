@@ -4,8 +4,9 @@ require_relative 'fillPanoramio'
 require_relative 'make_countries'
 makeCountriesContinents
 importGadventures
-# importImages
+importImages
 # add_images
+# export_cities_to_csv
 
 
 # export_images_to_csv

@@ -1,16 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe Image, :type => :model do
-	 let(:image) {Image.create(url:'something.com',longitude:5,latitude:5,adventure_id:5)}
+	 let(:image) {Image.create(panoramio_id: 12345678,original_image_url: 'www.www.www',medium_image_url: 'www.www.www',smaal_image_url: 'www.www.www',longitude: 12.34343,latitude: 12.34343, city_id:5)}
 
   it "has a valid image" do
-    expect(City.new()).to be_valid
+    expect(Image.new()).to be_valid
   end
 
-  it "has a valid background-image" do
-    expect(image).to respond_to(:url)
+  it "has a valid panormio id" do
+    expect(image).to respond_to(:panoramio_id)
+  end  
+  it "has a valid original-image" do
+    expect(image).to respond_to(:original_image_url)
   end
-
+  it "has a valid medium-image" do
+    expect(image).to respond_to(:medium_image_url)
+  end
+  it "has a valid smaal-image" do
+    expect(image).to respond_to(:smaal_image_url)
+  end
   it "have a longitude" do 
     expect(image).to respond_to(:longitude)
   end
@@ -20,6 +28,8 @@ RSpec.describe Image, :type => :model do
   end
 
   it "have a adventure id" do 
-    expect(image).to respond_to(:adventure_id)
+    expect(image).to respond_to(:city_id)
   end
 end
+
+
