@@ -2,9 +2,11 @@
 require_relative 'import_export_csv'
 require_relative 'fillPanoramio'
 require_relative 'make_countries'
+require_relative 'mediaCreator'
 makeCountriesContinents
 importGadventures
 importImages
+makeMediaFile
 # add_images
 # export_cities_to_csv
 
