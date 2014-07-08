@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.find_by(login_params).try(:authenticate, login_password[:password])
     if @user
       session[:id] = @user.id
-      redirect_to home_path
+      redirect_to users_path
     else
       redirect_to home_path 
     end
@@ -17,9 +17,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(signup_params)
     if @user.save
-      p "success"+ "*"*10000
+      raise params.inspect
       session[:id] = @user.id
-      redirect_to home_path
+      redirect_to users_path
     else
       redirect_to home_path 
     end
@@ -30,6 +30,10 @@ class UsersController < ApplicationController
     redirect_to home_path
   end
 
+  def favorite
+    
+  end
+  
   private
 
   def login_params

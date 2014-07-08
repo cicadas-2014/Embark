@@ -27,17 +27,25 @@
     <div id="main_image">
       <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
     </div>
-    <div id="thumbnail_container">
+  </div>
 
-    </div>
-
-    <div class='adventure_info'>
-      <div id='description'>
-       <header><%= @adventure.name %></header>
-       <p><%= @adventure.description %></p>
-     </div>
-     <div id="images"></div>
+  <div class='adventure_info'>
+    <div id='description'>
+    <header><%= @adventure.title %></header>
+     <p><%= @adventure.description %></p>
    </div>
+   <div id="images"></div>
  </div>
+ <div id="images"></div>
+</div>
+</div>
 
+
+<div id="map"></div>
+
+<script type="text/javascript">
+  var latitude = <%= @adventure.city.latitude %>;
+  var longitude = <%= @adventure.city.longitude %>;
+  renderMap(latitude,longitude); 
+</script>
 </div>
