@@ -6,11 +6,14 @@ Rails.application.routes.draw do
 
 	get 'user/logout'
 
-	root 'embark#home', as: 'home'
+	root 'embark#home'
+
 	get '/adventures', to: 'embark#adventures', as: 'adventures'
+	
 	get '/adventures/:adventure_id', to: 'embark#description', as: 'description'
 
 	get '/adventures/map', to: 'embark#map', as: 'map'
+	
 	resources :del
 
 

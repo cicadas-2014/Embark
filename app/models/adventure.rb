@@ -1,5 +1,8 @@
 require 'geocoder'
 class Adventure < ActiveRecord::Base
+	has_many :favorited_adventures
+	has_many :users, through: :favorited_adventures
+
 	validates :image_url, uniqueness: true
 	validates :title, uniqueness: true
 	validates :description, uniqueness: true
@@ -10,14 +13,6 @@ class Adventure < ActiveRecord::Base
 	belongs_to :city
 
 	def self.makeAdventure(title,description,start_city,duration,map_url,image_url,categories)
-		####################
-		# title: string
-		# description: text
-		# start_city: string
-		# duration: integer
-		# map_url: text
-		# image_url: text
-		####################
 		sleep(0.1)
 		city = City.find_by(name:start_city)
 		unless city

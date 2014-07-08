@@ -10,10 +10,9 @@ class UserController < ApplicationController
   end
 
   def signup
-  	raise params.inspect
     @user = User.new(signup_params)
     if @user.save
-      
+      redirect_to root_path
     else
       redirect_to root_path 
     end
@@ -26,7 +25,7 @@ class UserController < ApplicationController
   private
 
   def login_params
-    params.require(:params).permit(:username, :email)
+    params.require(:params).permit(:email)
   end
 
   def login_password
@@ -34,7 +33,7 @@ class UserController < ApplicationController
   end
 
   def signup_params
-    params.permit(:email, :passwordri)
+    params.permit(:email, :password)
   end
 
 end
