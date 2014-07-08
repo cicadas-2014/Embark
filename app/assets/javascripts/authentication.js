@@ -31,11 +31,6 @@ var appendAddAdventureForm = function(e){
 
 
 
-
-
-
-
-
 $(document).ready(function() {
   $('body').on('click', '#login', appendLoginForm);
   $('body').on('click', '#signup', appendSignupForm);
