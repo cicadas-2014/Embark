@@ -1,10 +1,10 @@
 
-$backgroundColor:papayawhip;
-$borderColor:#eee;
-$fillColor:#FFEFD5;
-$textColor:#000000;
+$backgroundColor:#fcfbe4;
+$borderColor:rgba(116, 201, 148, 0.84);;
+$fillColor:#74c9bf;
+$textColor:rgba(116, 201, 148, 0.84);;
 $errorColor:red;
-$font:"museo-sans";
+$font:'Raleway', sans-serif;
 
 * { 
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -24,43 +24,22 @@ $font:"museo-sans";
   filter: alpha(opacity=85); 
 }
 body { 
-  background-color: #fcfbe4;
+  background-color: $backgroundColor;
   overflow-x: hidden;
 }
 
 #gallery {
-    max-width: 100%;
+    width: 100%;
     padding-top: 10px;
     margin: 0 auto;
+    text-align: center;
 }
 
-.image img{
-  float:left;
-  padding-top: 5px;
-  padding-left: 5px;
-  margin: 0 auto;
+.image {
   display: inline-block;
-
-}
-
-#fit-width #gallery {
   margin: 0 auto;
 }
-@media (max-width: 1900px) {
-  .image img {height: 300px;width: auto;}
-}
-@media (max-width: 1500px) {
-  .image img {height: 250px;width: auto;}
-}
-@media (max-width: 1200px) {
-  .image img {height: 200px;width: auto;}
-}
-@media (max-width: 1000px) {
-  .image img {height: 170px;width: auto;}
-}
-@media (max-width: 800px) {
-  .image img {height: 120px;width: auto;}
-}
+
 
 #description header {
   font-size: 25px;
@@ -94,7 +73,6 @@ body {
 div.show_images {
   margin-top: 30px;
   width: 100%;
-  // border: 2px solid white;
   clear: both;
   border-radius: 10px;
 }
@@ -122,34 +100,99 @@ div.show_images {
   width: 1200px;
 }
 
-.filters{
+// select {
+//   float:right;
+//   color: $fillColor;
+//   background-color: black;
+//   font-size: 18px;
+//   right:10px;
+//   width:50%;
+// }
+#adventuresTop {
+    width: 100%;
+    border: 3px solid $textColor;
+    margin-bottom: 15px;
+}
+#adventuresTop button{
+  border: 2px solid $borderColor;
+  height: 80%;
+  font-family: $font;
+  font-size: 40px;
   display: inline-block;
-  position: absolute;
-  top: 20px;
-  right:3%;
-  margin: 5px;
-  width: 30%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: $textColor;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  font-family: $font;
+  background-color: $backgroundColor;
+  margin-right:30px;
+  float: right;
+  margin-top: 8px;
+
 }
-select {
+
+#adventuresTop .filterOptions {
+  border-top: 2px solid $borderColor;
+  width: 100%;
+  height: 50px;
+  margin-top: 1%;
+  display:none;
+}
+#adventuresTop .filterOptions select{
+  margin-right: 15px;
+  width: 45%;
+  background-color: $backgroundColor;
+  color: $textColor;
+  font-size: 25px;
+  font-family: $font;
+}
+#adventuresTop .filterOptions form {
+  display: inline-block;
+  text-align: center;
   float:right;
-  color: $fillColor;
-  background-color: black;
-  font-size: 18px;
-  right:10px;
-  width:50%;
+  width: 55%;
+  margin-top: 1%;
 }
-#embark a{
-  padding-left:3%;
+.filterOptions #filterLocation{
+  margin-top: 10px;
+  left: 40px;
+  display:inline-block;
+  width: 35%;
+}
+.filterOptions #filterLocation a{
+  text-decoration: none;
+  font-family: $font;
+  background-color: $backgroundColor;
+  border: 2px solid $borderColor;
+  color: $textColor;
+  border-radius: 5px;
+  font-size: 23px;
+  padding: 3px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 1%;
+  width: 25%;
+}
+#adventuresTop button:hover, #adventuresTop .filterOptions select:hover, .filterOptions #filterLocation a:hover{
+  background-color: $fillColor;
+  color: $backgroundColor;
+}
+#adventuresTitle a{
+  margin-top: 5px;
+  text-align: center;
+  font-family: $font;
+  letter-spacing: 0.3em;
   position:relative;
   font-size: 65px;
-  font-weight: bold;
-  color: black;
-  width: 100%;
-  height: 70px;
-  margin: 0px auto;
-  margin-top:5px;
-  margin-left:5px;
+  color: $textColor;
   text-decoration: none;
+}
+#adventuresTitle {
+  display: inline;
 }
 
 #description_title {
@@ -170,4 +213,38 @@ select {
 }
 .adventure_info {
   padding-bottom: 20px;
+
+}
+@media (max-width: 1900px) {
+  img {height: 290px;width: auto;}
+  #adventuresTop button{ width: 250px; height: 50px;font-size: 40px;} 
+  #adventuresTitle a{ font-size:65px; letter-spacing: 0.3em; }
+}
+@media (max-width: 1500px) {
+  img {height: 250px;width: auto;}
+  #adventuresTop button{ width: 220px; height: 40px;font-size: 30px;} 
+  #adventuresTitle a{ font-size:55px; letter-spacing: 0.2em; }
+}
+@media (max-width: 1400px) {
+  img {height: 210px;width: auto;}
+}
+@media (max-width: 1200px) {
+  img {height: 180px;width: auto;}
+  #adventuresTop button { width: 180px; height: 35px;font-size: 28px;} 
+  #adventuresTitle a { font-size:45px; letter-spacing: 0.1em; }
+}
+@media (max-width: 1000px) {
+  img {height: 150px;width: auto;}
+  #adventuresTop button{ width: 140px; height: 30px;font-size: 25px;} 
+  #adventuresTitle a{ font-size:40px; letter-spacing: 0.1em; }
+}
+@media (max-width: 800px) {
+  img {height: 120px;width: auto;}
+  #adventuresTop button{ display:none;} 
+  #adventuresTitle a{ font-size:30px; letter-spacing: 0.1em; }
+}
+@media (max-width: 600px) {
+  img {height: 100px;width: auto;}
+  #adventuresTop button{ display:none;} 
+  #adventuresTitle a{ font-size:25px; letter-spacing: 0.1em; }
 }
