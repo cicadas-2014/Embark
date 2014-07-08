@@ -14,7 +14,6 @@ Rails.application.routes.draw do
 
 	get '/adventures/map', to: 'embark#map', as: 'map'
 	
-	resources :del
-
-
+	resources :admin, only: [:show,:index]
+	
 end
