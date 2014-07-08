@@ -1,9 +1,18 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
+<div id="new_session">
+<% if session %>
+<input type="button" id="login" value="Login"/>
+<input type="button" id="signup" value="Signup"/>
+<% else %>
+<input type="button" id="logout" value="Logout"/>
+<% end %>
+</div>
+
 <div id='home'>
 	<div id="logo">
 		<p> Embark </p>
-	</div>
+</div>
 	<div id="search">
 		<%= link_to "Local", adventures_path(search: "local"), class: 'button' %>
 		<%= link_to "Continental", adventures_path(search: "continential"), class: 'button'%>
