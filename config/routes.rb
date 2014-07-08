@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+	post 'user/login'
+
+	post 'user/signup'
+
+	get 'user/logout'
+
+	post 'users/addAdventure', to: 'users#addAdventure', as: 'addAdventure'
+	
 	root 'embark#home', as: 'home'
 
 	get '/adventures', to: 'embark#adventures', as: 'adventures'

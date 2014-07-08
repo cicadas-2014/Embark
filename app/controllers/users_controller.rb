@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
 
   def index 
-    @user = User.find(session[:id])
-
+    # @user = User.find(session[:id])
   end
 
   def login
@@ -45,4 +44,11 @@ class UsersController < ApplicationController
     params.permit(:email, :password)
   end
 
+  def addAdventure
+    if Adventure.makeAdventure(params[:title],params[:description],params[:start_city],params[:duration],params[:image_url],params[:categories])
+      redirect_to users_path
+    else
+      redirect_to home_path
+    end
+  end
 end

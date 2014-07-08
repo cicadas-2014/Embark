@@ -12,7 +12,7 @@ class Adventure < ActiveRecord::Base
 	has_many :categories, through: :adventure_categories
 	belongs_to :city
 
-	def self.makeAdventure(title,description,start_city,duration,map_url,image_url,categories, inCSV = false, csv = nil)
+	def self.makeAdventure(title,description,start_city,duration,map_url=nil,image_url,categories, inCSV = false, csv = nil)
 		####################
 		# title: string
 		# description: text
