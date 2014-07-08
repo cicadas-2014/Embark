@@ -4,7 +4,7 @@
     <a href="/">Embark</a>
   </div>
 
-  <%= button_to "Favorite this adventure", action: "favorite", controller: 'users', params: {adventure_id: @adventure.id}
+  <%= button_to "Favorite this adventure", action: "favorite", controller: 'users', params: {adventure_id: @adventure.id} %>
   <form>
     <input type="button" id="favorite" value="Save to your favorites"/>
   </form>
@@ -43,7 +43,8 @@
 <div id="map"></div>
 
 <script type="text/javascript">
-  var finalPoints = <%= @final_points %>;
-  renderMap(finalPoints); 
+  var latitude = <%= @adventure.city.latitue %>;
+  var longitude = <%= @adventure.city.longitude %>;
+  renderMap(latitue,longitude); 
 </script>
 </div>
