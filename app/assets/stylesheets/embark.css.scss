@@ -1,8 +1,7 @@
-
 $backgroundColor:#fcfbe4;
-$borderColor:rgba(116, 201, 148, 0.84);;
+$borderColor:rgba(116, 201, 148, 0.84);
 $fillColor:#74c9bf;
-$textColor:rgba(116, 201, 148, 0.84);;
+$textColor:rgba(116, 201, 148, 0.84);
 $errorColor:red;
 $font:'Raleway', sans-serif;
 
@@ -23,21 +22,57 @@ $font:'Raleway', sans-serif;
   opacity: 0.75; 
   filter: alpha(opacity=85); 
 }
+
+
 body { 
-  background-color: $backgroundColor;
+  background-color: black;
+  //overflow-x: hidden;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#adventuresPage {
+  margin-top: -100px;
+  background-color: white;
   overflow-x: hidden;
+}
+
+
+
+#tagline {
+    background-color: $backgroundColor;
+    width: 100%;
+    padding-top: 270px;
+    padding-bottom: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: $font;
+    font-size: 40px;
+    letter-spacing: .1em;
+    color: #231f20; 
 }
 
 #gallery {
     width: 100%;
-    padding-top: 10px;
+    padding-top: 400px;
     margin: 0 auto;
     text-align: center;
 }
 
 .image {
+      margin-top: 40px;
   display: inline-block;
   margin: 0 auto;
+}
+
+.embark{
+    //  text-align: center;
+    // position: relative;
+    // margin-top: -10px;
+    font-family: $font;
+    font-size: 30px;
+    letter-spacing: .3em;
+    color: #74c9bf; 
 }
 
 
@@ -110,7 +145,7 @@ div.show_images {
 // }
 #adventuresTop {
     width: 100%;
-    border: 3px solid $textColor;
+    border: 3px solid white;
     margin-bottom: 15px;
 }
 #adventuresTop button{
@@ -128,7 +163,7 @@ div.show_images {
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
   font-family: $font;
-  background-color: $backgroundColor;
+  background-color: white;
   margin-right:30px;
   float: right;
   margin-top: 8px;
