@@ -57,7 +57,7 @@ def getImages(city,size)
   puts $photooooos
   puts newImages.length
   newImages.each do |image|
-    city.images << Image.create(original_image_url:image[1],medium_image_url:image[1].gsub('original','medium'), smaal_image_url:image[1].gsub('original','smaal'), latitude:image[2], longitude:image[3], panoramio_id:image[0])
+    city.images << Image.create(original_image_url:image[1],medium_image_url:image[1].gsub('original','medium'), small_image_url:image[1].gsub('original','small'), latitude:image[2], longitude:image[3], panoramio_id:image[0])
   end
 end
 end

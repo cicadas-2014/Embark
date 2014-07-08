@@ -5,7 +5,6 @@ class EmbarkController < ApplicationController
 	end
 
 	def adventures
-		# raise params.inspect
 		latitude = params[:latitude]
 		longitude = params[:longitude]
 		search = params[:search]

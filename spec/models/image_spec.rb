@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Image, :type => :model do
-	 let(:image) {Image.create(panoramio_id: 12345678,original_image_url: 'www.www.www',medium_image_url: 'www.www.www',smaal_image_url: 'www.www.www',longitude: 12.34343,latitude: 12.34343, city_id:5)}
+	 let(:image) {Image.create(panoramio_id: 12345678,original_image_url: 'www.www.www',medium_image_url: 'www.www.www',small_image_url: 'www.www.www',longitude: 12.34343,latitude: 12.34343, city_id:5)}
 
   it "has a valid image" do
     expect(Image.new()).to be_valid
@@ -16,8 +16,8 @@ RSpec.describe Image, :type => :model do
   it "has a valid medium-image" do
     expect(image).to respond_to(:medium_image_url)
   end
-  it "has a valid smaal-image" do
-    expect(image).to respond_to(:smaal_image_url)
+  it "has a valid small-image" do
+    expect(image).to respond_to(:small_image_url)
   end
   it "have a longitude" do 
     expect(image).to respond_to(:longitude)
