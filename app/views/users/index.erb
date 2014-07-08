@@ -4,7 +4,21 @@
 		<a href="/">Embark</a>
 	</div>
 
+<!-- 	<div id="user_adventures">
+		<% if @user.adventures.count %>
+		<% @user.adventures.each do |adventure| %>
+			<div class ="adventure">
+				<a href="/adventures/<%= adventure.id %>">	
+					<div id="adventure_name"><%= adventure.name %></div>
+				</a>
+			</div>
+			<div id="adventure_description"><%= adventure.description %></div>
+			<% end %>
+			<% end %>
+		</div>
+	</div> -->
 
 	<input type="button" id="addAdventure" value="Add Adventure"/>
 	<div id="adventureForm"></div>
+
 </div>
