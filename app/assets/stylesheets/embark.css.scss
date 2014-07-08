@@ -32,7 +32,7 @@ body {
 
 #adventuresPage {
   margin-top: -100px;
-  background-color: white;
+  background-color: $backgroundColor;
   overflow-x: hidden;
 }
 
@@ -288,15 +288,22 @@ div.show_images {
   #adventuresTitle a{ font-size:65px; letter-spacing: 0.3em; }
 }
 @media (max-width: 1500px) {
+  #gallery {
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+  }
   img {height: 250px;width: auto;}
   #adventuresPage button{ width: 125px; height: 40px;font-size: 12px;} 
   #adventuresTitle a{ font-size:55px; letter-spacing: 0.2em; }
 }
-@media (max-width: 1400px) {
-  img {height: 210px;width: auto;}
-}
 @media (max-width: 1200px) {
-  img {height: 180px;width: auto;}
+  #gallery {
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+  }
+  img {height: 180px; width: auto;}
   #adventuresPage button { width: 85px; height: 35px;font-size: 10px;} 
   #adventuresTitle a { font-size:45px; letter-spacing: 0.1em; }
 }

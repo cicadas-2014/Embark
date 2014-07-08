@@ -1,8 +1,9 @@
-$backgroundColor:#fff;
-$borderColor:#eee;
-$fillColor:#444;
-$textColor:#444;
+$backgroundColor:#fcfbe4;
+$borderColor:rgba(116, 201, 148, 0.84);
+$fillColor:#74c994;
+$textColor:rgba(116, 201, 148, 0.84);
 $errorColor:red;
+$font:'Raleway', sans-serif;
 
 @font-face {
     font-family: 'icon-worksregular';
@@ -25,6 +26,18 @@ body {
   background-color: white;
 }
 
+#new_session input {
+  border: 2px solid $backgroundColor;
+  font-family: $font;
+  font-size: 25px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: $backgroundColor;
+  font-family: $font;
+  background-color: $textColor;
+}
 
 #description {
   margin-top: 1%;
@@ -103,10 +116,10 @@ div.show_images {
 #embark a{
   position:relative;
   font-size: 65px;
-  font-weight: bold;
-  color: $fillColor;
+  letter-spacing: 0.3em;
+  color: $backgroundColor;
   width: 100%;
-  font-family: sans-serif;
+  font-family: $font;
   height: 70px;
   margin: 0px auto;
   margin-top:5px;

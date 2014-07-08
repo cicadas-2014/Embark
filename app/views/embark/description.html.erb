@@ -1,8 +1,21 @@
+<link rel="stylesheet" href="css/description.css.scss">
 <div id="adventureDescription">
 
   <div id="embark">
     <a href="/">Embark</a>
   </div>
+
+<div id="new_session">
+<% if session %>
+  <input type="button" id="login" value="Login"/>
+  <input type="button" id="signup" value="Signup"/>
+<% else %>
+  <%= button_to "Logout" %>
+<% end %>
+</div>
+
+
+
 
   <div>
     <form>
