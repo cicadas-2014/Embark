@@ -3,7 +3,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
+//= require masonry
 
 function getUserLocation(search) {
 	if(navigator.geolocation) {
@@ -57,7 +57,7 @@ function startAnimation(speed){
 	$('#home #logo').fadeTo(speed,1)
 	setTimeout(function() {
 		$('#home #logo').animate({
-			'font-size':'130px',
+			'font-size':'140px',
 			'letter-spacing': '0.1em'
 		},speed*2)
 		$('#home #background').stop().fadeTo(speed*2,1)
