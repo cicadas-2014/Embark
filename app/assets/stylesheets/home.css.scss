@@ -12,7 +12,7 @@ $font:'Raleway', sans-serif;
     font-family: $font;
     font-size: 100px;
     letter-spacing: 0.3em;
-    color: $fillColor;
+    color: $backgroundColor;
 }
 
 #home #background {
@@ -33,9 +33,9 @@ $font:'Raleway', sans-serif;
     z-index: -1;
     opacity: 0;
 }
-#home #background img {
+#home #background video{
     height: 100%;
-    width:100%;
+    position: fixed;
 }
 
 #home a:hover{
@@ -84,7 +84,13 @@ $font:'Raleway', sans-serif;
     color: $backgroundColor; 
     opacity: 0;
 }
-
+.homepage {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    position: absolute;
+}
 
 #search{
     margin-top: 40px;
