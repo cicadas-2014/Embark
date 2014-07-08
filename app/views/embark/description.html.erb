@@ -18,17 +18,19 @@
   <%= f.submit "Create" %>
 
   <div class="show_images">
-    <% unless @adventure.images.empty? %>
+    <% unless @adventure.city.images.empty? %>
     <div id="main_image">
       <img id="main_image" class="largeimage" src='<%= @adventure.images.first.url %>'/>
     </div>
     <div id="thumbnail_container">
+
       <div id="adventures_images">
         <% @adventure.images[0..4].each do |image| %>
         <img class="smallimage" src='<%= image.url %>'/>
         <% end %>
         <img class="smallimage" src='<%= @adventure.image_url %>'/>
       </div>
+
     </div>
     <% end %>
 
