@@ -21,7 +21,7 @@ def importGadventures
 	puts "importing adventures"
   cities = {}
   CSV.foreach("db/csvFiles/cities.csv") do |csv|
-    cities[vsv[0]] << [csv[1], csv[2], csv[3]]
+    cities[csv[0]] = [csv[1], csv[2], csv[3]]
   end
 	CSV.foreach("db/csvFiles/gadventures.csv") do |csv|
     cityBoolean = true
@@ -35,11 +35,14 @@ def importGadventures
 end
 
 def importImages
+  x = 0
   puts "importing images"
   CSV.foreach("db/csvFiles/images.csv") do |csv|
     city = City.find_by(name:csv[6])
-    puts city.id
+    if city
+      p x += 1
     Image.create(panoramio_id:csv[0], original_image_url:csv[1],medium_image_url:csv[2],smaal_image_url:csv[3],longitude:csv[4],latitude:csv[6],city:city)
+    end
   end
   puts "done importing images"
 end

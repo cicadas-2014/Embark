@@ -21,11 +21,10 @@ class Adventure < ActiveRecord::Base
 		# map_url: text
 		# image_url: text
 		####################
-		sleep(0.3)
 		city = City.find_by(name:start_city)
 		unless city
 			if inCSV
-				City.create(name:start_city, longitude:csv[0], latitude:csv[1], country: csv[2])
+				City.create(name:start_city, longitude:csv[0], latitude:csv[1], country: Country.find_by(name:csv[2]))
 			else
 				unless start_city == 'Longyearbyen'
 				geo = Geocoder.search(start_city).first
@@ -38,7 +37,6 @@ class Adventure < ActiveRecord::Base
 		end
 		if city
 		adventure = Adventure.create(title:title, description:description, duration:duration, map_url:map_url, image_url:image_url)
-		p adventure.id
 		adventure.city = city
 		categories = categories.gsub(/[\[\\\]" ]/,"").split(',').delete_if{ |cat| cat.match(/\d/) }
 		categories.each do |category|
