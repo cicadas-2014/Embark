@@ -1,17 +1,16 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/nav.css">
-
-<div id="embark" href="/">
-	EMBARK
-</div>
 
 <div id="new_session">
 <% if session %>
 <input type="button" id="login" value="Login"/>
 <input type="button" id="signup" value="Signup"/>
 <% else %>
-<input type="button" id="logout" value="Logout"/>
+%= button_to "Logout" %>
 <% end %>
+</div>
+
+<div id="embark" href="/">
+	EMBARK
 </div>
 
 <div id='home'>
