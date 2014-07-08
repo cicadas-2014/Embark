@@ -1,5 +1,4 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-
 <div id="new_session">
 <% if session %>
 <input type="button" id="login" value="Login"/>
@@ -8,6 +7,7 @@
 %= button_to "Logout" %>
 <% end %>
 </div>
+<link rel="stylesheet" href="css/home.css.scss">
 
 <div id="embark" href="/">
 	EMBARK
@@ -25,8 +25,12 @@
    </div>
 
 	<div id="background">
-		<%= image_tag('https://m1.behance.net/rendition/modules/82977983/disp/9458de8774adbcf5d6c33b40547f7198.gif') %> 	
+		<video autoplay="true" loop="true" preload="auto">
+		  <source src="field.mov" type="video/mp4">
+		</video>
+	</div>
+	<!-- 
+		<%= image_tag('https://m1.behance.net/rendition/modules/82977983/disp/9458de8774adbcf5d6c33b40547f7198.gif') %> 	 -->
 	</div>
 </div>
-
 

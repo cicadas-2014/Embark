@@ -3,7 +3,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require masonry
+
+
+function filter() {
+	$('.filters button').on('click',function(e){
+		e.preventDefault();
+
+		$('.filterOptions').css('display','block');
+	})
+}
+
 
 function getUserLocation(search) {
 	if(navigator.geolocation) {
@@ -43,6 +52,7 @@ function displayError(error){
 
 ready = function(){
 	var speed = 1200
+	filter();
 	startAnimation(speed)
 	buttonEffects(speed)
 	imageGallery();
@@ -55,13 +65,13 @@ function imageListLoad(speed){
 }
 function startAnimation(speed){
 	$('#home a').hide();
-	$('#home #logo').fadeTo(speed,2)
+	$('#home #logo').fadeTo(speed*4,1)
 	setTimeout(function() {
-		$('#home #logo').animate({
-			'font-size':'40px',
-			'letter-spacing': '0.1em'
-		},speed*2)
-		$('#home #background').stop().fadeTo(speed*2,1)
+		//  $('#home #logo').animate({
+		//  	'font-size':'30px',
+		//  	'letter-spacing': '0.1em'
+		// },speed*2)
+		$('#home #background').stop().fadeTo(speed*6,1)
 		setTimeout(function() {
 			 $('#home a').fadeTo(speed,1)
 		},speed*1.5)
@@ -100,7 +110,6 @@ imageGallery = function() {
 
 $(document).ready(ready)
 $(document).on('page:load', ready);
-
 
 
 
