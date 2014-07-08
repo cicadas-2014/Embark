@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
 	get '/users/login', to: "users#login"
 
+	get '/users/favorites', to: "users#favorites"
+
 end
