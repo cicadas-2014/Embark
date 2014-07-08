@@ -1,3 +1,5 @@
+<div class='homepage'>
+
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 <div id="new_session">
 <% if session %>
@@ -12,12 +14,10 @@
 <div id="embark" href="/">
 	EMBARK
 </div>
-
-<div id='home'>
-	<div id="logo">
-
-		<p> We inspire experiences </p>
-</div>
+	<div id='home'>
+		<div id="logo">
+			<p> We inspire experiences </p>
+		</div>
 	<div id="search">	
 		<%= link_to "Local", adventures_path(search: "local"), class: 'btn' %>
 		<%= link_to "Continental", adventures_path(search: "continential"), class: 'btn'%>
@@ -33,4 +33,4 @@
 		<%= image_tag('https://m1.behance.net/rendition/modules/82977983/disp/9458de8774adbcf5d6c33b40547f7198.gif') %> 	 -->
 	</div>
 </div>
-
+</div>

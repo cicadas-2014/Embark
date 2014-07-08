@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140708000318) do
-=======
 ActiveRecord::Schema.define(version: 20140707163616) do
->>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,23 +64,11 @@ ActiveRecord::Schema.define(version: 20140707163616) do
   end
 
   create_table "images", force: true do |t|
-    t.string   "panoramio_id"
-    t.text     "original_image_url"
-    t.text     "medium_image_url"
+    t.text     "big_image_url"
     t.text     "smaal_image_url"
     t.string   "longitude"
     t.string   "latitude"
-    t.boolean  "confirmed",          default: false
     t.integer  "city_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", force: true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_digest"
-    t.boolean  "admin?",          default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
