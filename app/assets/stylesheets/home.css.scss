@@ -5,6 +5,7 @@ $textColor:rgba(116, 201, 148, 0.84);;
 $errorColor:red;
 $font:'Raleway', sans-serif;
 
+
 #embark {
     margin-top: 120px;
     font-weight:bold;
@@ -12,8 +13,9 @@ $font:'Raleway', sans-serif;
     font-family: $font;
     font-size: 100px;
     letter-spacing: 0.3em;
-    color: $fillColor;
+    color: $backgroundColor;
 }
+
 
 #home #background {
     position: fixed;
@@ -49,7 +51,7 @@ $font:'Raleway', sans-serif;
 
 
 #home a {
-    border: 2px solid $backgroundColor;
+   // border: 2px solid $backgroundColor;
     width: 300px;
     height: 50px;
     font-family: $font;
