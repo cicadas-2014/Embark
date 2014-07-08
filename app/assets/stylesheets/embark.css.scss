@@ -71,11 +71,8 @@ body {
   width: 100%;
   height: auto;
 }
-.embark{
-    //  text-align: center;
-    // position: relative;
-    // margin-top: -10px;
-    font-family: $font;
+#header a {
+  font-family: $font;
     font-size: 30px;
     letter-spacing: .3em;
     color: #74c9bf; 
@@ -140,7 +137,7 @@ div.show_images {
   width: 1200px;
 }
 
-.scrolled {
+#adventurePage .scrolled {
   background-color: black;
   width: 100%;
   height: 100px;
