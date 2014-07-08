@@ -10,10 +10,9 @@ class UserController < ApplicationController
   end
 
   def signup
-  	raise params.inspect
     @user = User.new(signup_params)
     if @user.save
-      
+      redirect_to root_path
     else
       redirect_to root_path 
     end
@@ -26,7 +25,7 @@ class UserController < ApplicationController
   private
 
   def login_params
-    params.require(:params).permit(:username, :email)
+    params.require(:params).permit(:email)
   end
 
   def login_password
@@ -35,14 +34,6 @@ class UserController < ApplicationController
 
   def signup_params
     params.permit(:email, :password)
-  end
-
-  def addAdventure
-    if Adventure.makeAdventure(params[:title],params[:description],params[:start_city],params[:duration],params[:image_url],params[:categories])
-      redirect_to users_path
-    else
-      redirect_to home_path
-    end
   end
 
 end

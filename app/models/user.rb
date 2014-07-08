@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
+	has_many :favorited_adventures
+	has_many :adventures, through: :favorited_adventures
+
 	has_secure_password
-	validates :username, presence: true, uniqueness: true
 	validates :email, presence: true, uniqueness: true
 
 	

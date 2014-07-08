@@ -1,3 +1,74 @@
-// Place all the styles related to the user controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$backgroundColor:#fcfbe4;
+$borderColor:rgba(116, 201, 148, 0.84);
+$fillColor:#74c9bf;
+$textColor:rgba(116, 201, 148, 0.84);
+$errorColor:red;
+$font:'Raleway', sans-serif;
+
+#userPage input {
+  border: 2px solid $backgroundColor;
+  font-family: $font;
+  font-size: 25px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: $backgroundColor;
+  font-family: $font;
+  background-color: $textColor;
+}
+#userPage #adventureForm {
+  height: 760px;
+  width: 850px;
+}
+#userPage #adventureForm h1 {
+  font-size: 35px;
+  letter-spacing: .1em;
+  color: $backgroundColor;
+  font-family: $font;
+}
+#userPage #adventureForm form {
+  margin-right: 3px;
+  color: $backgroundColor;
+  font-size: 27px;
+  font-family: $font;
+}
+#userPage #adventureForm p{
+  margin: 5px;
+  float:right;
+  width: 100%;
+}
+#userPage #adventureForm input {
+  float: right;
+  width: 70%;
+}
+#userPage #adventureForm #descriptionBox textarea{
+  border: 2px solid $backgroundColor;
+  font-family: $font;
+  font-size: 25px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: $backgroundColor;
+  font-family: $font;
+  background-color: $textColor;
+  height: 120px;
+  wrap: hard;
+  float: right;
+  width: 70%;
+}
+#userPage #adventureForm .submit input {
+  width: 25%;
+}
+#userPage button:hover {
+  background-color: $fillColor;
+  color: $backgroundColor;
+}
+
+#userPage #embark a{
+
+}
+#userPage #user_adventures {
+
+}
