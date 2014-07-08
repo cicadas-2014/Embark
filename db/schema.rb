@@ -68,11 +68,6 @@ ActiveRecord::Schema.define(version: 20140708134211) do
     t.datetime "updated_at"
   end
 
-  create_table "favorited_adventures", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "images", force: true do |t|
     t.string   "panoramio_id"
     t.text     "original_image_url"
