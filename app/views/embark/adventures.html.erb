@@ -1,3 +1,4 @@
+
 <%= render "embark/topnav" %>
 <div id="userforms">
   <div id="loginform">
@@ -10,19 +11,25 @@
 <div id="back"></div>
 
 <p id="tagline">Choose your own adventure</p>
-<div class="compass">`</div>
+<a data-no-turbolink="true" href="/adventures?search=inspire"><div id="compass">`</div></a>
 
 </div>
 
 <div id="gallery">
- <%@adventures.each do |adv|%>
- <div class="image">
-  <a href="/adventures/<%=adv.id%>">
-    <img src=<%=adv.image_url%> alt="">
-  </a>
-  <div id='title'><%=adv.title%></div>
-</div>
-<%end%>
+  <%if @adventures.length > 27 %>
+    <% @adventures.each do |adv| %>
+      <a href="/adventures/<%= adv.id %>"><img src=<%=adv.image_url%> alt=""></a>
+    <% end %>
+  <% else %>
+     <%@adventures.each do |adv|%>
+     <div class="image">
+        <a href="/adventures/<%=adv.id%>">
+          <img src=<%=adv.image_url%> alt="">
+        </a>
+        <div id='title'><%=adv.title%></div>
+      </div>
+    <%end%>
+  <% end %>
 </div>
 
 
