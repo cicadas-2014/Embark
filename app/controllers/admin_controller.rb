@@ -21,8 +21,4 @@ class AdminController < ApplicationController
 		end
 		@adventure = Adventure.find(params[:id])
 	end
-
-
-
-
 end
