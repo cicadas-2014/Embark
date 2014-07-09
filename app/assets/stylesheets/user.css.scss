@@ -1,74 +1,74 @@
-$backgroundColor:#fcfbe4;
-$borderColor: #74C994;
-$fillColor:#74c9bf;
-$textColor: #74C994;
-$errorColor:red;
-$font:'Raleway', sans-serif;
+// $white:#fcfbe4;
+// $green: #74C994;
+// $green:#74c9bf;
+// $green: #74C994;
+// $errorColor:red;
+// $font:'Raleway', sans-serif;
 
-#userPage input {
-  border: 2px solid $backgroundColor;
-  font-family: $font;
-  font-size: 25px;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  color: $backgroundColor;
-  font-family: $font;
-  background-color: $textColor;
-}
-#userPage #adventureForm {
-  height: 760px;
-  width: 850px;
-}
-#userPage #adventureForm h1 {
-  font-size: 35px;
-  letter-spacing: .1em;
-  color: $backgroundColor;
-  font-family: $font;
-}
-#userPage #adventureForm form {
-  margin-right: 3px;
-  color: $backgroundColor;
-  font-size: 27px;
-  font-family: $font;
-}
-#userPage #adventureForm p{
-  margin: 5px;
-  float:right;
-  width: 100%;
-}
-#userPage #adventureForm input {
-  float: right;
-  width: 70%;
-}
-#userPage #adventureForm #descriptionBox textarea{
-  border: 2px solid $backgroundColor;
-  font-family: $font;
-  font-size: 25px;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  color: $backgroundColor;
-  font-family: $font;
-  background-color: $textColor;
-  height: 120px;
-  wrap: hard;
-  float: right;
-  width: 70%;
-}
-#userPage #adventureForm .submit input {
-  width: 25%;
-}
-#userPage button:hover {
-  background-color: $fillColor;
-  color: $backgroundColor;
-}
+// #userPage input {
+//   border: 2px solid $white;
+//   font-family: $font;
+//   font-size: 25px;
+//   display: inline-block;
+//   text-align: center;
+//   text-decoration: none;
+//   border-radius: 5px;
+//   color: $white;
+//   font-family: $font;
+//   background-color: $green;
+// }
+// #userPage #adventureForm {
+//   height: 760px;
+//   width: 850px;
+// }
+// #userPage #adventureForm h1 {
+//   font-size: 35px;
+//   letter-spacing: .1em;
+//   color: $white;
+//   font-family: $font;
+// }
+// #userPage #adventureForm form {
+//   margin-right: 3px;
+//   color: $white;
+//   font-size: 27px;
+//   font-family: $font;
+// }
+// #userPage #adventureForm p{
+//   margin: 5px;
+//   float:right;
+//   width: 100%;
+// }
+// #userPage #adventureForm input {
+//   float: right;
+//   width: 70%;
+// }
+// #userPage #adventureForm #descriptionBox textarea{
+//   border: 2px solid $white;
+//   font-family: $font;
+//   font-size: 25px;
+//   display: inline-block;
+//   text-align: center;
+//   text-decoration: none;
+//   border-radius: 5px;
+//   color: $white;
+//   font-family: $font;
+//   background-color: $green;
+//   height: 120px;
+//   wrap: hard;
+//   float: right;
+//   width: 70%;
+// }
+// #userPage #adventureForm .submit input {
+//   width: 25%;
+// }
+// #userPage button:hover {
+//   background-color: $green;
+//   color: $white;
+// }
 
-#userPage #embark a{
+// #userPage #embark a{
 
-}
-#userPage #user_adventures {
+// }
+// #userPage #user_adventures {
 
-}
+// }

@@ -53,8 +53,6 @@ function displayError(error){
 ready = function(){
 	var speed = 1200
 	filter();
-	startAnimation(speed)
-	buttonEffects(speed)
 	imageGallery();
 	imageListLoad(speed);
 };
@@ -64,41 +62,6 @@ function imageListLoad(speed){
 		'#adventuresPage').hide()
 	$('#adventuresPage').fadeTo(speed,1)
 }
-function startAnimation(speed){
-	$('#home a').hide();
-	$('#home #logo').fadeTo(speed*4,1)
-	setTimeout(function() {
-		//  $('#home #logo').animate({
-		//  	'font-size':'30px',
-		//  	'letter-spacing': '0.1em'
-		// },speed*2)
-		$('#home #background').stop().fadeTo(speed*6,1)
-		setTimeout(function() {
-			 $('#home a').fadeTo(speed,1)
-		},speed*1.5)
-		setTimeout(function() {
-			 $('#embark').fadeTo(speed,1)
-		},speed*1.5)
-	},speed)
-}
-function buttonEffects(speed){
-	$('#home a').hover(function(){
-		$('#home #background').stop().fadeTo(speed/2,0.6)
-	},function(){
-		$('#home #background').stop().fadeTo(speed/2,1)
-	})
-
-	$('#home #search a').on('click',function(e){
-		e.preventDefault();
-		getUserLocation($(this).attr('href'))
-		$('#home a').fadeTo(speed,0)
-		$('#home #background').fadeTo(speed,0)
-		setTimeout(function() {$('#home #background').hide()},speed)
-		$('#home #logo').fadeTo(speed,0);
-		$('#search').html("<img src='/assets/3.gif'/>")
-		$('#search img').css({'min-height':'16px !important','min-width':'16px '})
-	})
-};
 
 imageGallery = function() {
 	$('div.show_images').on('click', '.smallimage', function(e) {
