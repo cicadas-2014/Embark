@@ -140,7 +140,16 @@ a #inspirationbutton {
   margin-top: 50px;
   display:block;
   margin-bottom: 40px;
+
 }
+
+a #inspirationbutton:hover{
+	background-color: $backgroundColor;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 0.8s;
+    -webkit-transition-timing-function: ease;
+}
+
 #quote {
   font: $font;
   font-size: 20px;
