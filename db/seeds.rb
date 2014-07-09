@@ -6,7 +6,7 @@ require_relative 'mediaCreator'
 makeCountriesContinents
 importGadventures
 importImages
-makeMediaFile
+# makeMediaFile
 # add_images
 # export_cities_to_csv
 
