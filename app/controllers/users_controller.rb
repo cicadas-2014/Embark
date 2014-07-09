@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index 
-    # @user = User.find(session[:id])
+    @user = User.find(session[:id])
   end
 
   def login
@@ -17,11 +17,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(signup_params)
     if @user.save
-      raise params.inspect
       session[:id] = @user.id
       redirect_to users_path
+      p 1
     else
       redirect_to home_path 
+      p 2
     end
   end
 
@@ -47,11 +48,11 @@ class UsersController < ApplicationController
   private
 
   def login_params
-    params.require(:params).permit(:email)
+    params.permit(:email)
   end
 
   def login_password
-    params.require(:params).permit(:password)
+    params.permit(:password)
   end
 
   def signup_params
