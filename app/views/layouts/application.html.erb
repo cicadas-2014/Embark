@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Embark</title>
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=set_to_false"></script>
-  <script type="text/javascript" src="http://underscorejs.org/underscore.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>Embark</title>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=set_to_false"></script>
+	<script type="text/javascript" src="http://underscorejs.org/underscore.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<%= render "embark/navbar" %>
+	<%= yield %>
 </body>
 </html>

@@ -1,3 +1,10 @@
+$white:#fcfbe4;
+$green:rgba(116, 201, 148, 0.84);
+$green:#74c994;
+$green:rgba(116, 201, 148, 0.84);
+$errorColor:red;
+$font:'Raleway', sans-serif;
+
 #nav {
 	height: auto;
 	top: -380px;
@@ -7,4 +14,19 @@
 }
 #nav .mid-cont li{
 	display: none;
+}
+#nav .mid-cont li{
+	display: none;
+}
+
+#header .mid-cont .embark{
+background-position: 0px -18px;
+z-index: 4;
+font-family: $font;
+    font-size: 30px;
+    letter-spacing: .3em;
+    color: $green;
+}
+#header .mid-cont .hamburger{
+background-position: 0px -28px;
 }

@@ -1,283 +1,60 @@
-$backgroundColor:#fcfbe4;
-$borderColor:rgba(116, 201, 148, 0.84);
-$fillColor:#74c994;
-$textColor:rgba(116, 201, 148, 0.84);
-$errorColor:red;
-$font:'Raleway', sans-serif;
+// $white:#fcfbe4;
+// $green:#74C994;
+// $black:#231f20;
 
-* { 
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
-}
-
-.transition-050 {
-  -moz-transition: 0.50s;
-  -webkit-transition: 0.50s;
-  -ms-transition: 0.50s;
-  -o-transition: 0.50s;
-  transition: 0.50s;
-}
-.opacity85{ 
-  opacity: 0.75; 
-  filter: alpha(opacity=85); 
-}
-
-body { 
-  background-color: #231f20;
-  //overflow-x: hidden;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-#adventuresPage {
-  margin-top: -100px;
-  background-color: white;
-  overflow-x: hidden;
-}
-
-#tagline {
-    background-color: $backgroundColor;
-    top:0px;
-    width: 100%;
-    padding-top: 250px;
-    padding-bottom: 420px;
-    margin: 0 auto;
-    text-align: center;
-    font-family: $font;
-    font-size: 40px;
-    letter-spacing: .1em;
-    color: #231f20; 
-    position: relative;
-    z-index: 0;
-}
-
-@font-face {
-    font-family: 'icon-worksregular';
-    src: url('icon-works-webfont.eot');
-    src: url('icon-works-webfont.eot?#iefix') format('embedded-opentype'),
-         url('icon-works-webfont.woff') format('woff'),
-         url('icon-works-webfont.ttf') format('truetype'),
-         url('icon-works-webfont.svg#icon-worksregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-#compass {
-  width: 100px;
-  height: 10px;
-  text-align: center;
-  font-family: 'icon-worksregular';
-  font-size: 60px;
-  color: #252525;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 2;
-  top: -200px;
-}
-
-#adventurePage #gallery {
-   line-height: 0;
-    position: relative;
-   -webkit-column-count: 3;
-   -webkit-column-gap:   5px;
-   -moz-column-count:    3;
-   -moz-column-gap:      5px;
-   column-count:         3;
-   column-gap:           5px;
-   
-}
-#gallery img {
-  margin-top: 5px;
-  width: 100%;
-  height: auto;
-}
-#header a {
-  font-family: $font;
-    font-size: 30px;
-    letter-spacing: .3em;
-    color: $fillColor;
-}
-
-#description header {
-  font-size: 25px;
-  font-style: bold;
-  text-align: center;
-}
-
-#description {
-  margin-top: 1%;
-  padding: 1% 2%;
-  font-size: 20px;
-  background-color: $fillColor;
-  font-family: $font;
-  border: 8px double $textColor;
-  height: 350px;
-  float:left;
-  width: 58%;
-  color: $textColor;
-  border-radius: 9px;
-}
-
-#adventure_map img{
-  margin-top: 1%;
-  margin-left:1%;
-  height: 350px;
-  width: 38%;
-  border-radius: 9px;
-  float:right;
-}
-
-div.show_images {
-  margin-top: 30px;
-  width: 100%;
-  clear: both;
-  border-radius: 10px;
-}
-#back {
-  font-size: 20px;
-  text-decoration: none;
-  color: $fillColor;
-  float: right;
-}
-
-.smallimage {
-  position: static;
-  top:0;
-  width:236px;
-  height:236px;
-  padding:auto;
-  border-radius: 10px;
-  margin-top: 8px;
-}
-
-#main_image {
-  position: static;
-  border-radius: 10px;
-  height: auto;
-  width: 1200px;
-}
-///////////NAV BAR///////////////
-#adventurePage .scrolled {
-  background-color: black;
-  width: 100%;
-  height: 100px;
-}
-#adventurePage .mid-cont {}
-#adventurePage .mid-cont .embark {}
-#adventurePage .mid-cont .hamburger {}
-
-#adventuresPage button{
-  height: 100%;
-  font-family: $font;
-  font-size: 1px;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  color: $backgroundColor;
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-appearance: none;
-  font-family: $font;
-  background-color: #74c994;
-  margin-right:8em;
-  float: right;
-  //background: none transparent; 
-  border: none; 
-}
-
-#adventuresPage button:hover{
-     background: #74c9bf;
-    -webkit-transition-property: background;
-    -webkit-transition-duration: 0.8s;
-    -webkit-transition-timing-function: ease;
-}
-
-
-#adventuresPage .filterOptions {
-  border-top: 2px solid $borderColor;
-  width: 100%;
-  height: 50px;
-  margin-top: 1%;
-  display:none;
-}
-
-#adventuresPage .filterOptions select{
-  margin-right: 15px;
-  width: 45%;
-  background-color: $backgroundColor;
-  color: $textColor;
-  font-size: 25px;
-  font-family: $font;
-}
-
-#adventuresPage .filterOptions form {
-  display: inline-block;
-  text-align: center;
-  float:right;
-  width: 55%;
-  margin-top: 1%;
-}
-
-.filterOptions #filterLocation{
-  margin-top: 10px;
-  left: 40px;
-  display:inline-block;
-  width: 35%;
-}
-.filterOptions #filterLocation a{
-  text-decoration: none;
-  font-family: $font;
-  background-color: $backgroundColor;
-  border: 2px solid $borderColor;
-  color: $textColor;
-  border-radius: 5px;
-  font-size: 23px;
-  padding: 3px;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin: 1%;
-  width: 25%;
-}
-// #adventuresPage button:hover, #adventuresPage .filterOptions select:hover, .filterOptions #filterLocation a:hover{
-//   background-color: $fillColor;
-//   color: $backgroundColor;
+// .transition-050 {
+//   -moz-transition: 0.50s;
+//   -webkit-transition: 0.50s;
+//   -ms-transition: 0.50s;
+//   -o-transition: 0.50s;
+//   transition: 0.50s;
 // }
-#adventuresTitle a{
-  margin-top: 5px;
-  text-align: center;
-  font-family: $font;
-  letter-spacing: 0.3em;
-  position:relative;
-  font-size: 65px;
-  color: $textColor;
-  text-decoration: none;
-}
-#adventuresTitle {
-  display: inline;
-}
+// .opacity85{ 
+//   opacity: 0.75; 
+//   filter: alpha(opacity=85); 
+// }
 
-#description_title {
-  width: 100%;
-  margin-right: 5%;
-  text-align: right;
-  color: $textColor;
-  font-family: Helvetica;
-  font-size: 34px;
-}
 
-#description_title p:hover {
-  padding: 1%;
-}
-#adventureDescription {
-  width: 1200px;
-  margin: 0 auto;
-}
-.adventure_info {
-  padding-bottom: 20px;
+// #adventuresPage {
+//   margin-top: -100px;
+//   background-color: white;
+//   overflow-x: hidden;
+// }
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1900px) {
   #gallery {
     -moz-column-count:    3;
