@@ -5,33 +5,38 @@ $textColor: #74C994;
 $errorColor:red;
 $font:'Raleway', sans-serif;
 
+
 #userPage input {
-  border: 2px solid $backgroundColor;
-  font-family: $font;
   font-size: 25px;
-  display: inline-block;
+  width: 25%;
+  min-width: 200px;
   text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  color: $backgroundColor;
+  color: $textColor;
   font-family: $font;
-  background-color: $textColor;
+  background-color: $backgroundColor;
+  border: 2px solid $textColor;
+  padding: 5px;
+  margin-left: 40%;
+  margin-top: 50px;
+
 }
 #userPage #adventureForm {
   height: 760px;
-  width: 850px;
+  width: 90%;
 }
 #userPage #adventureForm h1 {
   font-size: 35px;
   letter-spacing: .1em;
-  color: $backgroundColor;
+  color: $textColor;
   font-family: $font;
+  margin-left: 3%;
 }
 #userPage #adventureForm form {
   margin-right: 3px;
-  color: $backgroundColor;
+  color: $textColor;
   font-size: 27px;
   font-family: $font;
+  margin-left: 5%;
 }
 #userPage #adventureForm p{
   margin: 5px;
@@ -40,35 +45,39 @@ $font:'Raleway', sans-serif;
 }
 #userPage #adventureForm input {
   float: right;
-  width: 70%;
+  width: 65%;
 }
 #userPage #adventureForm #descriptionBox textarea{
-  border: 2px solid $backgroundColor;
+  border: 2px solid $textColor;
   font-family: $font;
   font-size: 25px;
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  border-radius: 5px;
-  color: $backgroundColor;
-  font-family: $font;
-  background-color: $textColor;
+  color: $textColor;
+  background-color: $backgroundColor;
   height: 120px;
   wrap: hard;
   float: right;
-  width: 70%;
+  width: 65%;
 }
 #userPage #adventureForm .submit input {
   width: 25%;
 }
-#userPage button:hover {
+#userPage input:hover, #userPage #user_adventures #beInspired a:hover, #userPage button:hover {
   background-color: $fillColor;
   color: $backgroundColor;
 }
 
-#userPage #embark a{
-
+#userPage #user_adventures h3{
+  font-family: $font;
+  margin-top: 300px;
+  margin-left: 50px;
+  line-height: 3em;
+  text-align: center;
 }
-#userPage #user_adventures {
 
+#userPage #user_adventures #beInspired a{
+  border: 2px solid $textColor;
+  padding: 5px;
 }

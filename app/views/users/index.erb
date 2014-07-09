@@ -1,8 +1,6 @@
-<div id="userPage">
+<%= render 'embark/topnav' %>
 
-	<div id="embark">
-		<a href="/">Embark</a>
-	</div>
+<div id="userPage">
 
   <div id="user_adventures">
     <% if @user %>
@@ -14,13 +12,13 @@
           </div>
         <%end%>
     <% else %>
-    	<h3>You haven't favorited any adventures yet! Go forth and be inspired! <br><a href="/">BE INSPIRED!</a>
+    	<h3>You haven't favorited any adventures yet! Go forth and<div id='beInspired'><a href="/">BE INSPIRED!</a></div>
     	</h3>
     <%end%>
   </div>
 
 <div id="addAdventure">
-  <button name="addAdventure">Add Adventure</button>
+  <input name="addAdventure" value='Add Adventure'>
 </div>
 
 	<div id="adventureForm"></div>
