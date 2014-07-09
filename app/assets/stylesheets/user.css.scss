@@ -5,9 +5,8 @@ $textColor: #74C994;
 $errorColor:red;
 $font:'Raleway', sans-serif;
 
-
 #userPage input {
-  font-size: 25px;
+  font-size: 20px;
   width: 25%;
   min-width: 200px;
   text-align: center;
@@ -18,8 +17,9 @@ $font:'Raleway', sans-serif;
   padding: 5px;
   margin-left: 40%;
   margin-top: 50px;
-
+  display:block;
 }
+
 #userPage #adventureForm {
   height: 760px;
   width: 90%;
@@ -42,6 +42,7 @@ $font:'Raleway', sans-serif;
   margin: 5px;
   float:right;
   width: 100%;
+  font-size: 18px;
 }
 #userPage #adventureForm input {
   float: right;
