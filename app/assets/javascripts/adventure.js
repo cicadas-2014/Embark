@@ -6,4 +6,5 @@ var scrollToImages = function() {
 
 $(document).ready(function() {
 	$('body').on('click', '#compass a', scrollToImages);
+
 })
