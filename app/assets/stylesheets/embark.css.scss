@@ -43,6 +43,7 @@ body {
   min-height: 100%;
 }
 
+
 #adventuresPage {
   margin-top: -100px;
   background-color: $whiteColor;
@@ -85,6 +86,14 @@ body {
    column-count:         3;
    column-gap:           5px;
 }
+
+#category-filter {
+	height: 100%;
+	padding-top:100px;
+	position: relative;
+	color:red;
+}
+
 #gallery img {
   margin-top: 5px;
   width: 100%;
@@ -128,7 +137,16 @@ a #inspirationbutton {
   margin-top: 50px;
   display:block;
   margin-bottom: 40px;
+
 }
+
+a #inspirationbutton:hover{
+	background-color: $backgroundColor;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 0.8s;
+    -webkit-transition-timing-function: ease;
+}
+
 #quote {
   font: $font;
   font-size: 20px;
