@@ -1,0 +1,56 @@
+$backgroundColor:#fcfbe4;
+$borderColor:rgba(116, 201, 148, 0.84);
+$fillColor:#74c994;
+$textColor:rgba(116, 201, 148, 0.84);
+$errorColor:red;
+$font:'Raleway', sans-serif;
+
+#loginform {
+	border-radius: 5px;
+	position: fixed;
+	top: 200px;
+	max-width: 600px;
+	left: 50%;
+	padding: 30px;
+	margin-left: -300px;
+	z-index: 5;
+	background-color: $backgroundColor;
+}
+#loginform input, #loginform button, #loginform div {
+	width: 80%;
+	margin: 5px 10%;
+	font-weight: bold;
+	font-size: 1em;
+	text-align: center;
+	border-radius: 5px;
+}
+
+#signupform {
+	border-radius: 5px;
+	position: fixed;
+	top: 200px;
+	max-width: 600px;
+	left: 50%;
+	padding: 30px;
+	margin-left: -300px;
+	z-index: 5;
+	background-color: $backgroundColor;
+}
+#signupform input {
+	width: 80%;
+	margin: 5px 10%;
+	font-weight: bold;
+	font-size: 1em;
+	text-align: center;
+	border-radius: 5px;
+}
+#back {
+	position: fixed;
+	background-color: black;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
