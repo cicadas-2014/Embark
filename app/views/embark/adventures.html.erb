@@ -7,8 +7,10 @@
 </div>
 <div id="back"></div>
 
-  <p id="tagline">Choose your own adventure</p>
-  <div id="compass">`</div></div>
+<p id="tagline">Choose your own adventure</p>
+<div id="compass">`</div>
+
+</div>
 
 <div id="gallery">
  <%@adventures.each do |adv|%>
@@ -16,6 +18,7 @@
   <a href="/adventures/<%=adv.id%>">
     <img src=<%=adv.image_url%> alt="">
   </a>
+  <div id='title'><%=adv.title%></div>
 </div>
 <%end%>
 </div>

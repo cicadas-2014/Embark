@@ -94,6 +94,10 @@ body {
   width: 100%;
   height: auto;
 }
+#gallery .image #title {
+  color: $backgroundColor;
+  text-align: center;
+}
 #header a {
   font-family: $font;
     font-size: 30px;

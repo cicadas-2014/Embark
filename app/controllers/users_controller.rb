@@ -38,9 +38,9 @@ class UsersController < ApplicationController
   def addAdventure
     adventure = Adventure.makeAdventure(params[:title],params[:description],params[:start_city],params[:duration],nil,params[:image_url],params[:categories])
     if adventure
-      redirect_to users_path
-    else
       redirect_to home_path
+    else
+      redirect_to users_path
     end
 
   end
