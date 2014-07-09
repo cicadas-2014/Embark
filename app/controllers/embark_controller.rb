@@ -16,7 +16,7 @@ class EmbarkController < ApplicationController
 		else
 			latitude = params[:latitude]
 			longitude = params[:longitude]
-			search = params[:search]
+			search = params[:search]   
 			
 			distance = 8 if search == 'local'
 			distance = 20 if search == 'continential'
