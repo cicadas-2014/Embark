@@ -96,7 +96,9 @@ function buttonEffects(speed){
 		$('#home a').fadeTo(speed,0)
 		$('#home #background').fadeTo(speed,0)
 		setTimeout(function() {$('#home #background').hide()},speed)
-		$('#home #logo').fadeTo(speed,0)
+		$('#home #logo').fadeTo(speed,0);
+		$('#search').html("<img src='/assets/3.gif'/>")
+		$('#search img').css({'min-height':'16px !important','min-width':'16px '})
 	})
 };
 
