@@ -43,11 +43,4 @@ class EmbarkController < ApplicationController
 		@adventure = Adventure.find_by(id: params[:adventure_id])
 	end
 
-	def map
-		@adventures = Adventure.all
-		@coordinates = @adventure.map do |adventure|
-			h = {id: adventure.id, longitude: adventure.city.longitude, latitude: adventure.city.latitude}
-			return h
-		end
-	end
 end
