@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-
-	post 'user/login'
-
-	post 'user/signup'
-
-	get 'user/logout'
-
 	
 	root 'embark#home', as: 'home'
 
