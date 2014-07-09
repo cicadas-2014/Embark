@@ -6,9 +6,11 @@ var scrollToImages = function() {
 
 $(document).ready(function() {
 	$('body').on('click', '#compass a', scrollToImages);
-  $('#compass').mouseenter(function(){
-    $(this).css('font-size',70);
-  }).mouseleave(function(){
-    $(this).css('font-size',60);
-  })
+  // $('#compass').mouseenter(function(){
+  //   $(this).css('width',70);
+  //   $('#inspire').css('visibility','visible')
+  // }).mouseleave(function(){
+  //   $(this).css('width',50);
+  //   $('#inspire').css('visibility','hidden')
+  // })
 })
