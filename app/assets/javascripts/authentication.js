@@ -4,24 +4,22 @@ var addAdventureForm = "<div id='adventureForm'><h1>NEW ADVENTURE</h1><form meth
 
 var speed = 600
 var hideForms = function() {
+  console.log('hiding forms')
   $('#addAdventure').hide();
-  $('div#signupform').hide();
-  $('div#loginform').hide();
+  $('#signupform').hide();
+  $('#loginform').hide();
   $('#back').hide();
 }
 
-var showLoginFormFirst = function(e) {
-  e.preventDefault();
-  $('#loginform').fadeTo(speed,1);
-  $('#back').fadeTo(speed,0.7);
-}
 var showLoginForm = function(e) {
   e.preventDefault();
   $('#signupform').fadeTo(speed,0);
   $('#loginform').fadeTo(speed,1);
+  $('#back').fadeTo(speed,0.7);
 }
 var showSignupForm = function(e) {
   e.preventDefault();
+  $('#back').fadeTo(speed,0.7);
   $('#signupform').fadeTo(speed,1);
   $('#loginform').fadeTo(speed,0);
 }
@@ -35,12 +33,13 @@ var fadeOutForms = function(){
   $('#signupform').fadeTo(speed,0);
   $('#loginform').fadeTo(speed,0);
 }
+
 var fadeOutLogin = function(){
   $('#loginform').fadeTo(speed,0);
 }
+
 var removeBack = function(e){
   e.preventDefault();
-
   $('#loginform').fadeTo(speed,0);
   $('#signupform').fadeTo(speed,0);
   $('#back').fadeTo(speed,0);
@@ -49,17 +48,25 @@ var removeBack = function(e){
   },speed)
 }
 var stopPropagation = function(event){
-  event.stopPropagation()
+  event.stopPropagation();
 }
 
-$(document).ready(function() {
+var ready = function(){
   hideForms();
-  $('body').on('click', '#loginNavBar', showLoginFormFirst);
+  $('body').on('click', '#addAdventure', appendAddAdventureForm);
+  
+  $('body').on('click', '#loginNavBar', showLoginForm);signupNavBar
   $('body').on('click', '#loginButton', showLoginForm);
+  $('body').on('click', '#signupNavBar', showSignupForm);
+  $('body').on('click', '#signupButton', showSignupForm);
+
   $('body').on('click', '#backButton', removeBack);
   $('body').on('click', '#back', removeBack);
-  $('body').on('click', '#signupButton', showSignupForm);
-  $('body').on('click', '#addAdventure', appendAddAdventureForm);
+  
+  $('body').on('click', '#img', stopPropagation);
   // $('body').on('click', '#loginform', stopPropagation);
   // $('body').on('click', '#signupform', stopPropagation);
-})
+}
+
+$(document).ready(ready)
+// $(document).on('page:load', ready());
