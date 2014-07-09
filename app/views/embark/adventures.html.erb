@@ -15,17 +15,17 @@
 <p id="tagline">Choose your own adventure</p>
 
 <a data-no-turbolink="true" href="/adventures?search=inspire"><div id="compass">`</div></a>
-</div>
 <div id="category_filter">
 <%= form_tag(adventures_path, method: "get") do %>
 <%= hidden_field_tag 'params', @params.to_json  %>
 <%= collection_select(:category, :category_id, Category.all, :id, :name, {
-  :prompt => 'Click here to Filter By Category',  
+  :prompt => 'Filter By Category',  
   }, {
   :onchange => "this.form.submit()"
   }
 )%>
 <% end %>
+</div>
 </div>
 
 <div id="gallery">

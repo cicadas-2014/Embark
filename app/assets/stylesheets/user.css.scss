@@ -65,7 +65,7 @@ $font:'Raleway', sans-serif;
 #userPage #adventureForm .submit input {
   width: 25%;
 }
-a #inspirationbutton:hover , #userPage input:hover, #userPage #user_adventures #beInspired a:hover, #userPage button:hover {
+#category_filter select:hover, a #inspirationbutton:hover , #userPage input:hover, #userPage #user_adventures #beInspired a:hover, #userPage button:hover {
   background-color: $fillColor;
   color: $backgroundColor;
 }

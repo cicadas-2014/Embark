@@ -22,7 +22,19 @@ $font:'Raleway', sans-serif;
   opacity: 0.75; 
   filter: alpha(opacity=85); 
 }
-
+#category_filter select{
+  width: 150px;
+  font: $font;
+  color: $textColor;
+  margin-top: 30px;
+  font-size: 14px;
+  height: 45px;
+  padding: 3px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  background-color: $backgroundColor;
+  border: 2px solid $textColor;
+}
 body { 
   background-color: #231f20;
   //overflow-x: hidden;
@@ -41,7 +53,7 @@ body {
     top:50px;
     width: 100%;
     padding-top: 200px;
-    padding-bottom: 200px;
+    margin-bottom: 150px;
     margin: 0 auto;
     text-align: center;
     font-family: $font;
