@@ -14,8 +14,6 @@
 
 <p id="tagline">Choose your own adventure</p>
 <%= collection_select(:category, :category_id, @categories, :id, :name, {prompt: 'Click here to Filter By Category'}) %>
-<!-- <a data-no-turbolink="true" href="/adventures?search=inspire"><div id="compass"><img src="/globe.png"/></div>
-<div id="inspire">Inspire Me</div></a> -->
 </div>
 
 
@@ -36,6 +34,10 @@
     <%end%>
   <% end %>
 </div>
+<div id='tagline'><div id='quote'>“Adventure is worthwhile in itself.” <em>- Amelia Earhart</em></div>
+<a data-no-turbolink="true" href="/adventures?search=inspire">
+<div id="inspirationbutton">Infinite Possibilites await</div></a></div>
+
 
 
 
