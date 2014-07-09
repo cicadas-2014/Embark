@@ -4,6 +4,8 @@ $fillColor:#74c9bf;
 $green:#74c994;
 $textColor:rgba(116, 201, 148, 0.84);
 $errorColor:red;
+$black:#231f20;
+$red:#c9747f;
 $font:'Raleway', sans-serif;
 
 @font-face {
@@ -18,22 +20,28 @@ $font:'Raleway', sans-serif;
 }
 
 #favorite_button{
-  background-color:$green;
+  font-family: $font;
+  background-color:$red;
   position: absolute;
   transition: .5s ease;
   text-align: center;
-  top: 88%;
-  left:41.5%;
+  top: 78%;
+    margin-left: auto ;
+  margin-right: auto ;
+
 }
 
 
 
 #favorite_button:hover{
+  font-family: $font;
     background-color:$fillColor;
         -webkit-transition-property: background;
     -webkit-transition-duration: 0.8s;
     -webkit-transition-timing-function: ease;
+    cursor: pointer; 
 }
+
 
 body{
    background-color:#231f20;
@@ -49,7 +57,7 @@ body{
     top:0px;
     width: 100%;
     padding-top: 250px;
-    padding-bottom: 250px;
+    padding-bottom: 200px;
     margin: 0 auto;
     text-align: center;
     font-family: $font;
@@ -81,8 +89,8 @@ body{
     background-color: $backgroundColor;
     top:0px;
     width: 100%;
-    padding-top: 250px;
-    padding-bottom: 420px;
+    padding-top: 100px;
+    padding-bottom: 200px;
     margin: 0 auto;
     text-align: center;
     font-family: $font;
@@ -93,37 +101,64 @@ body{
     z-index: 0;
 }
 
+#spanheader {
+  margin-top: 10px;
+  margin-bottom: -50px;
+  height: 80px;
+  font-size: 30px;
+  padding-top:25px;
+  padding-left:30px;
+  font-family: $font;
+  background-color: $fillColor;
+  position:relative;
+
+}
+
+#description {
+  text-align: center;
+  margin:0 auto; 
+   margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color: $backgroundColor;
+    color: $black; 
+}
+
 #adventureDescription {
-  background-color: #231f20;
+  background-color: $fillColor;
   position: relative;
   width: 100%;
 }
 
-#adventureDescription #description p{
+#adventureDescription #description p {
   text-indent: 2em;
   line-height: 1.75;
-  margin-top: 1%;
-  padding: 1% 2%;
+  text-align: center;
+  margin-top: 5%; 
+  margin-left: 10%;
+  margin-right: 10%;
+  border: solid 2px $black;
+  padding: 18% 15% 10% 10%;
   font-size: 20px;
-  background-color:  #231f20;
+  background-color: $backgroundColor;
   font-family: $font;
-  border: 8px double $textColor;
   height: 100%;
   float:left;
-  width: 58%;
-  color: $backgroundColor;
-  border-radius: 9px;
+  width: 80%;
+  color: $black;
+  border-radius: 0px;
 }
 
 #adventureDescription #description header {
   font-size: 25px;
   text-align: center;
   font-family: $font;
+  font-size: 40px;
   width: 100%;
   padding-top: 3%;
   line-height: 1.75;
   padding-bottom: 2%;
-  color: $backgroundColor;
+  color: $black;
 }
 
 div.show_images {
@@ -145,7 +180,6 @@ div.show_images {
   margin-top: 8px;
 }
 
-
 #main_image {
   margin: 0 auto;
   max-width:2000px;
@@ -162,6 +196,20 @@ div.show_images {
   max-height:650px;   
   width: auto;
   height: auto;
+}
+
+.compass2 {
+  width: 100px;
+  height: 5px;
+  text-align: center;
+  font-family: 'icon-worksregular';
+  font-size: 60px;
+  color: #252525;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  top: 130px;
 }
 
 
@@ -199,11 +247,12 @@ div.show_images {
     -webkit-transition-property: background;
     -webkit-transition-duration: 0.8s;
     -webkit-transition-timing-function: ease;
-
 }
 
 #map {
-  //margin: 30px;
+  background-color: $black;
+  border: solid 2px $black;
+  margin-left: 24%;
   height: 50%;
   width: 50%;
   // float:right;
