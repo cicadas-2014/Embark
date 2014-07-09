@@ -15,6 +15,8 @@
 
 </div>
 
+<%= collection_select(:category, :category_id, @categories, :id, :name, {prompt: true}) %>
+
 <div id="gallery">
   <%if @adventures.length > 27 %>
     <% @adventures.each do |adv| %>
