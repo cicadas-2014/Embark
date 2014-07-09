@@ -13,6 +13,8 @@
 
 </div>
 
+<%= collection_select(:category, :category_id, @categories, :id, :name, {prompt: true}) %>
+
 <div id="gallery">
  <%@adventures.each do |adv|%>
  <div class="image">
