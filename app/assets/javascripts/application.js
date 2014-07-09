@@ -5,14 +5,13 @@
 //= require_tree .
 
 
+// function filter() {
+// 	$('.filters button').on('click',function(e){
+// 		e.preventDefault();
 
-function filter() {
-	$('.filters button').on('click',function(e){
-		e.preventDefault();
-
-		$('.filterOptions').css('display','block');
-	})
-}
+// 		$('.filterOptions').css('display','block');
+// 	})
+// }
 
 
 function getUserLocation(search) {
@@ -58,6 +57,7 @@ ready = function(){
 	filter();
 	imageGallery();
 	imageListLoad(speed);
+	galleryCaptions()
 };
 
 
@@ -68,10 +68,6 @@ imageGallery = function() {
 		$('img#main_image').attr('src', new_image_source);
 	});
 	$("#mygallery").justifiedGallery();
-
-
-};
-
 
 
 $(document).ready(ready)
