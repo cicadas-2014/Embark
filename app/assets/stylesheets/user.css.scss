@@ -1,8 +1,8 @@
-$backgroundColor:#fcfbe4;
-$borderColor: #74C994;
-$fillColor:#74c9bf;
-$textColor: #74C994;
-$errorColor:red;
+$whiteColor:#fcfbe4;
+$backgroundColor:#231f20;
+$borderColor:rgba(116, 201, 148, 0.84);
+$fillColor:#74c994;
+$textColor:rgba(116, 201, 148, 0.84);
 $font:'Raleway', sans-serif;
 
 #userPage input {
@@ -12,7 +12,7 @@ $font:'Raleway', sans-serif;
   text-align: center;
   color: $textColor;
   font-family: $font;
-  background-color: $backgroundColor;
+  background-color: $whiteColor;
   border: 2px solid $textColor;
   padding: 5px;
   margin-left: 40%;
@@ -56,7 +56,7 @@ $font:'Raleway', sans-serif;
   text-align: center;
   text-decoration: none;
   color: $textColor;
-  background-color: $backgroundColor;
+  background-color: $whiteColor;
   height: 120px;
   wrap: hard;
   float: right;
@@ -65,9 +65,9 @@ $font:'Raleway', sans-serif;
 #userPage #adventureForm .submit input {
   width: 25%;
 }
-a #inspirationbutton:hover , #userPage input:hover, #userPage #user_adventures #beInspired a:hover, #userPage button:hover {
+#favorite_button:hover, #category_filter select:hover, a #inspirationbutton:hover , #userPage input:hover, #userPage #user_adventures #beInspired a:hover, #userPage button:hover {
   background-color: $fillColor;
-  color: $backgroundColor;
+  color: $whiteColor;
 }
 
 #userPage #user_adventures h3{
