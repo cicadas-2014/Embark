@@ -1,10 +1,9 @@
 $white:#fcfbe4;
 $green:#74C994;
 $black:#111112;
+$blue:#74c9bf;
 $compass:#252525;
-
 $font:'Raleway', sans-serif;
-
 $column-count: 3; // gallery
 $column-gap: 5px;  // gallery
 
@@ -17,7 +16,7 @@ $column-gap: 5px;  // gallery
 }
 
 body { 
-	// background-color: $black;
+	background-color: $black;
 	min-width: 100%;
 	min-height: 100%;
 }
@@ -41,6 +40,7 @@ a {
 .button {
 	display: block;
 	text-align: center;
+	padding-top: 10px;
 	background: transparent;
 	border-radius: 5px;
 	text-transform: uppercase;
@@ -52,11 +52,15 @@ a {
 .bigButton {
 	@extend .button;
 	width: 400px;
-	height: 50px;
+	height: 70px;
 	margin: 30px auto;
+	opacity:0.85;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
 	&:hover {
 		@extend .bigButton;
-		background: $green;
+		background: $blue;
 		-webkit-transition-property: background;
 		-webkit-transition-duration: 0.8s;
 		-webkit-transition-timing-function: ease;
@@ -75,6 +79,7 @@ a {
 		-webkit-transition-timing-function: ease;
 	}
 }
+
 .logo {
 	@extend .text;
 	text-align: center;
@@ -83,6 +88,7 @@ a {
 	letter-spacing: 0.3em;
 	text-transform:uppercase;
 }
+
 .bigLogo {
 	@extend .logo;
 	margin-top: 7%;
@@ -90,11 +96,12 @@ a {
 	font-weight:bold;
 	font-size: 10em;
 }
+
 .smallLogo {
 	@extend .logo;
 	position: relative;
 	margin-top: -10px;
-	font-size: 5em;
+	font-size: 30px;
 }
 
 
@@ -117,9 +124,10 @@ a {
 	font-size: 60px;
 	color: $compass;
 	position: relative;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	z-index: 2;
-	margin-top: 300px;
+	top: -200px;
 }
 
 #gallery {
@@ -142,13 +150,15 @@ a {
 	font-style: normal;
 	font-weight: normal;
 	font-family: $font;
-	font-size: 4em;
+	font-size: 8em;
 	line-height : 45px;
 	letter-spacing: .1em;
 	color: $white;
 }
+
 #tagline {
 	@extend .text;
+	font-size: 2em;
 	text-align: center;
 	margin-bottom: 5%;
 }
@@ -177,7 +187,7 @@ a {
 		margin-right: 5%;
 		text-align: right;
 		color: $green;
-		font-family: $font;
+		font-family: Helvetica;
 		font-size: 34px;
 	}
 }

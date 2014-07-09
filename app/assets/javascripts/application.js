@@ -5,6 +5,7 @@
 //= require_tree .
 
 
+
 function filter() {
 	$('.filters button').on('click',function(e){
 		e.preventDefault();
@@ -50,6 +51,8 @@ function displayError(error){
 	}
 }
 
+
+
 ready = function(){
 	var speed = 1200
 	filter();
@@ -57,11 +60,6 @@ ready = function(){
 	imageListLoad(speed);
 };
 
-function imageListLoad(speed){
-	$(
-		'#adventuresPage').hide()
-	$('#adventuresPage').fadeTo(speed,1)
-}
 
 imageGallery = function() {
 	$('div.show_images').on('click', '.smallimage', function(e) {
@@ -69,8 +67,10 @@ imageGallery = function() {
 		var new_image_source = e.target.getAttribute('src')
 		$('img#main_image').attr('src', new_image_source);
 	});
-};
+	$("#mygallery").justifiedGallery();
 
+
+};
 
 
 
