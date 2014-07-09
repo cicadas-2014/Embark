@@ -4,6 +4,13 @@ $fillColor:#74c994;
 $textColor:rgba(116, 201, 148, 0.84);
 $errorColor:red;
 $font:'Raleway', sans-serif;
+.text {
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	margin: auto 0;
+	font-size: 1em;
+}
 
 #loginform {
 	border-radius: 5px;
@@ -16,15 +23,49 @@ $font:'Raleway', sans-serif;
 	z-index: 5;
 	background-color: $backgroundColor;
 }
-#loginform input, #loginform button, #loginform div {
+#loginform input, #signupform input {
 	width: 80%;
 	margin: 5px 10%;
-	font-weight: bold;
 	font-size: 1em;
 	text-align: center;
 	border-radius: 5px;
 }
+.buttons {
+	@extend .text;
+	position: relative;
+	display: inline-block;
+	height: 59px;
+	border-radius: 5px;
+	border: solid black 2px;
 
+}
+#signupButton {
+	@extend .buttons;
+	@extend .text;
+	padding-top: 15px;
+	font-weight: bold;
+	width: 45%;
+	margin-left: 10%;
+	float: left;
+}
+#loginButton {
+	@extend .buttons;
+	@extend .text;
+	padding-top: 15px;
+	font-weight: bold;
+	width: 45%;
+	margin-left: 10%;
+	float: left;
+}
+#backButton {
+	@extend .buttons;
+	@extend .text;
+	padding-top: 15px;
+	font-weight: bold;
+	width: 30%;
+	float: right;
+	margin-right: 10%
+}
 #signupform {
 	border-radius: 5px;
 	position: fixed;
@@ -35,14 +76,6 @@ $font:'Raleway', sans-serif;
 	margin-left: -300px;
 	z-index: 5;
 	background-color: $backgroundColor;
-}
-#signupform input {
-	width: 80%;
-	margin: 5px 10%;
-	font-weight: bold;
-	font-size: 1em;
-	text-align: center;
-	border-radius: 5px;
 }
 #back {
 	position: fixed;

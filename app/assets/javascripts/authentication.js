@@ -4,22 +4,25 @@ var addAdventureForm = "<div id='adventureForm'><h1>NEW ADVENTURE</h1><form meth
 var hideForms = function() {
   $('#addAdventure').hide();
   $('div#signupform').hide();
-  // $('div#loginform').hide();
+  $('div#loginform').hide();
   $('#back').hide();
 }
 
+var showLoginFormFirst = function(e) {
+  e.preventDefault();
+  $('#loginform').fadeTo(600,1);
+    $('#back').css('z-index',2);
+  $('#back').fadeTo(600,0.7);
+}
 var showLoginForm = function(e) {
   e.preventDefault();
-  fadeOutForms();
-  $('#loginform').fadeTo(1000,1);
-  $('#back').fadeTo(1000,0.7);
+  $('#signupform').fadeTo(600,0);
+  $('#loginform').fadeTo(600,1);
 }
-
 var showSignupForm = function(e) {
   e.preventDefault();
+  $('#signupform').fadeTo(600,1);
   $('#loginform').fadeTo(600,0);
-  $('#signupform').fadeTo(1000,1);
-  $('#back').fadeTo(1000,0.7);
 }
 
 var appendAddAdventureForm = function(e){
@@ -27,21 +30,36 @@ var appendAddAdventureForm = function(e){
   // fadeOutForms();
   $('#adventureForm').append(addAdventureForm);
 }
-
 var fadeOutForms = function(){
+  $('#signupform').fadeTo(600,0);
   $('#loginform').fadeTo(600,0);
-  $('#back').fadeTo(600,0);
 }
+var fadeOutLogin = function(){
+  $('#loginform').fadeTo(600,0);
+}
+var removeBack = function(e){
+  e.preventDefault();
 
-var loginForm = function(event){
+  $('#loginform').fadeTo(600,0);
+  $('#signupform').fadeTo(600,0);
+  $('#back').fadeTo(600,0);
+  setTimeout(function() {
+    hideForms();
+    $('#back').css('z-index',-2);
+  },600)
+}
+var stopPropagation = function(event){
   event.stopPropagation()
 }
 
 $(document).ready(function() {
   hideForms();
-  $('body').on('click', '#login', showLoginForm);
-  $('body').on('click', '#backButton', fadeOutForms);
-  $('body').on('click', '#signup', showSignupForm);
+  $('body').on('click', '#menuLoginButton', showLoginFormFirst);
+  $('body').on('click', '#loginButton', showLoginForm);
+  $('body').on('click', '#backButton', removeBack);
+  $('body').on('click', '#back', removeBack);
+  $('body').on('click', '#signupButton', showSignupForm);
   $('body').on('click', '#addAdventure', appendAddAdventureForm);
-  $('body').on('click', '#loginform', loginForm);
+  // $('body').on('click', '#loginform', stopPropagation);
+  // $('body').on('click', '#signupform', stopPropagation);
 })
