@@ -30,6 +30,7 @@ body {
   min-height: 100%;
 }
 
+
 #adventuresPage {
   margin-top: -100px;
   background-color: $backgroundColor;
@@ -75,6 +76,14 @@ body {
    column-gap:           5px;
    
 }
+
+#category-filter {
+	height: 100%;
+	padding-top:100px;
+	position: relative;
+	color:red;
+}
+
 #gallery img {
   margin-top: 5px;
   width: 100%;
