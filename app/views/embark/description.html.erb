@@ -8,23 +8,32 @@
   </div>
  </div>
  
+<div id="spanheader"><span>Your Adventure</span>
 
+</div>
+
+<br>
 
 <div class="information">
 <div class="show_images">
+  <br>
     <div id="main_image">
       <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
     </div>
   </div> 
 
+  <br>
+
   <div id="adventureDescription">
 
   <div id='description'>
      <header><%= @adventure.title %></header>
+     <div class="compass2">`</div>
+
       <p><%= @adventure.description %></p>
   </div>
 
-<br>
+
 
   <div id="map">
     <script type="text/javascript">
@@ -33,7 +42,10 @@
       renderMap(latitude,longitude); 
     </script>
   </div>
+  <br>
 </div>
+
+<br>
 
 
 </div>
