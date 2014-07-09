@@ -14,12 +14,11 @@
 
 <p id="tagline">Choose your own adventure</p>
 
-
 <a data-no-turbolink="true" href="/adventures?search=inspire"><div id="compass">`</div></a>
 </div>
 <div id="category_filter">
 <%= form_tag(adventures_path, method: "get") do %>
-<%= hidden_field_tag 'params', @params  %>
+<%= hidden_field_tag 'params', @params.to_json  %>
 <%= collection_select(:category, :category_id, Category.all, :id, :name, {
   :prompt => 'Click here to Filter By Category',  
   }, {
@@ -45,6 +44,10 @@
   <%end%>
   <% end %>
 </div>
+<div id='tagline'><div id='quote'>“Adventure is worthwhile in itself.” <em>- Amelia Earhart</em></div>
+<a data-no-turbolink="true" href="/adventures?search=inspire">
+<div id="inspirationbutton">Infinite Possibilites await</div></a></div>
+
 
 
 
