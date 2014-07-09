@@ -17,7 +17,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(signup_params)
     if @user.save
-      raise params.inspect
       session[:id] = @user.id
       redirect_to users_path
     else
@@ -47,11 +46,11 @@ class UsersController < ApplicationController
   private
 
   def login_params
-    params.require(:params).permit(:email)
+    params.permit(:email)
   end
 
   def login_password
-    params.require(:params).permit(:password)
+    params.permit(:password)
   end
 
   def signup_params

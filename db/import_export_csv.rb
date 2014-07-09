@@ -39,7 +39,7 @@ def importGadventures
       cityBoolean = false
       cities[csv[2]] = nil
     end
-
+    
     Adventure.makeAdventure(csv[0],csv[1],csv[2],csv[3],csv[5],csv[4],csv[6],cityBoolean,cities[csv[2]])
   end
 

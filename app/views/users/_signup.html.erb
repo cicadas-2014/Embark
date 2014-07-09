@@ -1,9 +1,11 @@
 <h2>Signup</h2>
+
 <%= form_tag('/users', method: "post", remote: true, :id => "signup") do %>
   <%= email_field_tag(:email, nil, placeholder:'Email') %>
   <%= password_field_tag(:password, nil, placeholder:'Password') %>
   <%= submit_tag('Sign up') %>
 <% end %>
+
 <div id="buttons">
 	<a href="#" id="loginButton">Login</a>
 	<a href="#" id="backButton">Back</a>
