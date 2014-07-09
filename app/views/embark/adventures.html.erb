@@ -1,90 +1,9 @@
-<head>
-
-  <link rel="stylesheet" type="text/css" media="all" href="http://cobblehilldigital.com/wp-content/themes/cobblehill/css/mytheme.css">
-
-  <script type="text/javascript" src="http://cobblehilldigital.com/wp-content/themes/cobblehill/js/mytheme.js"></script>
-</head>
-
-
-<div id="nav">
-  <div class="mid-cont">
-    <div class="close"></div>
-    <div class="menu-main-nav-container">
-      <ul id="menu-main-nav">
-        <li>
-          <a href="http://embarkinspire.tumblr.com/">Our Story<span class="sub">A glimpse into our team process</span></a>
-        </li>
-        <li>
-          <a href="https://github.com/cicadas-2014/Embark">GitHub<span class="sub">Fixing everyhting the third time around</span></a>
-        </li>
-        <li>
-          <a href="http://api.gadventures.com/">Featured API<span class="sub">Our finest collaborator</span></a>
-        </li>
-        <li>
-          <a href="https://mail.google.com/">Contact<span class="sub">We want to hear from you</span></a>
-        </li>
-        <li>
-          <a href="login" id="login">Login<span class="sub">Log in and be able to favorite and save adventures!</span></a>
-        </li>
-      </ul>
-    </div>     
-  </div>
-</div>
-
-<div id="adventuresPage">
-  <div id="header" class="scrolled">
-    <div class="mid-cont">
-      <a class = "embark" href="/" style="background-position: 0px -18px;">EMBARK</a>
-      <div class="hamburger" style="background-position: 0px -28px;"></div>
-
-      <button name="filters">Filter</button>
-
-    </div>
-  </div>
- <!--    <div class="filterOptions">
-
-        <div id="filterLocation"> 
-          <%= link_to "Local", adventures_path(search: "local"), class: 'btn' %>
-          <%= link_to "Continental", adventures_path(search: "continential"), class: 'btn'%>
-          <%= link_to "Global", adventures_path(search: "global"), class: 'btn' %>
-        </div>
-        <form>
-          <select>
-              <option>Category</option>
-            <%@categories.each do |cat|%>
-             <option><%=cat.name%></option>
-            <%end%>
-          </select>
-
-          <select >    
-             <option>Duration</option>
-            <%@adventures.each do |adv|%>
-             <option><%=adv.duration%></option>
-            <%end%>
-          </select>
-        </form>
-    </div> 
-  </div> -->
-
-
+<div id="adventurePage">
   <p id="tagline">Choose your own adventure</p>
-  <div id="compass">`</div>
-  <!-- <div id="home-scroll" class="desktop" onclick="scrollToHome();">
-  <div class="pointer">&#96;</div> -->
-
-
-
+  <div id="compassIcon">`</div>
+  <div id="gallery">
+    <%@adventures.each do |adv|%>
+    <a class="image" href="/adventures/<%=adv.id%>"><img src=<%=adv.image_url%> alt=""></a>
+    <%end%>
+  </div>
 </div>
-
-<div id="gallery">
- <%@adventures.each do |adv|%>
- <div class="image">
-  <a href="/adventures/<%=adv.id%>">
-    <img src=<%=adv.image_url%> alt="">
-  </a>
-</div>
-<%end%>
-</div>
-
-
-
