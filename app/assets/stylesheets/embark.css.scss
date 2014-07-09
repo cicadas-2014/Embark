@@ -64,20 +64,6 @@ body {
     font-style: normal;
 }
 
-#compass {
-  width: 100px;
-  height: 10px;
-  text-align: center;
-  font-family: 'icon-worksregular';
-  font-size: 60px;
-  color: #252525;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 2;
-  top: -125px;
-}
-
 #adventurePage #gallery {
    line-height: 0;
     position: relative;
@@ -123,8 +109,8 @@ body {
 }
 .adventure_info {
   padding-bottom: 20px;
-
 }
+
 
 
 @media (max-width: 1900px) {
@@ -133,7 +119,6 @@ body {
     -webkit-column-count: 3;
     column-count:         3;
   }
-  img {height: 290px;width: auto;}
   }
 @media (max-width: 1500px) {
   #gallery {
@@ -141,7 +126,6 @@ body {
     -webkit-column-count: 3;
     column-count:         3;
   }
-  img {height: 250px;width: auto;}
   }
 @media (max-width: 1200px) {
   #gallery {
@@ -149,7 +133,6 @@ body {
     -webkit-column-count: 3;
     column-count:         3;
   }
-  img {height: 180px; width: auto;}
   }
 @media (max-width: 1000px) {
   #gallery {
@@ -158,11 +141,11 @@ body {
     column-count:         2;
   }
   #tagline {padding-top: 100px;font-size: 25px;}
-  img {height: 150px;width: auto;}
 }
 @media (max-width: 700px) {
-  img {height: 120px;width: auto;}
-}
-@media (max-width: 600px) {
-  img {height: 180px;width: auto;}
+  #gallery {
+    -moz-column-count:    1;
+    -webkit-column-count: 1;
+    column-count:         1;
+  }
 }
