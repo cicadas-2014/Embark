@@ -25,6 +25,9 @@ def SaveToCSV(data)
 	CSV.open('db/csvFiles/gadventures.csv', 'a') do |csv|
 		csv << data
 	end
+		CSV.open('db/csvFiles/new_york_adventures.csv', 'a') do |csv|
+		csv << data
+	end
 end
 
 def dataRetrieval(url)

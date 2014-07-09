@@ -31,8 +31,7 @@ class UsersController < ApplicationController
   end
 
   def favorites
-    FavoritedAdventure.create(adventure_id: params[:data], user_id: session[:id])
-    return 200
+    FavoritedAdventure.create(adventure_id: params[:adventure], user_id: 1)
   end
   
   def addAdventure
