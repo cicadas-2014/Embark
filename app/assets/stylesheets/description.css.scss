@@ -16,20 +16,6 @@ $font:'Raleway', sans-serif;
     font-style: normal;
 }
 
-
-ul.thumbnail-gallery {
-  list-style: none;
-  margin: 10px 0;
-  padding: 0;
-}
-
-ul.thumbnail-gallery li {
-  display: inline-block;
-  margin: 10px 10px 0 0;
-  padding: 0;
-}
-
-
 .pointer{
   margin-top: 100px; 
   font-family: icon-worksregular;
@@ -96,7 +82,6 @@ div.show_images {
   margin-top: 8px;
 }
 
-
 #main_image {
   margin: 0 auto;
   max-width:2000px;
@@ -150,8 +135,7 @@ div.show_images {
 }
 
 #map {
-  margin: 30px;
-  height: 400px;
-  width: 400px;
-  // float:right;
+  //margin: 30px;
+ height: 40px;
+  //width: 400px;
 }
