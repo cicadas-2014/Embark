@@ -1,8 +1,8 @@
-$backgroundColor:#fcfbe4;
+$whiteColor:#fcfbe4;
+$backgroundColor:#231f20;
 $borderColor:rgba(116, 201, 148, 0.84);
 $fillColor:#74c994;
 $textColor:rgba(116, 201, 148, 0.84);
-$errorColor:red;
 $font:'Raleway', sans-serif;
 
 * { 
@@ -22,9 +22,22 @@ $font:'Raleway', sans-serif;
   opacity: 0.75; 
   filter: alpha(opacity=85); 
 }
-
+#category_filter select {
+  width: 150px;
+  float:right;
+  font: $font;
+  color: $textColor;
+  margin-top: 30px;
+  font-size: 14px;
+  height: 45px;
+  padding: 3px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  background-color: $whiteColor;
+  border: 2px solid $textColor;
+}
 body { 
-  background-color: #231f20;
+  background-color: $backgroundColor;
   //overflow-x: hidden;
   min-width: 100%;
   min-height: 100%;
@@ -33,27 +46,26 @@ body {
 
 #adventuresPage {
   margin-top: -100px;
-  background-color: $backgroundColor;
+  background-color: $whiteColor;
   overflow-x: hidden;
 }
 
 #tagline {
-    background-color: $backgroundColor;
+    background-color: $whiteColor;
     top:50px;
     width: 100%;
     padding-top: 200px;
-    padding-bottom: 200px;
+    margin-bottom: 150px;
     margin: 0 auto;
     text-align: center;
     font-family: $font;
     font-size: 40px;
     letter-spacing: .2em;
     line-height: 50px;
-    color: #231f20; 
+    color: $backgroundColor; 
     position: relative;
     z-index: 0;
 }
-
 @font-face {
     font-family: 'icon-worksregular';
     src: url('icon-works-webfont.eot');
@@ -64,7 +76,6 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-
 #adventurePage #gallery {
    line-height: 0;
     position: relative;
@@ -74,7 +85,6 @@ body {
    -moz-column-gap:      5px;
    column-count:         3;
    column-gap:           5px;
-   
 }
 
 #category-filter {
@@ -90,7 +100,7 @@ body {
   height: auto;
 }
 #gallery .image #title {
-  color: $backgroundColor;
+  color: $whiteColor;
   text-align: center;
 }
 #header a {
@@ -98,19 +108,6 @@ body {
     font-size: 30px;
     letter-spacing: .3em;
     color: $fillColor;
-}
-
-#description_title {
-  width: 100%;
-  margin-right: 5%;
-  text-align: right;
-  color: $textColor;
-  font-family: Helvetica;
-  font-size: 34px;
-}
-
-#description_title p:hover {
-  padding: 1%;
 }
 #adventureDescription {
   width: 1200px;
@@ -133,7 +130,7 @@ a #inspirationbutton {
   text-align: center;
   color: $textColor;
   font-family: $font;
-  background-color: $backgroundColor;
+  background-color: $whiteColor;
   border: 2px solid $textColor;
   padding: 5px;
   margin-left: 40%;
@@ -154,6 +151,7 @@ a #inspirationbutton:hover{
   font: $font;
   font-size: 20px;
 }
+
 
 @media (max-width: 1900px) {
   #gallery {
