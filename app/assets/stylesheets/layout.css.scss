@@ -17,7 +17,7 @@ $column-gap: 5px;  // gallery
 }
 
 body { 
-	background-color: $black;
+	// background-color: $black;
 	min-width: 100%;
 	min-height: 100%;
 }
@@ -94,7 +94,7 @@ a {
 	@extend .logo;
 	position: relative;
 	margin-top: -10px;
-	font-size: 30px;
+	font-size: 5em;
 }
 
 
@@ -117,10 +117,9 @@ a {
 	font-size: 60px;
 	color: $compass;
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	z-index: 2;
-	top: -200px;
+	margin-top: 300px;
 }
 
 #gallery {
@@ -178,7 +177,7 @@ a {
 		margin-right: 5%;
 		text-align: right;
 		color: $green;
-		font-family: Helvetica;
+		font-family: $font;
 		font-size: 34px;
 	}
 }
