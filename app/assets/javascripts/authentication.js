@@ -55,7 +55,7 @@ var ready = function(){
   hideForms();
   $('body').on('click', '#addAdventure', appendAddAdventureForm);
   
-  $('body').on('click', '#loginNavBar', showLoginForm);signupNavBar
+  $('body').on('click', '#loginNavBar', showLoginForm);
   $('body').on('click', '#loginButton', showLoginForm);
   $('body').on('click', '#signupNavBar', showSignupForm);
   $('body').on('click', '#signupButton', showSignupForm);
