@@ -1,0 +1,51 @@
+$white:#fcfbe4;
+$green:#74C994;
+$black:#111112;
+$compass:#252525;
+
+$font:'Raleway', sans-serif;
+
+$column-count: 3; // gallery
+$column-gap: 5px;  // gallery
+
+
+#compassIcon {
+	width: 100px;
+	height: 10px;
+	text-align: center;
+	font-family: 'icon-worksregular';
+	font-size: 60px;
+	color: $compass;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 2;
+	top: -200px;
+}
+
+#gallery {
+	line-height: 0;
+	position: relative;
+
+	-webkit-column-count: $column-count;
+	-moz-column-count: $column-count;
+	column-count: $column-count;
+	-webkit-column-gap: $column-gap;
+	-moz-column-gap: $column-gap;
+	column-gap: $column-gap; 
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@font-face {
+	font-family: 'icon-worksregular';
+	src: url('icon-works-webfont.eot');
+	src: url('icon-works-webfont.eot?#iefix') format('embedded-opentype'),
+	url('icon-works-webfont.woff') format('woff'),
+	url('icon-works-webfont.ttf') format('truetype'),
+	url('icon-works-webfont.svg#icon-worksregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
