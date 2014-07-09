@@ -63,8 +63,6 @@ function imageListLoad(speed){
 	$('#adventuresPage').fadeTo(speed,1)
 }
 
-
-
 imageGallery = function() {
 	$('div.show_images').on('click', '.smallimage', function(e) {
 		e.preventDefault();
