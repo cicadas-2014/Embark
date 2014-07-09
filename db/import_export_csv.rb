@@ -23,15 +23,25 @@ def importGadventures
   CSV.foreach("db/csvFiles/cities.csv") do |csv|
     cities[csv[0]] = [csv[1], csv[2], csv[3]]
   end
-	CSV.foreach("db/csvFiles/gadventures.csv") do |csv|
+  CSV.foreach("db/csvFiles/gadventures.csv") do |csv|
     cityBoolean = true
     unless cities[csv[2]]
       cityBoolean = false
       cities[csv[2]] = nil
     end
-city.name,city.longitude,city.latitude,city.country.name
-		Adventure.makeAdventure(csv[0],csv[1],csv[2],csv[3],csv[4],csv[5],csv[6],cityBoolean,cities[csv[3]])
-	end
+    # city.name,city.longitude,city.latitude,city.country.name
+    Adventure.makeAdventure(csv[0],csv[1],csv[2],csv[3],csv[4],csv[5],csv[6],cityBoolean,cities[csv[3]])
+  end
+  CSV.foreach("db/csvFiles/new_york_adventures.csv") do |csv|
+    cityBoolean = true
+    unless cities[csv[2]]
+      cityBoolean = false
+      cities[csv[2]] = nil
+    end
+    # city.name,city.longitude,city.latitude,city.country.name
+    Adventure.makeAdventure(csv[0],csv[1],csv[2],csv[3],csv[4],csv[5],csv[6],cityBoolean,cities[csv[3]])
+  end
+
   puts "done importing adventures"
 end
 
@@ -42,7 +52,7 @@ def importImages
     city = City.find_by(name:csv[6])
     if city
       p x += 1
-    Image.create(panoramio_id:csv[0], original_image_url:csv[1],medium_image_url:csv[2],small_image_url:csv[3],longitude:csv[4],latitude:csv[6],city:city)
+      Image.create(panoramio_id:csv[0], original_image_url:csv[1],medium_image_url:csv[2],small_image_url:csv[3],longitude:csv[4],latitude:csv[6],city:city)
     end
   end
   puts "done importing images"
@@ -61,8 +71,8 @@ def export_cities_to_csv
   CSV.open("db/csvFiles/cities.csv", "wb") do |csv|
     City.all.each do |city|
       if city.country
-      csv << [city.name,city.longitude,city.latitude,city.country.name]
-    end
+        csv << [city.name,city.longitude,city.latitude,city.country.name]
+      end
     end
   end
 end

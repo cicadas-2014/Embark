@@ -40,8 +40,7 @@ body {
     background-color: $backgroundColor;
     top:0px;
     width: 100%;
-    padding-top: 250px;
-    padding-bottom: 420px;
+    padding: 25% 0;
     margin: 0 auto;
     text-align: center;
     font-family: $font;
@@ -50,6 +49,7 @@ body {
     color: #231f20; 
     position: relative;
     z-index: 0;
+    height: 30%;
 }
 
 @font-face {
@@ -64,17 +64,23 @@ body {
 }
 
 #compass {
-  width: 100px;
-  height: 10px;
+  height: 65px;
   text-align: center;
   font-family: 'icon-worksregular';
   font-size: 60px;
   color: #252525;
+  padding: auto;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   z-index: 2;
-  top: -200px;
+  top: -100px;
+  padding-top: 1%;
+  padding-bottom: 20%
+}
+
+#compass a:hover {
+  cursor: pointer;
 }
 
 #adventurePage #gallery {
