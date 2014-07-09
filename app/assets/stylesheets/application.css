@@ -13,3 +13,4 @@
  *= require_tree .
  *= require_self
  */
+div#nav{width:100%; padding:15px; height:230px;}
