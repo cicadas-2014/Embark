@@ -14,18 +14,23 @@
           <a href="https://github.com/cicadas-2014/Embark">GitHub<span class="sub">Fixing everything the third time around</span></a>
         </li>
         <li>
-          <a href="http://api.gadventures.com/">Featured API<span class="sub">Our finest collaborator</span></a>
-        </li>
-        <li>
           <a href="https://mail.google.com/">Contact<span class="sub">We want to hear from you</span></a>
         </li>
+        <% if current_user %>
         <li>
-          <% if current_user %>
           <a href="/users" id="usersPage">Account<span class="sub">View your favorite adventures!</span></a>
-          <% else %>
-          <a href="/login" id="loginNavBar">Login<span class="sub">Log in and be able to favorite and save adventures!</span></a>
-          <% end %>
         </li>
+        <li>
+          <a href="/users/logout" id="logout">Logout<span class="sub">Log out</span></a>
+        </li>
+        <% else %>
+        <li>
+          <a href="/login" id="loginNavBar">Login<span class="sub">Log in and be able to favorite and save adventures!</span></a>
+        </li>
+        <li>
+          <a href="/signup" id="signupNavBar">Signup<span class="sub">Sign up and be able to favorite and save adventures!</span></a>
+        </li>
+        <% end %>
       </ul>
     </div>     
   </div>
