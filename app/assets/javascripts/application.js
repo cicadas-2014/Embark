@@ -5,14 +5,6 @@
 //= require_tree .
 
 
-function filter() {
-	$('.filters button').on('click',function(e){
-		e.preventDefault();
-
-		$('.filterOptions').css('display','block');
-	})
-}
-
 
 function getUserLocation(search) {
 	if(navigator.geolocation) {
