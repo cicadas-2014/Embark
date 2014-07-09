@@ -28,9 +28,9 @@ def importGadventures
     unless cities[csv[2]]
       cityBoolean = false
       cities[csv[2]] = nil
-    end
-city.name,city.longitude,city.latitude,city.country.name
-		Adventure.makeAdventure(csv[0],csv[1],csv[2],csv[3],csv[4],csv[5],csv[6],cityBoolean,cities[csv[3]])
+    end 
+    p  cities[csv[2]]
+		Adventure.makeAdventure(csv[0],csv[1],csv[2],csv[3],csv[4],csv[5],csv[6],cityBoolean,cities[csv[2]])
 	end
   puts "done importing adventures"
 end
