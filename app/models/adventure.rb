@@ -45,7 +45,7 @@ class Adventure < ActiveRecord::Base
 		categories.each do |category|
 			adventure.categories << Category.find_or_create_by(name:category)
 		end
-		adventure.save
+		adventure = adventure.save
 		end
 		adventure
 	end
