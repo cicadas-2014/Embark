@@ -1,6 +1,6 @@
 <h2>Signup</h2>
 
-<%= form_tag('/users', method: "post", remote: true, :id => "signup") do %>
+<%= form_tag('/users', method: "post", :id => "signup") do %>
   <%= email_field_tag(:email, nil, placeholder:'Email') %>
   <%= password_field_tag(:password, nil, placeholder:'Password') %>
   <%= submit_tag('Sign up') %>
