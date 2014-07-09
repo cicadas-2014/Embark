@@ -5,13 +5,14 @@
 //= require_tree .
 
 
-function filter() {
-	$('.filters button').on('click',function(e){
-		e.preventDefault();
 
-		$('.filterOptions').css('display','block');
-	})
-}
+// function filter() {
+// 	$('.filters button').on('click',function(e){
+// 		e.preventDefault();
+
+// 		$('.filterOptions').css('display','block');
+// 	})
+// }
 
 
 function getUserLocation(search) {
@@ -57,6 +58,7 @@ ready = function(){
 	buttonEffects(speed)
 	imageGallery();
 	imageListLoad(speed);
+	galleryCaptions()
 };
 
 function imageListLoad(speed){
@@ -106,7 +108,13 @@ imageGallery = function() {
 	});
 };
 
+<link rel="stylesheet" href="css/justifiedGallery.css" />
+<script src="js/jquery.justifiedGallery.js"></script>
 
+function galleryCaptions() {
+	$("#gallery").justifiedGallery();
+});
+}
 
 
 $(document).ready(ready)

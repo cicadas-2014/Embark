@@ -88,10 +88,19 @@ body {
    column-gap:           5px;
    
 }
+span {
+
+}
 #gallery img {
   margin-top: 5px;
   width: 100%;
   height: auto;
+}
+figcaption {
+  color: $backgroundColor;
+  margin-top: -30px;
+  margin-left: 5px;
+  display: none;
 }
 #header a {
   font-family: $font;
