@@ -1,26 +1,30 @@
 <%= render "embark/topnav" %>
 
+ <div id="inspire">Get inspired
   <div  class="favorite_div">
     <form>
       <input type="button" adventure='<%= @adventure.id %>' id="favorite_button" value="Save to your favorites"/>
     </form>
   </div>
+ </div>
+ 
 
-<div id="adventureDescription">
 
-
-<!--   <div class="show_images">
+<div class="information">
+<div class="show_images">
     <div id="main_image">
       <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
     </div>
-  </div> -->
+  </div> 
+
+  <div id="adventureDescription">
 
   <div id='description'>
      <header><%= @adventure.title %></header>
       <p><%= @adventure.description %></p>
   </div>
 
-
+<br>
 
   <div id="map">
     <script type="text/javascript">
@@ -29,5 +33,7 @@
       renderMap(latitude,longitude); 
     </script>
   </div>
+</div>
+
 
 </div>
