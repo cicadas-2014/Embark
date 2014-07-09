@@ -73,13 +73,13 @@ imageGallery = function() {
 	});
 };
 
-<link rel="stylesheet" href="css/justifiedGallery.css" />
-<script src="js/jquery.justifiedGallery.js"></script>
+// <link rel="stylesheet" href="css/justifiedGallery.css" />
+// <script src="js/jquery.justifiedGallery.js"></script>
 
-function galleryCaptions() {
-	$("#gallery").justifiedGallery();
-});
-}
+// function galleryCaptions() {
+// 	$("#gallery").justifiedGallery();
+// });
+// }
 
 
 $(document).ready(ready)
