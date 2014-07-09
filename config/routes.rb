@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 	resources :users, only: [:index,:create]
 
 	get '/users/login', to: "users#login"
+	get '/users/logout', to: "users#logout"
 
 	get '/users/favorites', to: "users#favorites"
 
