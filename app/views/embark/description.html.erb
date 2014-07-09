@@ -1,5 +1,15 @@
 <%= render "embark/topnav" %>
+<div id="userforms">
+  <div id="loginform">
+    <%= render "users/login" %>
+  </div>
+  <div id="signupform">
+    <%= render "users/signup" %>  
+  </div>
 
+</div>
+
+<div id="back"></div>
  <div id="inspire">Get inspired
   <% if current_user %>
   <div  class="favorite_div">
