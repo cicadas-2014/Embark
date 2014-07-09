@@ -40,7 +40,7 @@ class EmbarkController < ApplicationController
 	end
 
 	def description
-		@categories = Caetgory.all
+		@categories = Category.all
 		@adventure = Adventure.find_by(id: params[:adventure_id])
 	end
 

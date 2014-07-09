@@ -19,6 +19,9 @@
   <br>
     <div id="main_image">
       <img id="main_image" class="largeimage" src='<%= @adventure.image_url %>'/>
+     <%@adventure.city.images.each do |image|%>
+        <img id="main_image" class="largeimage" src='<%= image.medium_image_url %>'/>
+      <%end%>
     </div>
   </div> 
 
