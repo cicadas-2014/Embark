@@ -106,11 +106,12 @@ div#hamburger {
 
 
 #search img {
-    width: 1%;
-    height: 1%;
-     display: block;
-    margin-left: 630px;
-    margin-right: auto
+    width: 2%;
+    height: 2%;
+    display: block;
+    position: fixed;
+    margin-left: 50%;
+    margin-right: auto;
     }
 
 @media (max-width: 1000px) {

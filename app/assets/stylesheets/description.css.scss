@@ -26,8 +26,7 @@ $font:'Raleway', sans-serif;
   transition: .5s ease;
   text-align: center;
   top: 78%;
-  margin-left: -8.3%;
-
+  margin-left: 40%;
 }
 
 
@@ -56,7 +55,7 @@ body{
     top:0px;
     width: 100%;
     padding-top: 250px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     margin: 0 auto;
     text-align: center;
     font-family: $font;
@@ -89,7 +88,7 @@ body{
     top:0px;
     width: 100%;
     padding-top: 100px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     margin: 0 auto;
     text-align: center;
     font-family: $font;
@@ -262,5 +261,4 @@ div.show_images {
   margin-left: 24%;
   height: 50%;
   width: 50%;
-  // float:right;
 }
