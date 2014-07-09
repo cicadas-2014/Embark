@@ -8,5 +8,9 @@ var scrollToImages = function() {
 
 $(document).ready(function() {
 	$('body').on('click', '#compass a', scrollToImages);
-
+  $('#compass').mouseenter(function(){
+    $(this).css('font-size',70);
+  }).mouseleave(function(){
+    $(this).css('font-size',60);
+  })
 })
