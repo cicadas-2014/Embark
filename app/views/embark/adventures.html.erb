@@ -1,16 +1,14 @@
 <%= render "embark/topnav" %>
-<div id="login">
+<div id="loginform">
   <%= render "users/login" %>
 </div>
-<div id="signup">
+<div id="signupform">
   <%= render "users/signup" %>  
 </div>
+<div id="back"></div>
 
   <p id="tagline">Choose your own adventure</p>
-  <div id="compass">`</div>
-  <!-- <div id="home-scroll" class="desktop" onclick="scrollToHome();">
-  <div class="pointer">&#96;</div> -->
-</div>
+  <div id="compass">`</div></div>
 
 <div id="gallery">
  <%@adventures.each do |adv|%>
