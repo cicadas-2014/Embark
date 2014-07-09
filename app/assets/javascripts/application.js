@@ -5,7 +5,6 @@
 //= require_tree .
 
 
-
 // function filter() {
 // 	$('.filters button').on('click',function(e){
 // 		e.preventDefault();
@@ -51,6 +50,8 @@ function displayError(error){
 	}
 }
 
+
+
 ready = function(){
 	var speed = 1200
 	filter();
@@ -59,11 +60,6 @@ ready = function(){
 	galleryCaptions()
 };
 
-function imageListLoad(speed){
-	$(
-		'#adventuresPage').hide()
-	$('#adventuresPage').fadeTo(speed,1)
-}
 
 imageGallery = function() {
 	$('div.show_images').on('click', '.smallimage', function(e) {
@@ -71,15 +67,7 @@ imageGallery = function() {
 		var new_image_source = e.target.getAttribute('src')
 		$('img#main_image').attr('src', new_image_source);
 	});
-};
-
-// <link rel="stylesheet" href="css/justifiedGallery.css" />
-// <script src="js/jquery.justifiedGallery.js"></script>
-
-// function galleryCaptions() {
-// 	$("#gallery").justifiedGallery();
-// });
-// }
+	$("#mygallery").justifiedGallery();
 
 
 $(document).ready(ready)
