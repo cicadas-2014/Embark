@@ -1,3 +1,5 @@
+// This code was copied from the google maps api documentation
+
 (function() {
   this.Gmaps = {
     build: function(type, options) {
