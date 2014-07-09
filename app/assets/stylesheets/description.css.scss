@@ -1,8 +1,11 @@
 $backgroundColor:#fcfbe4;
 $borderColor:rgba(116, 201, 148, 0.84);
 $fillColor:#74c9bf;
+$green:#74c994;
 $textColor:rgba(116, 201, 148, 0.84);
 $errorColor:red;
+$black:#231f20;
+$red:#c9747f;
 $font:'Raleway', sans-serif;
 
 @font-face {
@@ -16,12 +19,56 @@ $font:'Raleway', sans-serif;
     font-style: normal;
 }
 
+#favorite_button{
+  font-family: $font;
+  background-color:$red;
+  position: absolute;
+  transition: .5s ease;
+  text-align: center;
+  top: 78%;
+  left:41%;
+}
+
+
+
+#favorite_button:hover{
+  font-family: $font;
+    background-color:$fillColor;
+        -webkit-transition-property: background;
+    -webkit-transition-duration: 0.8s;
+    -webkit-transition-timing-function: ease;
+    cursor: pointer; 
+}
+
+
+body{
+   background-color:#231f20;
+}
 .pointer{
   margin-top: 100px; 
   font-family: icon-worksregular;
   font-size: 40px;
 }
 
+#inspire {
+    background-color: $backgroundColor;
+    top:0px;
+    width: 100%;
+    padding-top: 250px;
+    padding-bottom: 200px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: $font;
+    font-size: 40px;
+    letter-spacing: .1em;
+    color: #231f20; 
+    position: relative;
+    z-index: 0;
+}
+
+.information {
+  background-color:#231f20; 
+}
 
 #new_session input {
   border: 2px solid $backgroundColor;
@@ -36,31 +83,80 @@ $font:'Raleway', sans-serif;
   background-color: $textColor;
 }
 
-#adventureDescription #description p{
+#tagline {
+    background-color: $backgroundColor;
+    top:0px;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: $font;
+    font-size: 40px;
+    letter-spacing: .1em;
+    color: #231f20; 
+    position: relative;
+    z-index: 0;
+}
+
+#spanheader {
+  margin-top: 10px;
+  margin-bottom: -50px;
+  height: 80px;
+  font-size: 30px;
+  padding-top:25px;
+  padding-left:30px;
+  font-family: $font;
+  background-color: $fillColor;
+  position:relative;
+
+}
+
+#description {
+  text-align: center;
+  margin:0 auto; 
+   margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color: $backgroundColor;
+    color: $black; 
+}
+
+#adventureDescription {
+  background-color: $fillColor;
+  position: relative;
+  width: 100%;
+}
+
+#adventureDescription #description p {
   text-indent: 2em;
   line-height: 1.75;
-  margin-top: 1%;
-  padding: 1% 2%;
+  text-align: center;
+  margin-top: 5%; 
+  margin-left: 10%;
+  margin-right: 10%;
+  border: solid 2px $black;
+  padding: 18% 15% 10% 10%;
   font-size: 20px;
-  background-color: $fillColor;
+  background-color: $backgroundColor;
   font-family: $font;
-  border: 8px double $textColor;
   height: 100%;
   float:left;
-  width: 58%;
-  color: $backgroundColor;
-  border-radius: 9px;
+  width: 80%;
+  color: $black;
+  border-radius: 0px;
 }
 
 #adventureDescription #description header {
   font-size: 25px;
   text-align: center;
   font-family: $font;
+  font-size: 40px;
   width: 100%;
   padding-top: 3%;
   line-height: 1.75;
   padding-bottom: 2%;
-  color: $backgroundColor;
+  color: $black;
 }
 
 div.show_images {
@@ -82,7 +178,6 @@ div.show_images {
   margin-top: 8px;
 }
 
-
 #main_image {
   margin: 0 auto;
   max-width:2000px;
@@ -99,6 +194,20 @@ div.show_images {
   max-height:650px;   
   width: auto;
   height: auto;
+}
+
+.compass2 {
+  width: 100px;
+  height: 5px;
+  text-align: center;
+  font-family: 'icon-worksregular';
+  font-size: 60px;
+  color: #252525;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  top: 130px;
 }
 
 
@@ -121,11 +230,14 @@ div.show_images {
   text-align: center;
   text-decoration: none;
   color: $backgroundColor;
-  text-transform: uppercase;
   text-align: center;
   font-family: $font;
   background-color: $textColor;
   margin-right:100px;
+  position:absolute;
+  transition: .5s ease;
+  left: 1000px;
+  top: 198px;
 }
 
 #favorite input:hover{
@@ -136,8 +248,10 @@ div.show_images {
 }
 
 #map {
-  margin: 30px;
-  height: 400px;
-  width: 400px;
+  background-color: $black;
+  border: solid 2px $black;
+  margin-left: 24%;
+  height: 50%;
+  width: 50%;
   // float:right;
 }
