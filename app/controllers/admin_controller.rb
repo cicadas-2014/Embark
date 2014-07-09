@@ -1,11 +1,11 @@
 class AdminController < ApplicationController
 	def index
-
-		@adventures = Adventure.all
+		@cities = City.all
 	end
 	def show
 		p params[:deleteAdventure]
 		if params[:deleteAdventure]
+			
 			Adventure.destroy((params[:id].to_i-1))
 		end
 		if params[:deletePictures] && params[:deletePictures] != ""
