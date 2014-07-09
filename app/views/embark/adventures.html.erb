@@ -7,15 +7,17 @@
   <div id="signupform">
     <%= render "users/signup" %>  
   </div>
+
 </div>
+
 <div id="back"></div>
 
 <p id="tagline">Choose your own adventure</p>
+<%= collection_select(:category, :category_id, @categories, :id, :name, {prompt: 'Click here to Filter By Category'}) %>
 <a data-no-turbolink="true" href="/adventures?search=inspire"><div id="compass">`</div></a>
-
 </div>
 
-<%= collection_select(:category, :category_id, @categories, :id, :name, {prompt: true}) %>
+
 
 <div id="gallery">
   <%if @adventures.length > 27 %>

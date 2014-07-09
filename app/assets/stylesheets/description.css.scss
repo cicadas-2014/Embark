@@ -180,33 +180,29 @@ div.show_images {
 }
 
 #main_image {
-     overflow-x: scroll;
-    overflow-y: hidden;
-    height: 80px;
-    white-space:nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space:nowrap;
   margin: 0 auto;
-  max-width:2000px;
-  max-height:650px;   
+  height:400px;   
   width: auto;
-  height: auto;
+
 }
 
 #main_image img{
-
-     box-shadow: 1px 1px 10px #999;
+    box-shadow: 1px 1px 10px #999;
     margin: 2px;
     max-height: 50px;
-    cursor: pointer;
+    cursor:default;
     display:inline-block;
     *display:inline;/* For IE7*/
     *zoom:1;/* For IE7*/
     vertical-align:top;
-  margin: 0 auto;
-  position: static;
-  max-width:2000px;
-  max-height:650px;   
-  width: auto;
-  height: auto;
+    margin: 0 auto;
+    position: static;
+    max-width:2000px;
+    max-height:650px;   
+    width: auto;
 }
 
 .compass2 {

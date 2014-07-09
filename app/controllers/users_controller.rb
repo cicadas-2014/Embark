@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index 
-    # @user = User.find(session[:id])
+    @user = User.find(session[:id])
   end
 
   def login
@@ -19,8 +19,10 @@ class UsersController < ApplicationController
     if @user.save
       session[:id] = @user.id
       redirect_to users_path
+      p 1
     else
       redirect_to home_path 
+      p 2
     end
   end
 
