@@ -3,7 +3,7 @@
 <div id="userPage">
 
   <div id="user_adventures">
-    <% if @user %>
+    <% if @user.adventures %>
         <% @user.adventures.each do |adventure| %>
           <div class ="adventure">
             <a href="/adventures/<%= adventure.id %>">
