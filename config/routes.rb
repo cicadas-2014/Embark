@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	
+
 	root 'embark#home', as: 'home'
 
 	get '/adventures', to: 'embark#adventures', as: 'adventures'
