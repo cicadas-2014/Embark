@@ -1,11 +1,13 @@
 <%= render "embark/topnav" %>
 
  <div id="inspire">Get inspired
+  <% if current_user %>
   <div  class="favorite_div">
     <form>
       <input type="button" adventure='<%= @adventure.id %>' id="favorite_button" value="Save to your favorites"/>
     </form>
   </div>
+  <% end %> 
  </div>
  
 <div id="spanheader"><span>Your Adventure</span>

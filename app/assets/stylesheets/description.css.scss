@@ -180,6 +180,10 @@ div.show_images {
 }
 
 #main_image {
+     overflow-x: scroll;
+    overflow-y: hidden;
+    height: 80px;
+    white-space:nowrap;
   margin: 0 auto;
   max-width:2000px;
   max-height:650px;   
@@ -188,7 +192,15 @@ div.show_images {
 }
 
 #main_image img{
-  display: block;
+
+     box-shadow: 1px 1px 10px #999;
+    margin: 2px;
+    max-height: 50px;
+    cursor: pointer;
+    display:inline-block;
+    *display:inline;/* For IE7*/
+    *zoom:1;/* For IE7*/
+    vertical-align:top;
   margin: 0 auto;
   position: static;
   max-width:2000px;
