@@ -1,10 +1,21 @@
 
+
+
 <div id="adventurePage">
   <p id="tagline">Choose your own adventure</p>
   <div id="compassIcon">`</div>
   <div id="gallery">
-    <%@adventures.each do |adv|%>
-    <a class="image" href="/adventures/<%=adv.id%>"><img src=<%=adv.image_url%> alt=""></a>
-    <%end%>
+   <!--  <% if @adventures.length > 27 %>
+      <%@adventures.each do |city|%>
+        <%= @image=city.images.sample(1).first.medium_image_url %>
+        <%= @adventure=city.adventures.sample(1).first %>
+      <a class="image" href="/adventures/<%= @adventure.id%>"><img src= <%= @image %> alt="">
+       <%end%></a>
+    <% else %> -->
+      <%@adventures.each do |adv|%>
+      <a class="image" href="/adventures/<%=adv.id%>"><img src=<%=adv.image_url%> alt=""></a>
+      <div class='text'><%=adv.title%></div>
+      <%end%>
+<!--     <% end %> -->
   </div>
 </div>

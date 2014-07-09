@@ -142,10 +142,9 @@ a {
 	font-style: normal;
 	font-weight: normal;
 	font-family: $font;
-	font-size: 4em;
-	line-height : 45px;
-	letter-spacing: .1em;
-	color: $white;
+	font-size: .9em;
+	line-height : 20px;
+	color: $black;
 }
 #tagline {
 	@extend .text;
