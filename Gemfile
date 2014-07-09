@@ -33,7 +33,7 @@ gem 'bcrypt'
 gem 'json'
 
 gem 'curl'
-gem 'curb'
+# gem 'curb'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
