@@ -1,6 +1,6 @@
 var alterFavoriteButton = function(e) {
   e.preventDefault();
-  var data = $('#favorite_button').attr('adventure');
+  var data = { adventure: $('#favorite_button').attr('adventure') };
   console.log(data);
   document.getElementById('favorite_button').value = 'Saved to favorites!!'
   document.getElementById('favorite_button').adventure = 'nil'
