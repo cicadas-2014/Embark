@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-	console.log(true)
 	var deletePictures = [];
 
 	$('#admin img').on('click', function() {
