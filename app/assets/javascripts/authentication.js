@@ -4,7 +4,6 @@ var addAdventureForm = "<div id='adventureForm'><h1>NEW ADVENTURE</h1><form meth
 
 var speed = 600
 var hideForms = function() {
-  console.log('hiding forms')
   // $('#addAdventure').hide();
   $('#signupform').hide();
   $('#loginform').hide();
