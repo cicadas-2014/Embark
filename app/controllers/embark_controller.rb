@@ -19,7 +19,7 @@ class EmbarkController < ApplicationController
 			search = params[:search]   
 			
 			distance = 8 if search == 'local'
-			distance = 20 if search == 'continential'
+			distance = 30 if search == 'continential'
 			distance = 1000000 if search == 'global'
 
 			valid_adventures = []
