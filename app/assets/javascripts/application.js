@@ -9,7 +9,6 @@ function getUserLocation(search) {
 		navigator.geolocation.getCurrentPosition(function(position){
 			var lat = position.coords.latitude;
 			var lon = position.coords.longitude;
-			console.log(search+'&latitude='+lat+'&longitude='+lon);
 			window.location = search+'&latitude='+lat+'&longitude='+lon;
 		},displayError);
 	} else {
@@ -70,6 +69,7 @@ function startAnimation(speed){
 		},speed*1.5)
 	},speed)
 }
+
 function buttonEffects(speed){
 	$('#home a').hover(function(){
 		$('#home #background').stop().fadeTo(speed/2,0.6)
@@ -84,7 +84,7 @@ function buttonEffects(speed){
 		$('#home #background').fadeTo(speed,0)
 		setTimeout(function() {$('#home #background').hide()},speed)
 		$('#home #logo').fadeTo(speed,10);
-		$('#search').html("<img src='/assets/loading.gif'/>")
+		$('#search').html("<img src='/loading.gif'/>")
 		$('#search img').css({'min-height':'4px !important','min-width':'4px '})
 	})
 };
@@ -96,9 +96,6 @@ imageGallery = function() {
 		$('img#main_image').attr('src', new_image_source);
 	});
 };
-
-
-
 
 $(document).ready(ready)
 $(document).on('page:load', ready);
