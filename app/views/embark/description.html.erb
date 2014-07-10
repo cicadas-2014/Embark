@@ -15,12 +15,20 @@
 
 
   <% if session[:id] %>
-  <div  class="favorite_div">
-    <form >
-      <input type="button" adventure='<%= @adventure.id %>' id="favorite_button" value="Save to your favorites"/>
-    </form>
-  </div>
-  <% end %> 
+    <% if User.find(session[:id]).adventures.all.include?(Adventure.find(@adventure.id)) %>
+       <div  class="favorite_div">
+        <form >
+          <input type="button" adventure='nil' id="favorite_button" value="Saved to favorites!!"/>
+        </form>
+      </div>
+    <% else %>
+      <div  class="favorite_div">
+        <form >
+          <input type="button" adventure='<%= @adventure.id %>' id="favorite_button" value="Save to your favorites"/>
+        </form>
+      </div>
+    <% end %>
+  <% end %>  
  </div>
 
  
