@@ -5,7 +5,6 @@ class EmbarkController < ApplicationController
 	end
 
 	def adventures
-		p params
 		if params[:search] == 'inspire'
 			@adventures = []
 			Adventure.all.each do |adv|
@@ -18,7 +17,9 @@ class EmbarkController < ApplicationController
 			latitude = params[:latitude]
 			longitude = params[:longitude]
 			search = params[:search]   
-			
+
+			valid_adventures = []
+
 			if params[:category].nil?
 				all_adventures = Adventure.all
 			else

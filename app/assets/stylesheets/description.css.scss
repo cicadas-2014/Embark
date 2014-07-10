@@ -1,5 +1,6 @@
 $whiteColor:#fcfbe4;
 $backgroundColor:#231f20;
+$black:#231f20;
 $borderColor:rgba(116, 201, 148, 0.84);
 $fillColor:#74c994;
 $textColor:rgba(116, 201, 148, 0.84);
@@ -157,7 +158,7 @@ body{
   margin: 0 auto;
   height:400px;   
   width: auto;
-
+  text-align: center;
 }
 
 #main_image img{
@@ -176,18 +177,14 @@ body{
     width: auto;
 }
 
-.compass2 {
-  width: 100px;
-  height: 5px;
+#compass2 {
+  width: 140px;
   text-align: center;
-  font-family: 'icon-worksregular';
-  font-size: 60px;
   color: $backgroundColor;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  z-index: 2;
-  top: 130px;
+  top: 250px;
 }
 
 
