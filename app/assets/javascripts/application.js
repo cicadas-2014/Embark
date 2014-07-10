@@ -70,6 +70,7 @@ function startAnimation(speed){
 		},speed*1.5)
 	},speed)
 }
+
 function buttonEffects(speed){
 	$('#home a').hover(function(){
 		$('#home #background').stop().fadeTo(speed/2,0.6)
@@ -96,9 +97,6 @@ imageGallery = function() {
 		$('img#main_image').attr('src', new_image_source);
 	});
 };
-
-
-
 
 $(document).ready(ready)
 $(document).on('page:load', ready);
