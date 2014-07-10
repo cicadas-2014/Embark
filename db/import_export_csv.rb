@@ -8,12 +8,6 @@ def top20
   slice = adventures.each_slice(5)
   slice.each do |s|
     p s[4][0]
-    # adventure = Adventure.create(name: s[0][0], duration: s[2][0].to_i, description: s[3][0], image_url: s[4][0])
-    # p adventure
-    # p s[1][0]
-    # country = Country.find_or_create_by(name:s[1][0])
-    # p country
-    # CountryAdventure.create(country_id: country.id, adventure_id: adventure.id)
   end
 end
 
@@ -41,6 +35,16 @@ def importGadventures
     end
     
     Adventure.makeAdventure(csv[0],csv[1],csv[2],csv[3],csv[5],csv[4],csv[6],cityBoolean,cities[csv[2]])
+  end
+
+    CSV.foreach("db/csvFiles/continental.csv") do |csv|
+    cityBoolean = true
+    unless cities[csv[2]]
+      cityBoolean = false
+      cities[csv[2]] = nil
+    end
+    
+    Adventure.makeAdventure(csv[0],csv[1],csv[2],csv[3],csv[5],csv[5],csv[6],cityBoolean,cities[csv[2]])
   end
 
   puts "done importing adventures"
