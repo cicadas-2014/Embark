@@ -47,7 +47,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    curb (0.8.5)
     curl (0.0.9)
       awesome_print (>= 0.2.1)
       unidecoder (>= 1.1.1)
@@ -198,7 +197,6 @@ DEPENDENCIES
   bcrypt
   capybara
   coffee-rails (~> 4.0.0)
-  curb
   curl
   database_cleaner
   factory_girl_rails
