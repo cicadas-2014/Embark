@@ -5,7 +5,7 @@ var addAdventureForm = "<div id='adventureForm'><h1>NEW ADVENTURE</h1><form meth
 var speed = 600
 var hideForms = function() {
   console.log('hiding forms')
-  $('#addAdventure').hide();
+  // $('#addAdventure').hide();
   $('#signupform').hide();
   $('#loginform').hide();
   $('#back').hide();
@@ -16,12 +16,18 @@ var showLoginForm = function(e) {
   $('#signupform').fadeTo(speed,0);
   $('#loginform').fadeTo(speed,1);
   $('#back').fadeTo(speed,0.7);
+  setTimeout(function() {
+    $('#signupform').hide();
+  },speed)
 }
 var showSignupForm = function(e) {
   e.preventDefault();
   $('#back').fadeTo(speed,0.7);
   $('#signupform').fadeTo(speed,1);
   $('#loginform').fadeTo(speed,0);
+    setTimeout(function() {
+    $('#loginform').hide();
+  },speed/2)
 }
 
 var appendAddAdventureForm = function(e){
