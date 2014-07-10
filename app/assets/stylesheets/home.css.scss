@@ -3,6 +3,7 @@ $backgroundColor:#231f20;
 $borderColor:rgba(116, 201, 148, 0.84);
 $fillColor:#74c994;
 $textColor:rgba(116, 201, 148, 0.84);
+$blue:#74c9bf;
 $font:'Raleway', sans-serif;
 
 
@@ -49,7 +50,7 @@ $font:'Raleway', sans-serif;
 }
 
 #home a:hover{
-     background: $fillColor;
+     background: $blue;
     -webkit-transition-property: background;
     -webkit-transition-duration: 0.8s;
     -webkit-transition-timing-function: ease;
@@ -106,11 +107,11 @@ $font:'Raleway', sans-serif;
 
 
 #search img {
-    width: 2%;
-    height: 2%;
+    width: 4%;
+    height: 6%;
     display: block;
     position: fixed;
-    margin-left: 50%;
+    margin-left: 47%;
     margin-right: auto;
     }
 

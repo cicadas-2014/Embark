@@ -84,7 +84,7 @@ function buttonEffects(speed){
 		$('#home #background').fadeTo(speed,0)
 		setTimeout(function() {$('#home #background').hide()},speed)
 		$('#home #logo').fadeTo(speed,10);
-		$('#search').html("<img src='/assets/ajax-loader.gif'/>")
+		$('#search').html("<img src='/assets/loading.gif'/>")
 		$('#search img').css({'min-height':'4px !important','min-width':'4px '})
 	})
 };
