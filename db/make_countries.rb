@@ -7,7 +7,8 @@ def makeCountriesContinents
   CSV.foreach('db/csvFiles/country_continent.csv') do |countryRow|
     continent = Continent.find_or_create_by(name:countryRow[0])
     country = Country.find_or_create_by(name:countryRow[1])
-    puts country.name
+    continent.countries << country
     country.continent = continent
+    puts "#{continent.name} << #{country.name}"
   end
 end
