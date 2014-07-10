@@ -3,14 +3,15 @@
 <div id="userPage">
 
   <div id="user_adventures">
-    <% if @user.adventures %>
+    <% if @user.adventures.length > 0 %>
+      <div id="usersFavorites">
+        <h1>Favorite Adventures</h1>
         <% @user.adventures.each do |adventure| %>
-          <div class ="adventure">
-            <a href="/adventures/<%= adventure.id %>">
-              <div id="adventure_name"><%= adventure.name %></div></a>
-            <div id="adventure_description"><%= adventure.description %></div>
+          <div class ="user_adventure">
+            <a href="/adventures/<%= adventure.id %>"><div id="adventure_name"><%= adventure.title %></div></a>
           </div>
         <%end%>
+      </div>
     <% else %>
     	<h3>You haven't favorited any adventures yet! Go forth and<div id='beInspired'><a href="/">BE INSPIRED!</a></div>
     	</h3>
@@ -18,7 +19,7 @@
   </div>
 
 <div id="addAdventure">
-  <input name="addAdventure" value='Add Adventure'>
+  <input name="addAdventure" value='Add Your Own Adventure'>
 </div>
 
 	<div id="adventureForm"></div>

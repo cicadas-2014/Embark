@@ -8,21 +8,37 @@ $font:'Raleway', sans-serif;
 #userPage input {
   font-size: 20px;
   width: 25%;
-  min-width: 200px;
+  min-width: 230px;
   text-align: center;
   color: $textColor;
   font-family: $font;
   background-color: $whiteColor;
   border: 2px solid $textColor;
   padding: 5px;
-  margin-left: 40%;
+  margin-left: 37.5%;
   margin-top: 50px;
   display:block;
+}
+#usersFavorites {
+  margin-top: 30%;
+  h1{
+    text-align: center;
+    border: 2px solid $textColor;
+    padding: 5px;
+    color: $textColor;
+  }
+}
+.user_adventure {
+  text-align: center;
+  font: $font;
+  color: $borderColor;
+  font-size: 25px;
+  margin-top: 3%;
 }
 
 #userPage #adventureForm {
   height: 760px;
-  width: 90%;
+  width: 80%;
 }
 #userPage #adventureForm h1 {
   font-size: 35px;
@@ -40,30 +56,33 @@ $font:'Raleway', sans-serif;
 }
 #userPage #adventureForm p{
   margin: 5px;
-  float:right;
-  width: 100%;
+  float:left;
   font-size: 18px;
+  width:40%;
 }
 #userPage #adventureForm input {
-  float: right;
-  width: 65%;
+  float: left;
+  width: 55%;
+  margin:0;
 }
 #userPage #adventureForm #descriptionBox textarea{
   border: 2px solid $textColor;
   font-family: $font;
   font-size: 25px;
-  display: inline-block;
   text-align: center;
   text-decoration: none;
   color: $textColor;
   background-color: $whiteColor;
   height: 120px;
   wrap: hard;
-  float: right;
-  width: 65%;
+  float: left;
+  width: 55%;
 }
 #userPage #adventureForm .submit input {
   width: 25%;
+  margin-top: 5px;
+  margin-left: 20px;
+  float:left;
 }
 #favorite_button:hover, #category_filter select:hover, a #inspirationbutton:hover , #userPage input:hover, #userPage #user_adventures #beInspired a:hover, #userPage button:hover {
   background-color: $fillColor;

@@ -19,10 +19,8 @@ class UsersController < ApplicationController
     if @user.save
       session[:id] = @user.id
       redirect_to users_path
-      p 1
     else
       redirect_to home_path 
-      p 2
     end
   end
 
@@ -32,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def favorites
-    FavoritedAdventure.create(adventure_id: params[:data], user_id: session[:id])
+    FavoritedAdventure.create(adventure_id: params[:adventureID], user_id: session[:id])
   end
   
   def addAdventure

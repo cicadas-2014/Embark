@@ -11,9 +11,9 @@
 
 <div id="back"></div>
  <div id="inspire">Get inspired
-  <% if current_user %>
+  <% if session[:id] %>
   <div  class="favorite_div">
-    <form>
+    <form >
       <input type="button" adventure='<%= @adventure.id %>' id="favorite_button" value="Save to your favorites"/>
     </form>
   </div>

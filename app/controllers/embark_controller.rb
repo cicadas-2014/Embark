@@ -5,7 +5,6 @@ class EmbarkController < ApplicationController
 	end
 
 	def adventures
-		p params
 		if params[:search] == 'inspire'
 			@adventures = []
 			Adventure.all.each do |adv|
@@ -23,7 +22,6 @@ class EmbarkController < ApplicationController
 			distance = 1000000 if search == 'global'
 
 			valid_adventures = []
-			p session
 			if params[:category].nil?
 				all_adventures = Adventure.all
 			else
