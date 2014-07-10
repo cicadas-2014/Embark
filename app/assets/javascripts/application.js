@@ -13,6 +13,9 @@ function getUserLocation(search) {
 		},displayError);
 	} else {
 		document.getElementById('locationData').innerHTML = "Sorry - your browser doesn't support geolocation!";
+		setTimeout(function() {
+			window.location = '/adventures?search=global'
+		},2000);
 	}
 }
 function redirect(position, search){
