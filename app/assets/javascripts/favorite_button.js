@@ -4,7 +4,7 @@ var alterFavoriteButton = function(e) {
   console.log(data);
   document.getElementById('favorite_button').value = 'Saved to favorites!!'
   document.getElementById('favorite_button').adventure = 'nil'
-  console.log(document.getElementById('favorite_button').value)
+  input.disabled = true;
   $.ajax({
     url: "/users/favorites",
     data: data
