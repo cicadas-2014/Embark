@@ -10,7 +10,10 @@
 </div>
 
 <div id="back"></div>
- <div id="inspire">Get inspired</div>
+ <div id="inspire">   <header><%= @adventure.title %></header> 
+</div>
+
+
   <% if session[:id] %>
   <div  class="favorite_div">
     <form >
@@ -19,6 +22,8 @@
   </div>
   <% end %> 
  </div>
+
+ 
 
 <br>
 
@@ -38,8 +43,7 @@
   <div id="adventureDescription">
 
   <div id='description'>
-     <header><%= @adventure.title %></header> 
-
+  
         <img id="compass2" src="/compass.jpg"/>
 
       <p><%= @adventure.description %></p>
