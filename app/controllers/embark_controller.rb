@@ -56,7 +56,7 @@ class EmbarkController < ApplicationController
 			else 
 				valid_adventures = all_adventures
 			end
-			y = []
+			@adventures = []
 			valid_adventures.each_with_index do |adventure, index|
 				if index < 28 
 					@adventures << adventure
