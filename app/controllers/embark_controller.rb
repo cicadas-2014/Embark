@@ -35,7 +35,7 @@ class EmbarkController < ApplicationController
 				all_adventures.each do |adventure|
 					if adventure.city_id
 						city = City.find(adventure.city_id)
-						distance = 8;
+						distance = 3;
 						if city.latitude.to_i - latitude.to_i+distance < distance*2 && city.latitude.to_i - latitude.to_i+distance > 0 && city.longitude.to_i - longitude.to_i+distance < distance*2 && city.longitude.to_i - longitude.to_i+distance > 0
 							unless adventure.image_url == "nil" || adventure.image_url == "Private photo cant use"
 								valid_adventures << adventure
@@ -60,6 +60,8 @@ class EmbarkController < ApplicationController
 
 			@adventures = valid_adventures.sample(27)
 			@params = params
+			@categories = Category.all.order(:name)
+			p @categories
 		end
 	end
 
