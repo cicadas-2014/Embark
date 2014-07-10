@@ -23,6 +23,7 @@ $font:'Raleway', sans-serif;
 	margin-left: -300px;
 	z-index: 5;
 	background-color: $backgroundColor;
+	opacity: 0;
 }
 #loginform input, #signupform input {
 	width: 80%;
@@ -77,6 +78,7 @@ $font:'Raleway', sans-serif;
 	margin-left: -300px;
 	z-index: 5;
 	background-color: $backgroundColor;
+	opacity: 0;
 }
 #back {
 	position: fixed;
