@@ -1,23 +1,23 @@
-$backgroundColor:#fcfbe4;
-$borderColor:rgba(116, 201, 148, 0.84);;
-$fillColor:#74c9bf;
-$textColor:rgba(116, 201, 148, 0.84);;
-$errorColor:red;
+$whiteColor:#fcfbe4;
+$backgroundColor:#231f20;
+$borderColor:rgba(116, 201, 148, 0.84);
+$fillColor:#74c994;
+$textColor:rgba(116, 201, 148, 0.84);
 $font:'Raleway', sans-serif;
 
 
-div#hamburger {
-    color: $backgroundColor;
+#hamburger {
+    background-color: red;
 }
 
 #embark {
     margin-top: 120px;
-    font-weight:bold;
+    // font-weight:bold;
     text-align: center;
     font-family: $font;
     font-size: 130px;
     letter-spacing: 0.3em;
-    color: $backgroundColor;
+    color: $whiteColor;
 }
 
 
@@ -62,7 +62,7 @@ div#hamburger {
 
 
 #home  a {
-   // border 2px solid $backgroundColor;
+   // border 2px solid $whiteColor;
     width: 280px;
     height: 70px;
     padding-top: 10px;
@@ -72,7 +72,7 @@ div#hamburger {
     text-decoration: none;
     background: transparent;
     opacity: 0;
-    color: $backgroundColor;
+    color: $whiteColor;
     font-size: 30px;
     line-height : 45px;
     text-align: center;
@@ -89,7 +89,7 @@ div#hamburger {
     font-family: $font;
     font-size: 30px;
     letter-spacing: .3em;
-    color: $backgroundColor; 
+    color: $whiteColor; 
     opacity: 0;
 }
 .homepage {
@@ -115,9 +115,6 @@ div#hamburger {
     }
 
 @media (max-width: 1000px) {
-    div#header {
-         background-color: black;
-    }
     #embark {
         font-size: 110px;
     }

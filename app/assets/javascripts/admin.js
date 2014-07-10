@@ -1,15 +1,17 @@
 $( document ).ready(function() {
+	console.log(true)
 	var deletePictures = [];
-	$('#del img').on('click', function() {
+
+	$('#admin img').on('click', function() {
 		var id = $(this).attr('id');
 		deletePictures.push(id);
-		console.log(deletePictures);
 		$(this).css('opacity','0.3');
 	});
-	$('#del #delete_pictures').on('click', function() {
-		window.location = '/del/'+(advId+1)+'?deletePictures='+String(deletePictures);
+
+	$('#admin #delete_pictures').on('click', function() {
+		window.location = '/admin/'+(cityId+1)+'?deletePictures='+String(deletePictures);
 	});
-	$('#del #delete_adventure').on('click', function() {
-		window.location = '/del/'+(advId+1)+'?deleteAdventure=true';
+	$('#admin #delete_adventure').on('click', function() {
+		window.location = '/admin/'+(cityId+1)+'?deleteAdventure=true';
 	});
 });
