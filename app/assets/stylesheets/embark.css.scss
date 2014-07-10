@@ -23,18 +23,21 @@ $font:'Raleway', sans-serif;
   filter: alpha(opacity=85); 
 }
 #category_filter select {
-  width: 150px;
+  width: 0 auto;
   float:right;
   font: $font;
   color: $textColor;
   margin-top: 30px;
+  margin-left: 20px;
   font-size: 14px;
   height: 45px;
-  padding: 3px;
+  padding: 9px;
   margin-bottom: 15px;
   margin-right: 15px;
   background-color: $whiteColor;
   border: 2px solid $textColor;
+  position:relative;
+  z-index:2;
 }
 body { 
   background-color: $backgroundColor;
@@ -88,10 +91,11 @@ body {
 }
 
 #category-filter {
-	height: 100%;
-	padding-top:100px;
-	position: relative;
-	color:red;
+	// height: 100%;
+	// // padding-top:100px;
+	// // text-align:center;
+	// position: relative;
+	// color:red;
 }
 
 #gallery img {
