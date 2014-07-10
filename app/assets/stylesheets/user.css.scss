@@ -5,6 +5,32 @@ $fillColor:#74c994;
 $textColor:rgba(116, 201, 148, 0.84);
 $font:'Raleway', sans-serif;
 
+#addAdventure {
+  text-align: center;
+    display:block;
+    margin:0 auto;
+}
+input {
+  font-size: 20px;
+  width: 25%;
+  min-width: 230px;
+  text-align: center;
+  color: $textColor;
+  font-family: $font;
+  background-color: $whiteColor;
+  border: 2px solid $textColor;
+  padding: 5px;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  margin-top: 50px;
+  display:inline-block;
+  cursor: default;
+  position:relative;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+}
+
+
 #userPage input {
   font-size: 20px;
   width: 25%;
@@ -15,12 +41,15 @@ $font:'Raleway', sans-serif;
   background-color: $whiteColor;
   border: 2px solid $textColor;
   padding: 5px;
-  margin-left: 37.5%;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
   margin-top: 50px;
-  display:block;
+  display:inline-block;
   cursor: default;
+  position:relative;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
 }
-
 
 #usersFavorites {
   margin-top: 20%;
