@@ -16,7 +16,7 @@
         <li>
           <a href="https://mail.google.com/">Contact<span class="sub">We want to hear from you</span></a>
         </li>
-        <% if current_user %>
+        <% if session[:id] %>
         <li>
           <a href="/users" id="usersPage">Account<span class="sub">View your favorite adventures!</span></a>
         </li>
