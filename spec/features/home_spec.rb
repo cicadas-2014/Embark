@@ -21,11 +21,6 @@ describe 'views/embark/home.html.erb' do
 		end
 		it "local button redirects to right page" do
 			visit home_path
-			click_link("Continental")
-			expect(current_path).to eq adventures_path
-		end
-		it "local button redirects to right page" do
-			visit home_path
 			click_link("Global")
 			expect(current_path).to eq adventures_path
 		end
