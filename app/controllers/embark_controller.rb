@@ -56,15 +56,9 @@ class EmbarkController < ApplicationController
 			else 
 				valid_adventures = all_adventures
 			end
-			@adventures = []
-			valid_adventures.each_with_index do |adventure, index|
-				if index < 27
-					@adventures << adventure
-				end
-			end
+			@adventures = valid_adventures.sample(27)
 			@params = params
 			@categories = Category.all.order(:name)
-			p @categories
 		end
 	end
 
