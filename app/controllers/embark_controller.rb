@@ -7,10 +7,19 @@ class EmbarkController < ApplicationController
 	def adventures
 		if params[:search] == 'inspire'
 			@adventures = []
+			@categories = Category.all.order(:name)
 			Adventure.all.each do |adv|
 				unless adv.image_url == nil
 					@adventures << adv
 				end
+			end
+			if params[:category].nil?
+				all_adventures = Adventure.all
+			else
+				par = JSON.parse(params[:params], symbol_names: true)
+				latitude = par['latitude'].to_f
+				longitude = par['longitude'].to_f
+				all_adventures = Category.find(params[:category][:category_id]).adventures.all
 			end
 		else
 
